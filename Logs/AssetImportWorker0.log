@@ -299,3 +299,19 @@ Received Import Request.
 Start importing Assets/script using Guid(0c41f4652ea9f4843bb180488c49e2a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac3f6f0d6a9238ac4fced80aba1c66c3') in 0.000399 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 436.416040 seconds.
+  path: Assets/police
+  artifactKey: Guid(c2551cb30ba764945aac7ec830f03329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/police using Guid(c2551cb30ba764945aac7ec830f03329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '396a1db9055c2f527c1574eac19cd196') in 0.000523 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 669.400842 seconds.
+  path: Assets/Scenes/uimenueric.unity
+  artifactKey: Guid(6d957ad4de40ede419e9cb5ba136e173) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/uimenueric.unity using Guid(6d957ad4de40ede419e9cb5ba136e173) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c828ce5de3136bce7d6b889f17915297') in 0.000591 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
