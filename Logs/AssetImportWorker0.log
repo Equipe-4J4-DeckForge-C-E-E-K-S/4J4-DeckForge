@@ -210,3 +210,11 @@ Received Import Request.
 Start importing Assets/Scenes/testEmile 1.unity using Guid(91e24971eae875146848d2b73cd7dab0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '431a491d3b7d588d89a36178c87e3990') in 0.000413 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 314.370276 seconds.
+  path: Assets/Scenes/testEmile 1.unity
+  artifactKey: Guid(81a51ce32142bcd4887e8ed906259441) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/testEmile 1.unity using Guid(81a51ce32142bcd4887e8ed906259441) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72b7e4c14a4d07c663f6e492caa85d9b') in 0.000421 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
