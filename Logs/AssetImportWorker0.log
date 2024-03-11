@@ -186,3 +186,27 @@ Received Import Request.
 Start importing Assets/Scenes/testEmile.unity using Guid(670c629274af28349a0ee6b1ba2ce10a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b9b0d38c4cd3dc2a8e59ead70933936') in 0.002185 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 3175.738960 seconds.
+  path: Assets/Scenes/testEmile.unity
+  artifactKey: Guid(670c629274af28349a0ee6b1ba2ce10a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/testEmile.unity using Guid(670c629274af28349a0ee6b1ba2ce10a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d5f36cb2c4f3e23092c5a5c1d8c2bcf') in 0.000744 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 9.990650 seconds.
+  path: Assets/Scenes/testEmile.unity
+  artifactKey: Guid(670c629274af28349a0ee6b1ba2ce10a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/testEmile.unity using Guid(670c629274af28349a0ee6b1ba2ce10a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd965dc75560fef1dc3a9b671ee7ab9bc') in 0.000450 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 3.027009 seconds.
+  path: Assets/Scenes/testEmile 1.unity
+  artifactKey: Guid(91e24971eae875146848d2b73cd7dab0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/testEmile 1.unity using Guid(91e24971eae875146848d2b73cd7dab0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '431a491d3b7d588d89a36178c87e3990') in 0.000413 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
