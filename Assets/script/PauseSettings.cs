@@ -40,9 +40,12 @@ public class PauseSettings : MonoBehaviour
         SceneManager.LoadScene("uimenueric"); // Load your main menu scene
     }
 
-    public void QuitGame()
+   public void QuitGame()
     {
+        // Quit the game
+        Debug.Log("QUIT!");
         Application.Quit();
     }
 }
+
 
