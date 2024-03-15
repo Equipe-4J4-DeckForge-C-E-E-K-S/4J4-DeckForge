@@ -10,7 +10,7 @@ public class comportementCartes : MonoBehaviour
     public GameObject[] ballsDebug;
     public GameObject[] nouveauDeck;
     public int index;
-    public int indexAEnlever;
+    public int index2;
     public GameObject nouvelleCarte;
 
     // Start is called before the first frame update
@@ -31,49 +31,47 @@ public class comportementCartes : MonoBehaviour
     public void setup()
     {
         //ajouterCarte();
-        enleverCarte();
+        enleverCarte(ligma, index2);
     }
 
 
-    public void ajouterCarte()
+    public void ajouterCarte(GameObject[] deckUtilise)
     {
-        nouveauDeck = new GameObject[ligma.Length + 1];
+        nouveauDeck = new GameObject[deckUtilise.Length + 1];
         index = 0;
         foreach (var carte in nouveauDeck)
         {
             if (index < ligma.Length)
             {
                 Debug.Log(index);
-                nouveauDeck[index] = ligma[index];
+                nouveauDeck[index] = deckUtilise[index];
             }
             else
             {
                 nouveauDeck[index] = nouvelleCarte;
-                Debug.Log("nouvelle carte");
             }
             index++;
         }
-        ligma = nouveauDeck;
+        deckUtilise = nouveauDeck;
     }
     
-    public void enleverCarte()
+    public void enleverCarte(GameObject[] deckUtlise, int indexAEnlever)
     {
-        nouveauDeck = new GameObject[ligma.Length - 1];
+        nouveauDeck = new GameObject[deckUtlise.Length - 1];
         index = 0;
         foreach (var carte in nouveauDeck)
         {
             if (index < indexAEnlever)
             {
-                Debug.Log(index);
-                nouveauDeck[index] = ligma[index];
+                nouveauDeck[index] = deckUtlise[index];
             }
             else if (index >= indexAEnlever)
             {
-                Debug.Log(index);
-                nouveauDeck[index] = ligma[index + 1];
+                nouveauDeck[index] = deckUtlise[index + 1];
             }
             index++;
         }
-        ligma = nouveauDeck;
+        Debug.Log(deckUtlise);
+        deckUtlise = nouveauDeck;
     }
 }

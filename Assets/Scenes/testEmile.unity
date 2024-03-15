@@ -749,7 +749,7 @@ MonoBehaviour:
   - {fileID: 1724807661}
   nouveauDeck: []
   index: 0
-  indexAEnlever: 3
+  index2: 2
   nouvelleCarte: {fileID: 2795280334094779141, guid: 9b782ea43faa01e498d4f026c00689b0, type: 3}
 --- !u!1 &879046991
 GameObject:
@@ -1221,7 +1221,7 @@ MonoBehaviour:
   ballsDebug: []
   nouveauDeck: []
   index: 0
-  indexAEnlever: 0
+  index2: 0
   nouvelleCarte: {fileID: 0}
 --- !u!1 &1724807661 stripped
 GameObject:
