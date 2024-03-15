@@ -10,6 +10,7 @@ public class comportementCartes : MonoBehaviour
     public GameObject[] ballsDebug;
     public GameObject[] nouveauDeck;
     public int index;
+    public int indexAEnlever;
     public GameObject nouvelleCarte;
 
     // Start is called before the first frame update
@@ -61,16 +62,16 @@ public class comportementCartes : MonoBehaviour
         index = 0;
         foreach (var carte in nouveauDeck)
         {
-            //if (index < ligma.Length-1)
-            //{
+            if (index < indexAEnlever)
+            {
                 Debug.Log(index);
                 nouveauDeck[index] = ligma[index];
-            //}
-            //else
-            //{
-                //nouveauDeck[index] = nouvelleCarte;
-                //Debug.Log("nouvelle carte");
-            //}
+            }
+            else if (index >= indexAEnlever)
+            {
+                Debug.Log(index);
+                nouveauDeck[index] = ligma[index + 1];
+            }
             index++;
         }
         ligma = nouveauDeck;

@@ -739,7 +739,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e246786f8816f4343bcbca89f2abb522, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ligma: 
+  ligma: []
+  ballsDebug:
+  - {fileID: 2795280334094779141, guid: 8de6c3545fed386498b1e212633d5b17, type: 3}
+  - {fileID: 1481016787}
+  - {fileID: 1481016787}
+  - {fileID: 1120439218}
+  - {fileID: 1481016787}
+  - {fileID: 1724807661}
+  nouveauDeck: []
+  index: 0
+  indexAEnlever: 3
+  nouvelleCarte: {fileID: 2795280334094779141, guid: 9b782ea43faa01e498d4f026c00689b0, type: 3}
 --- !u!1 &879046991
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,6 +1045,16 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1120439218 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2795280334094779141, guid: 9b782ea43faa01e498d4f026c00689b0, type: 3}
+  m_PrefabInstance: {fileID: 235534590}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1481016787 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2795280334094779141, guid: 8de6c3545fed386498b1e212633d5b17, type: 3}
+  m_PrefabInstance: {fileID: 1891819763}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1676031651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1196,7 +1217,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e246786f8816f4343bcbca89f2abb522, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ligma: 
+  ligma: []
+  ballsDebug: []
+  nouveauDeck: []
+  index: 0
+  indexAEnlever: 0
+  nouvelleCarte: {fileID: 0}
+--- !u!1 &1724807661 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2795280334094779141, guid: e28ec1095c2770c4d894ed9d3880f39d, type: 3}
+  m_PrefabInstance: {fileID: 1676031651}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1805973079
 GameObject:
   m_ObjectHideFlags: 0
