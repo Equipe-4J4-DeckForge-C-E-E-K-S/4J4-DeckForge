@@ -29,12 +29,12 @@ public class comportementCartes : MonoBehaviour
 
     public void setup()
     {
-        //ajouterCarte();
+        //ligma = ajouterCarte(ligma, nouvelleCarte);
         ligma = enleverCarte(ligma, index2);
     }
 
 
-    public GameObject[] ajouterCarte(GameObject[] deckUtilise)
+    public GameObject[] ajouterCarte(GameObject[] deckUtilise, GameObject carteAAjouter)
     {
         GameObject[] nouveauDeck = new GameObject[deckUtilise.Length + 1];
         int index = 0;
@@ -47,11 +47,10 @@ public class comportementCartes : MonoBehaviour
             }
             else
             {
-                nouveauDeck[index] = nouvelleCarte;
+                nouveauDeck[index] = carteAAjouter;
             }
             index++;
         }
-        //deckUtilise = nouveauDeck;
         return nouveauDeck;
     }
     
