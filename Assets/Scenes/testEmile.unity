@@ -743,12 +743,10 @@ MonoBehaviour:
   ballsDebug:
   - {fileID: 2795280334094779141, guid: 8de6c3545fed386498b1e212633d5b17, type: 3}
   - {fileID: 1481016787}
-  - {fileID: 1481016787}
+  - {fileID: 1791649739}
   - {fileID: 1120439218}
   - {fileID: 1481016787}
   - {fileID: 1724807661}
-  nouveauDeck: []
-  index: 0
   index2: 2
   nouvelleCarte: {fileID: 2795280334094779141, guid: 9b782ea43faa01e498d4f026c00689b0, type: 3}
 --- !u!1 &879046991
@@ -1219,14 +1217,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ligma: []
   ballsDebug: []
-  nouveauDeck: []
-  index: 0
   index2: 0
   nouvelleCarte: {fileID: 0}
 --- !u!1 &1724807661 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2795280334094779141, guid: e28ec1095c2770c4d894ed9d3880f39d, type: 3}
   m_PrefabInstance: {fileID: 1676031651}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1791649739 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2795280334094779141, guid: be71904ba16ca72489ba60cc12073951, type: 3}
+  m_PrefabInstance: {fileID: 235297141}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1805973079
 GameObject:

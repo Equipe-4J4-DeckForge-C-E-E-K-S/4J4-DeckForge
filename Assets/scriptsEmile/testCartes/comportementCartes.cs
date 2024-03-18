@@ -8,8 +8,7 @@ public class comportementCartes : MonoBehaviour
     public GameObject[] ligma;
     static GameObject[] balls;
     public GameObject[] ballsDebug;
-    public GameObject[] nouveauDeck;
-    public int index;
+    //public GameObject[] nouveauDeck;
     public int index2;
     public GameObject nouvelleCarte;
 
@@ -31,14 +30,14 @@ public class comportementCartes : MonoBehaviour
     public void setup()
     {
         //ajouterCarte();
-        enleverCarte(ligma, index2);
+        ligma = enleverCarte(ligma, index2);
     }
 
 
-    public void ajouterCarte(GameObject[] deckUtilise)
+    public GameObject[] ajouterCarte(GameObject[] deckUtilise)
     {
-        nouveauDeck = new GameObject[deckUtilise.Length + 1];
-        index = 0;
+        GameObject[] nouveauDeck = new GameObject[deckUtilise.Length + 1];
+        int index = 0;
         foreach (var carte in nouveauDeck)
         {
             if (index < ligma.Length)
@@ -52,13 +51,14 @@ public class comportementCartes : MonoBehaviour
             }
             index++;
         }
-        deckUtilise = nouveauDeck;
+        //deckUtilise = nouveauDeck;
+        return nouveauDeck;
     }
     
-    public void enleverCarte(GameObject[] deckUtlise, int indexAEnlever)
+    public GameObject[] enleverCarte(GameObject[] deckUtlise, int indexAEnlever)
     {
-        nouveauDeck = new GameObject[deckUtlise.Length - 1];
-        index = 0;
+        GameObject[] nouveauDeck = new GameObject[deckUtlise.Length - 1];
+        int index = 0;
         foreach (var carte in nouveauDeck)
         {
             if (index < indexAEnlever)
@@ -71,7 +71,6 @@ public class comportementCartes : MonoBehaviour
             }
             index++;
         }
-        Debug.Log(deckUtlise);
-        deckUtlise = nouveauDeck;
+        return nouveauDeck;
     }
 }
