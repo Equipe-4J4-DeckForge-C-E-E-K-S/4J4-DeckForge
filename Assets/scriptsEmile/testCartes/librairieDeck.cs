@@ -52,8 +52,7 @@ public class librairieDeck : MonoBehaviour
         int indexAleatoire = 0;
         foreach (var carte in deckUtilise)
         {
-            Debug.Log(deckUtilise.Length);
-            indexAleatoire = Random.Range(0, (deckUtilise.Length - 1));
+            indexAleatoire = CheckerIndexAleatoire(indexAleatoire, indexUtilises, deckUtilise);
 
             index++;
             indexUtilises = EnregistrerNouveauIndex(indexUtilises, indexAleatoire);
@@ -80,5 +79,20 @@ public class librairieDeck : MonoBehaviour
             index++;
         }
         return nouvelEnregistrementIndexs;
+    }
+
+    public int CheckerIndexAleatoire(int indexUtilise, int[] indexUtilises, GameObject[] deckUtilise)
+    {
+        int index = 0;
+        indexUtilise = Random.Range(0, (deckUtilise.Length - 1));
+        foreach (var indexAChecker in indexUtilises)
+        {
+            if(indexUtilise == indexUtilises[index])
+            {
+                
+            }
+            index++;
+        }
+        return indexUtilise;
     }
 }
