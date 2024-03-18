@@ -8,6 +8,13 @@ public class PauseSettings : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    private AudioSource musicAudioSource;
+    private float previousMusicTimeScale;
+
+    void Start()
+    {
+        musicAudioSource = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -23,14 +30,17 @@ public class PauseSettings : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
+        Time.timeScale = previousMusicTimeScale;
+        musicAudioSource.UnPause();
         GameIsPaused = false;
     }
 
     void Pause()
     {
         pauseMenuUI.SetActive(true);
+        previousMusicTimeScale = Time.timeScale;
         Time.timeScale = 0f; // Pause the game
+        musicAudioSource.Pause();
         GameIsPaused = true;
         EventSystem.current.SetSelectedGameObject(null);
     }
@@ -41,12 +51,10 @@ public class PauseSettings : MonoBehaviour
         SceneManager.LoadScene("uimenueric"); // Load your main menu scene
     }
 
-   public void QuitGame()
+    public void QuitGame()
     {
         // Quit the game
         Debug.Log("QUIT!");
         Application.Quit();
     }
 }
-
-
