@@ -1,10 +1,11 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class librairieDeck : MonoBehaviour
 {
+    public int[] indexsDebug;
+
     public GameObject[] ajouterCarte(GameObject[] deckUtilise, GameObject carteAAjouter)
     {
         GameObject[] nouveauDeck = new GameObject[deckUtilise.Length + 1];
@@ -13,7 +14,6 @@ public class librairieDeck : MonoBehaviour
         {
             if (index < deckUtilise.Length)
             {
-                Debug.Log(index);
                 nouveauDeck[index] = deckUtilise[index];
             }
             else
@@ -42,5 +42,43 @@ public class librairieDeck : MonoBehaviour
             index++;
         }
         return nouveauDeck;
+    }
+
+    public GameObject[] SufflerCartes(GameObject[] deckUtilise)
+    {
+        GameObject[] nouveauDeck = new GameObject[deckUtilise.Length];
+        int[] indexUtilises = new int[0];
+        int index = 0;
+        int indexAleatoire = 0;
+        foreach (var carte in deckUtilise)
+        {
+            Debug.Log(deckUtilise.Length);
+            indexAleatoire = Random.Range(0, (deckUtilise.Length - 1));
+
+            index++;
+            indexUtilises = EnregistrerNouveauIndex(indexUtilises, indexAleatoire);
+        }
+        indexsDebug = indexUtilises;
+
+        return nouveauDeck;
+    }
+
+    public int[] EnregistrerNouveauIndex(int[] indexEnregistres, int nouveauIndex)
+    {
+        int index = 0;
+        int[] nouvelEnregistrementIndexs = new int[indexEnregistres.Length + 1];
+        foreach (var indexUtilise in nouvelEnregistrementIndexs)
+        {
+            if (index < indexEnregistres.Length)
+            {
+                nouvelEnregistrementIndexs[index] = indexEnregistres[index];
+            }
+            else
+            {
+                nouvelEnregistrementIndexs[index] = nouveauIndex;
+            }
+            index++;
+        }
+        return nouvelEnregistrementIndexs;
     }
 }
