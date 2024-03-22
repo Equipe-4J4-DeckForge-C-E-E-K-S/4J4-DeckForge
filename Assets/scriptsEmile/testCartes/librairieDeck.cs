@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -48,17 +47,17 @@ public class librairieDeck : MonoBehaviour
     public GameObject[] SufflerCartes(GameObject[] deckUtilise)
     {
         GameObject[] nouveauDeck = new GameObject[deckUtilise.Length];
-        /*int algorithmeChoisi = Random.Range(0, 2);
+        int algorithmeChoisi = Random.Range(0, 2);
         if (algorithmeChoisi == 0)
         {
-
+            nouveauDeck = SauterOrdreCartes(deckUtilise);
+            nouveauDeck = InverserOrdreCartes(nouveauDeck);
         }
         else
         {
-
-        }*/
-        nouveauDeck = SauterOrdreCartes(deckUtilise);
-        deckDebug = nouveauDeck;
+            nouveauDeck = InverserOrdreCartes(deckUtilise);
+            nouveauDeck = SauterOrdreCartes(nouveauDeck);
+        }
         return nouveauDeck;
     }
 
@@ -76,6 +75,36 @@ public class librairieDeck : MonoBehaviour
             {
                 nouveauDeck[index] = deckUtilise[0];
             }
+            index++;
+        }
+        return nouveauDeck;
+    }
+
+    private GameObject[] InverserOrdreCartes(GameObject[] deckUtilise)
+    {
+        GameObject[] nouveauDeck = new GameObject[deckUtilise.Length];
+        int index = 0;
+        bool inverse = true;
+        foreach (var carte in nouveauDeck)
+        {
+            if (inverse)
+            {
+                Debug.Log(inverse);
+                if (index + 1 < deckUtilise.Length)
+                {
+                    nouveauDeck[index] = deckUtilise[index + 1];
+                }
+                else if (index + 1 == deckUtilise.Length)
+                {
+                    nouveauDeck[index] = deckUtilise[(deckUtilise.Length -1)];
+                }
+            }
+            else
+            {
+                Debug.Log(inverse);
+                nouveauDeck[index] = deckUtilise[index - 1];
+            }
+            inverse = !inverse;
             index++;
         }
         return nouveauDeck;
