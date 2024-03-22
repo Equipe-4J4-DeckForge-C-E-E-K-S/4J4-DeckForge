@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/uimenueric.unity
     guid: 6d957ad4de40ede419e9cb5ba136e173
   - enabled: 1
-    path: Assets/Scenes/pausemenu.unity
+    path: Assets/Scenes/pausemenuniveauherbe.unity
     guid: 22fc7691cfb54a24cb8a45c63e88cc05
   m_configObjects: {}
