@@ -23,6 +23,6 @@ public class bouttonShuffletest : MonoBehaviour
     public void setUp() 
     {
         //listeGameObject.GetComponent<bouttonAjoutTest>().listeLocale =
-        librairies.GetComponent<librairieDeck>().SufflerCartes(listeCherche);
+        librairies.GetComponent<librairieDeck>().SufflerCartes(listeGameObject.GetComponent<bouttonAjoutTest>().listeLocale);
     }
 }

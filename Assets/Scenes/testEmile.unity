@@ -1499,6 +1499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e246786f8816f4343bcbca89f2abb522, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indexsDebug: 
 --- !u!1 &1715736395
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,9 +1648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   listeGameObject: {fileID: 792511989}
   librairies: {fileID: 1712367415}
-  listeCherche:
-  - {fileID: 1481016787}
-  - {fileID: 1120439218}
+  listeCherche: []
 --- !u!1 &1724807661 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2795280334094779141, guid: e28ec1095c2770c4d894ed9d3880f39d, type: 3}

@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class librairieDeck : MonoBehaviour
 {
-    public int[] indexsDebug;
+    public GameObject[] deckDebug;
 
     public GameObject[] ajouterCarte(GameObject[] deckUtilise, GameObject carteAAjouter)
     {
@@ -43,56 +44,40 @@ public class librairieDeck : MonoBehaviour
         }
         return nouveauDeck;
     }
-
+    
     public GameObject[] SufflerCartes(GameObject[] deckUtilise)
     {
         GameObject[] nouveauDeck = new GameObject[deckUtilise.Length];
-        int[] indexUtilises = new int[0];
-        int index = 0;
-        int indexAleatoire = 0;
-        foreach (var carte in deckUtilise)
+        /*int algorithmeChoisi = Random.Range(0, 2);
+        if (algorithmeChoisi == 0)
         {
-            indexAleatoire = CheckerIndexAleatoire(indexAleatoire, indexUtilises, deckUtilise);
 
-            index++;
-            indexUtilises = EnregistrerNouveauIndex(indexUtilises, indexAleatoire);
         }
-        indexsDebug = indexUtilises;
+        else
+        {
 
+        }*/
+        nouveauDeck = SauterOrdreCartes(deckUtilise);
+        deckDebug = nouveauDeck;
         return nouveauDeck;
     }
 
-    public int[] EnregistrerNouveauIndex(int[] indexEnregistres, int nouveauIndex)
+    private GameObject[] SauterOrdreCartes(GameObject[] deckUtilise)
     {
+        GameObject[] nouveauDeck = new GameObject[deckUtilise.Length];
         int index = 0;
-        int[] nouvelEnregistrementIndexs = new int[indexEnregistres.Length + 1];
-        foreach (var indexUtilise in nouvelEnregistrementIndexs)
+        foreach (var carte in nouveauDeck)
         {
-            if (index < indexEnregistres.Length)
+            if (index < deckUtilise.Length-1)
             {
-                nouvelEnregistrementIndexs[index] = indexEnregistres[index];
+                nouveauDeck[index] = deckUtilise[index + 1];
             }
-            else
+            else if (index == deckUtilise.Length-1)
             {
-                nouvelEnregistrementIndexs[index] = nouveauIndex;
+                nouveauDeck[index] = deckUtilise[0];
             }
             index++;
         }
-        return nouvelEnregistrementIndexs;
-    }
-
-    public int CheckerIndexAleatoire(int indexUtilise, int[] indexUtilises, GameObject[] deckUtilise)
-    {
-        int index = 0;
-        indexUtilise = Random.Range(0, (deckUtilise.Length - 1));
-        foreach (var indexAChecker in indexUtilises)
-        {
-            if(indexUtilise == indexUtilises[index])
-            {
-                
-            }
-            index++;
-        }
-        return indexUtilise;
+        return nouveauDeck;
     }
 }
