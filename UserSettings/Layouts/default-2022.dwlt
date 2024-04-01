@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1357
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 122
+  controlID: 126
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,8 +166,8 @@ MonoBehaviour:
     y: 0
     width: 232
     height: 1307
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -245,8 +245,8 @@ MonoBehaviour:
     y: 0
     width: 978
     height: 670
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -271,8 +271,8 @@ MonoBehaviour:
     y: 670
     width: 978
     height: 637
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -499,7 +499,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: da39fefffabefeff4e33ffffdc33ffff6838ffff0639ffff2cbfffffa8c0ffffbac2ffff1ac3ffffc6c6ffff0ad2ffffd2d2ffffc2d7ffff8ed8ffff9adcffffbedeffff84e0ffffe4e0fffff6e1ffff5cf3fffff6f5ffff32fbfffff45d0000605e0000405f00005a5f000072680000de680000006b00008a6b00008e6c0000fa6c0000986d0000ba6d0000e86d00007c6e0000047000007070000030710000567100005e7100007a73000084740000a6740000d4740000547c0000807d0000a67d0000ae7d0000c07e0000ca7f0000ec7f0000128000001a80000068800000ae800000568e0000828f0000a88f0000029300002893000030930000c0930000fc93000020ad00004ead00009cad0000bcad0000e2ad0000
+      m_ExpandedIDs: ee26feff523cfeff5e5bfeff645bfeff5668feffb068feff6469feff866bfeffa883feff44eafeffd4f2feffa4f4fefffef4feff80f5feff70f8feff2afafeffaafafeff30fbfeff9cfcfeff7cb40000a2b40000aab400003eb500007eb50000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -615,7 +615,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Nature
+    - Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Impacts
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -623,16 +623,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Nature
+  - Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Impacts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\zisss\OneDrive\Desktop\equipejeu\4J4-DeckForge
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 365d0000
-    m_LastClickedID: 23862
-    m_ExpandedIDs: 00000000fe5c0000005d0000025d0000045d0000065d00000a5d0000385d000000ca9a3b
+    m_SelectedIDs: 160d0000
+    m_LastClickedID: 3350
+    m_ExpandedIDs: 00000000fe0500002a06000086060000fa0600003a0700003e0700005209000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -660,7 +660,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fe5c0000005d0000025d0000045d0000065d0000085d00000a5d0000
+    m_ExpandedIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -687,7 +687,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: e4800000d6fefeff1462000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1073,9 +1073,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 0
-      snapOffset: {x: 0, y: 25}
+      snapOffset: {x: -231, y: -197}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
+      snapCorner: 3
       id: Scene View/Particles
       index: 6
       layout: 4
@@ -1144,9 +1144,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1920, y: 2159.6, z: 0}
+    m_Target: {x: 43.51511, y: 7.415001, z: 107.009155}
     speed: 2
-    m_Value: {x: 1920, y: 2159.6, z: 0}
+    m_Value: {x: 43.51511, y: 7.415001, z: 107.009155}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1192,13 +1192,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.10756287, y: 0.09885121, z: -0.010749828, w: -0.98921907}
+    m_Target: {x: -0.11975709, y: 0.22634344, z: -0.028055063, w: -0.96626353}
     speed: 2
-    m_Value: {x: -0.10756227, y: 0.09885066, z: -0.010749768, w: -0.9892135}
+    m_Value: {x: -0.11975558, y: 0.22634058, z: -0.028054709, w: -0.9662513}
   m_Size:
-    m_Target: 1.0792253
+    m_Target: 46.70703
     speed: 2
-    m_Value: 1.0792253
+    m_Value: 46.70703
   m_Ortho:
     m_Target: 0
     speed: 2
