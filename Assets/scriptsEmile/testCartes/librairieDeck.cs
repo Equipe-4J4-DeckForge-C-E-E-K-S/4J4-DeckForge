@@ -47,17 +47,23 @@ public class librairieDeck : MonoBehaviour
     public GameObject[] SufflerCartes(GameObject[] deckUtilise)
     {
         GameObject[] nouveauDeck = new GameObject[deckUtilise.Length];
-        int algorithmeChoisi = Random.Range(0, 2);
-        if (algorithmeChoisi == 0)
+        int algorithmeChoisi = 0;
+        int nbShuffleAFaire = Random.Range(1, 6);
+        for (int i = 0; i < nbShuffleAFaire; i++)
         {
-            nouveauDeck = SauterOrdreCartes(deckUtilise);
-            nouveauDeck = InverserOrdreCartes(nouveauDeck);
+            algorithmeChoisi = Random.Range(0, 2);
+            if (algorithmeChoisi == 0)
+            {
+                nouveauDeck = SauterOrdreCartes(deckUtilise);
+                nouveauDeck = InverserOrdreCartes(nouveauDeck);
+            }
+            else
+            {
+                nouveauDeck = InverserOrdreCartes(deckUtilise);
+                nouveauDeck = SauterOrdreCartes(nouveauDeck);
+            }
         }
-        else
-        {
-            nouveauDeck = InverserOrdreCartes(deckUtilise);
-            nouveauDeck = SauterOrdreCartes(nouveauDeck);
-        }
+        
         return nouveauDeck;
     }
 
