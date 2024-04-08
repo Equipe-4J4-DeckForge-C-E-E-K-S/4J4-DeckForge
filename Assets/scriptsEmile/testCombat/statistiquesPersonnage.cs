@@ -23,7 +23,7 @@ public class statistiquesPersonnage : MonoBehaviour
     private void FixedUpdate()
     {
         if (vie <= 0) {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }

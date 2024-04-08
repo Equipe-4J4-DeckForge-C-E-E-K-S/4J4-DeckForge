@@ -5,6 +5,8 @@ using UnityEngine;
 public class comportementJoueur : MonoBehaviour
 {
     public GameObject ennemiAAttaque;
+    public bool enAttaque;
+    public bool cibleTrouve;
 
     // Start is called before the first frame update
     void Start()
