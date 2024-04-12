@@ -13,6 +13,11 @@ public class comportementFleche : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+    }
+
+    private void Update()
+    {
         cursorHotspot = new Vector2(cursorTexture.width / 2, cursorTexture.height / 2);
         Cursor.SetCursor(cursorTexture, cursorHotspot, CursorMode.Auto);
     }
