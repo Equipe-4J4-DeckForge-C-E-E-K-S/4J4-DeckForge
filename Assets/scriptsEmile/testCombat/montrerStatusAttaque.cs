@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -10,6 +11,10 @@ public class montrerStatusAttaque : MonoBehaviour
     public GameObject personnage;
     public bool cibleTrouve;
     public bool enAttaque;
+
+    void Start() 
+    {
+    }
 
     // Update is called once per frame
     void Update()
