@@ -21,16 +21,6 @@ public class comportementJoueur : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*Vector2 pos = objetADupliquer.GetComponent<RectTransform>().anchoredPosition;
-        pos.x = floatX;
-        pos.y = floatY;
-        gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(pos.x, pos.y);
-        if (enAttaque == false)
-        {
-            
-            ligma = Instantiate(objetADupliquer, canvas);
-            enAttaque = true;
-        }
-        ligma.GetComponent<RectTransform>().anchoredPosition = new Vector2(pos.x, pos.y);*/
+        
     }
 }

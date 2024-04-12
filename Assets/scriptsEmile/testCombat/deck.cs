@@ -52,12 +52,13 @@ public class deck : MonoBehaviour
         for (int carte = 0; carte < nbCartesDonnees; carte++)
         {
             Debug.Log("oki");
-            /*GameObject*/ carteADupliquer = deckActuel[carte];
+            carteADupliquer = deckActuel[0];
             Vector2 pos;
             carteDupliquee = Instantiate(carteADupliquer, canvas);
-            //pos.x = -200f + (50f * carte);
-            //pos.y = -110;
-            //carteDupliquee.GetComponent<RectTransform>().anchoredPosition = new Vector2(pos.x, pos.y);
+            pos.x = -200f + (150f * carte);
+            pos.y = -110;
+            carteDupliquee.GetComponent<RectTransform>().anchoredPosition = new Vector2(pos.x, pos.y);
+            deckActuel = librairie.GetComponent<librairieDeck>().enleverCarte(deckActuel, 0);
         }
     }
 }

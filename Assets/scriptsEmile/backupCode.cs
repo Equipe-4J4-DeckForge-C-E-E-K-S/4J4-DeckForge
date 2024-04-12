@@ -67,4 +67,18 @@ public int[] EnregistrerNouveauIndex(int[] indexEnregistres, int nouveauIndex)
         index++;
     }
     return nouvelEnregistrementIndexs;*/
+
+
+
+    /*Vector2 pos = objetADupliquer.GetComponent<RectTransform>().anchoredPosition;
+        pos.x = floatX;
+        pos.y = floatY;
+        //gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(pos.x, pos.y);
+        if (enAttaque == false)
+        {
+            
+            ligma = Instantiate(objetADupliquer, canvas);
+            enAttaque = true;
+        }
+        //ligma.GetComponent<RectTransform>().anchoredPosition = new Vector2(pos.x, pos.y);*/
 }

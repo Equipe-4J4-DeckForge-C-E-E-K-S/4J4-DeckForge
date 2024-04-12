@@ -3968,7 +3968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   librairie: {fileID: 0}
-  canvas: {fileID: 0}
+  canvas: {fileID: 165976861}
   carteADupliquer: {fileID: 0}
   carteDupliquee: {fileID: 0}
   deckStatDebug:
@@ -3976,13 +3976,14 @@ MonoBehaviour:
   - {fileID: 2795280334094779141, guid: 9b782ea43faa01e498d4f026c00689b0, type: 3}
   - {fileID: 2795280334094779141, guid: e28ec1095c2770c4d894ed9d3880f39d, type: 3}
   - {fileID: 2795280334094779141, guid: be71904ba16ca72489ba60cc12073951, type: 3}
+  - {fileID: 2795280334094779141, guid: 8de6c3545fed386498b1e212633d5b17, type: 3}
   deckLoc: []
   deckTrash: []
   deckActuel: []
   compteur: {fileID: 923351298}
   tourJoueur: 1
   tourJoueurCommence: 1
-  nbCartesDonnees: 1
+  nbCartesDonnees: 4
 --- !u!1001 &1475639999
 PrefabInstance:
   m_ObjectHideFlags: 0
