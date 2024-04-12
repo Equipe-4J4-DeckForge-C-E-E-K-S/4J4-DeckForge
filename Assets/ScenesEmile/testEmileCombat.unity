@@ -524,7 +524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joueur: {fileID: 587014299}
-  parent: {fileID: 0}
+  parent: {fileID: 611206438}
   enAttaque: 0
   CibleTrouve: 0
 --- !u!1 &165976857
