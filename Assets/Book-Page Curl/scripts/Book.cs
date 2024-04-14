@@ -20,9 +20,12 @@ public class Book : MonoBehaviour {
     public Sprite[] bookPages;
     public bool interactable=true;
     public bool enableShadowEffect=true;
+    public AudioClip pageTurnSound;
+    private AudioSource audioSource;
     //represent the index of the sprite shown in the right page
     public int currentPage = 0;
     public int TotalPageCount
+    
     {
         get { return bookPages.Length; }
     }
@@ -69,6 +72,7 @@ public class Book : MonoBehaviour {
 
     void Start()
     {
+        audioSource = gameObject.AddComponent<AudioSource>();
         if (!canvas) canvas=GetComponentInParent<Canvas>();
         if (!canvas) Debug.LogError("Book should be a child to canvas");
 
@@ -378,6 +382,7 @@ public class Book : MonoBehaviour {
     }
     void Flip()
     {
+        
         if (mode == FlipMode.RightToLeft)
             currentPage += 2;
         else
@@ -392,6 +397,8 @@ public class Book : MonoBehaviour {
         UpdateSprites();
         Shadow.gameObject.SetActive(false);
         ShadowLTR.gameObject.SetActive(false);
+        
+        audioSource.PlayOneShot(pageTurnSound);
         if (OnFlip != null)
             OnFlip.Invoke();
     }
