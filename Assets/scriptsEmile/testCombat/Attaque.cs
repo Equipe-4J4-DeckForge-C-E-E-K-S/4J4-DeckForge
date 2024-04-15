@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Attaque : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class Attaque : MonoBehaviour
     public float attaque;
     public bool cibleTrouve;
     public bool enAttaque;
+
+    public GameObject librairie;
+    public GameObject deck;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +23,15 @@ public class Attaque : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (deck.GetComponent<deck>().tourJoueur)
+        {
+            GetComponent<Button>().enabled = true;
+        }
+        else
+        {
+            GetComponent<Button>().enabled = false;
+        }
+
         cibleTrouve = personnage.GetComponent<comportementJoueur>().cibleTrouve;
         if (cibleTrouve)
         {
@@ -27,6 +40,9 @@ public class Attaque : MonoBehaviour
             personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie -= attaque;
             cibleTrouve = false;
             personnage.GetComponent<comportementJoueur>().cibleTrouve = cibleTrouve;
+
+            //librairie.GetComponent<deck>().deckTrash = librairie.GetComponent<librairieDeck>().ajouterCarte(deck.GetComponent<deck>().deckTrash, gameObject);
+            //Destroy(gameObject);
         }
     }
 

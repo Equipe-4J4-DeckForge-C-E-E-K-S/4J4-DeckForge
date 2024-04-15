@@ -161,6 +161,12 @@ MonoBehaviour:
   joueur: {fileID: 587014299}
   cible: {fileID: 117620240}
   enAttaque: 0
+  librairie: {fileID: 0}
+  deck: {fileID: 0}
+  actionChoisie1: 0
+  actionChoisie2: 0
+  actionChoisie3: 0
+  actionChoisie4: 0
 --- !u!114 &19270879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -991,6 +997,8 @@ MonoBehaviour:
   attaque: 0
   cibleTrouve: 0
   enAttaque: 0
+  librairie: {fileID: 1712367415}
+  deck: {fileID: 1442245924}
 --- !u!114 &194977993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1005,6 +1013,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorTexture: {fileID: 2800000, guid: c521c39c9b36a64498ea649b42cac145, type: 3}
   cursorHotspot: {x: 0, y: 0}
+  joueur: {fileID: 587014299}
 --- !u!1 &266346719
 GameObject:
   m_ObjectHideFlags: 0
@@ -1819,6 +1828,12 @@ MonoBehaviour:
   joueur: {fileID: 587014299}
   cible: {fileID: 130910200}
   enAttaque: 0
+  librairie: {fileID: 1712367415}
+  deck: {fileID: 1442245924}
+  actionChoisie1: 0
+  actionChoisie2: 0
+  actionChoisie3: 0
+  actionChoisie4: 0
 --- !u!1 &657041742
 GameObject:
   m_ObjectHideFlags: 0
@@ -3484,6 +3499,8 @@ MonoBehaviour:
   personnage: {fileID: 587014299}
   defense: 0
   estClique: 1
+  librairie: {fileID: 1712367415}
+  deck: {fileID: 1442245924}
 --- !u!114 &1404209754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4092,7 +4109,7 @@ MonoBehaviour:
   tourJoueur: 1
   tourEnnemi: 0
   tourJoueurCommence: 1
-  nbCartesDonnees: 7
+  nbCartesDonnees: 2
 --- !u!1001 &1475639999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4312,6 +4329,8 @@ MonoBehaviour:
   personnage: {fileID: 587014299}
   vie: 0
   estClique: 1
+  librairie: {fileID: 1712367415}
+  deck: {fileID: 1442245924}
 --- !u!1 &1683468600
 GameObject:
   m_ObjectHideFlags: 0
@@ -4459,6 +4478,7 @@ GameObject:
   - component: {fileID: 1712367417}
   - component: {fileID: 1712367419}
   - component: {fileID: 1712367420}
+  - component: {fileID: 1712367421}
   m_Layer: 5
   m_Name: stuff
   m_TagString: Untagged
@@ -4552,6 +4572,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deck: {fileID: 1442245924}
   typeTour: {fileID: 1412010439}
+--- !u!114 &1712367421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712367415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 077378285e58a864cab15af1189e15d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1805973079
 GameObject:
   m_ObjectHideFlags: 0
@@ -4962,7 +4994,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2075479360
 RectTransform:
   m_ObjectHideFlags: 0

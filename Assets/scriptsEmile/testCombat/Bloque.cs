@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Bloque : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class Bloque : MonoBehaviour
     public GameObject personnage;
     public float defense;
     public bool estClique;
+
+    public GameObject librairie;
+    public GameObject deck;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +22,14 @@ public class Bloque : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (deck.GetComponent<deck>().tourJoueur)
+        {
+            GetComponent<Button>().enabled = true;
+        }
+        else
+        {
+            GetComponent<Button>().enabled = false;
+        }
     }
 
     public void Bloquer()
@@ -28,6 +39,9 @@ public class Bloque : MonoBehaviour
             defense *= 2;
             personnage.GetComponent<statistiquesPersonnage>().defense = defense;
             estClique = false;
+
+            librairie.GetComponent<deck>().deckTrash = librairie.GetComponent<librairieDeck>().ajouterCarte(deck.GetComponent<deck>().deckTrash, gameObject);
+            Destroy(gameObject);
         }
     }
 }

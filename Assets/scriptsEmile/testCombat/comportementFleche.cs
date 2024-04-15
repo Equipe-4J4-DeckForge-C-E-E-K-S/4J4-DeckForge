@@ -5,21 +5,24 @@ using UnityEngine;
 
 public class comportementFleche : MonoBehaviour
 {
-    // Start is called before the first frame update
     public Texture2D cursorTexture;
-
     public Vector2 cursorHotspot;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject joueur;
+    public bool enAttaque;
 
     private void Update()
     {
-        cursorHotspot = new Vector2(cursorTexture.width / 2, cursorTexture.height / 2);
-        Cursor.SetCursor(cursorTexture, cursorHotspot, CursorMode.Auto);
+        if (joueur.GetComponent<comportementJoueur>().enAttaque)
+        {
+            cursorHotspot = new Vector2(cursorTexture.width / 2, cursorTexture.height / 2);
+            Cursor.SetCursor(cursorTexture, cursorHotspot, CursorMode.Auto);
+        }
+        else
+        {
+            Cursor.SetCursor(null, cursorHotspot, CursorMode.Auto);
+        }
+        enAttaque = joueur.GetComponent<comportementJoueur>().enAttaque;
     }
 
 }
