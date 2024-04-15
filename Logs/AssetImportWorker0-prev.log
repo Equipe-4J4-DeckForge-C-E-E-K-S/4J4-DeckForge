@@ -1,0 +1,394 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.21f1 (bf09ca542b87) revision 12519882'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'en' Physical Memory: 16075 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.21f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/chri1/Documents/GitHub/4J4-DeckForge
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+53785
+Successfully changed project path to: C:/Users/chri1/Documents/GitHub/4J4-DeckForge
+C:/Users/chri1/Documents/GitHub/4J4-DeckForge
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [31196] Host "[IP] 10.90.64.164 [Port] 0 [Flags] 2 [Guid] 2646179837 [EditorId] 2646179837 [Version] 1048832 [Id] WindowsEditor(7,Christophers-Laptop) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [31196] Host "[IP] 10.90.64.164 [Port] 0 [Flags] 2 [Guid] 2646179837 [EditorId] 2646179837 [Version] 1048832 [Id] WindowsEditor(7,Christophers-Laptop) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 7 workers.
+Refreshing native plugins compatible for Editor in 35.03 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.21f1 (bf09ca542b87)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.21f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/chri1/Documents/GitHub/4J4-DeckForge/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3070 Laptop GPU (ID=0x249d)
+    Vendor:   NVIDIA
+    VRAM:     8033 MB
+    Driver:   31.0.15.3734
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.21f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.21f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.21f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56340
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.21f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.039745 seconds.
+- Loaded All Assemblies, in  0.825 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.727 seconds
+Domain Reload Profiling: 1546ms
+	BeginReloadAssembly (272ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (17ms)
+	RebuildCommonClasses (74ms)
+	RebuildNativeTypeToScriptingClass (21ms)
+	initialDomainReloadingComplete (169ms)
+	LoadAllAssembliesAndSetupDomain (283ms)
+		LoadAssemblies (240ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (277ms)
+			TypeCache.Refresh (274ms)
+				TypeCache.ScanAssembly (247ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (728ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (536ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (28ms)
+			SetLoadedEditorAssemblies (14ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (4ms)
+			ProcessInitializeOnLoadAttributes (388ms)
+			ProcessInitializeOnLoadMethodAttributes (102ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.217 seconds
+Refreshing native plugins compatible for Editor in 9.15 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.020 seconds
+Domain Reload Profiling: 2231ms
+	BeginReloadAssembly (345ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (9ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (57ms)
+	RebuildCommonClasses (54ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (76ms)
+	LoadAllAssembliesAndSetupDomain (720ms)
+		LoadAssemblies (612ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (292ms)
+			TypeCache.Refresh (258ms)
+				TypeCache.ScanAssembly (233ms)
+			ScanForSourceGeneratedMonoScriptInfo (26ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (1020ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (709ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (42ms)
+			SetLoadedEditorAssemblies (31ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (111ms)
+			ProcessInitializeOnLoadAttributes (474ms)
+			ProcessInitializeOnLoadMethodAttributes (31ms)
+			AfterProcessingInitializeOnLoad (20ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 6.86 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3084 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 32 unused Assets / (57.3 KB). Loaded Objects now: 3545.
+Memory consumption went from 120.8 MB to 120.8 MB.
+Total: 3.675100 ms (FindLiveObjects: 0.392600 ms CreateObjectMapping: 0.225300 ms MarkObjects: 2.901600 ms  DeleteObjects: 0.154200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 270095.477947 seconds.
+  path: Assets/ScenesChristopher/ChristopherMarchant2D.unity
+  artifactKey: Guid(5e5a63e0aeb55114f9d145d74fd9f6a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScenesChristopher/ChristopherMarchant2D.unity using Guid(5e5a63e0aeb55114f9d145d74fd9f6a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84c0fd09d4d2f0ba4cbbd155406f5802') in 0.003344 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 8.119658 seconds.
+  path: Assets/2DModelChristopher
+  artifactKey: Guid(992e2ac9bce02804694aa21c7ebe3b71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2DModelChristopher using Guid(992e2ac9bce02804694aa21c7ebe3b71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e8c34d029674b6480ab2297ea74f51b') in 0.001271 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 305.761484 seconds.
+  path: Assets/2DModelChristopher/GraalMap
+  artifactKey: Guid(d4174aebed499584d9e7258d73821731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2DModelChristopher/GraalMap using Guid(d4174aebed499584d9e7258d73821731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50a6afad37b4e9a79d3dec59c917a9a7') in 0.000994 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 17.529429 seconds.
+  path: Assets/2DModelChristopher/Protagoniste_Arriere.png
+  artifactKey: Guid(2360c7192f51e4541bc39385526f23dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2DModelChristopher/Protagoniste_Arriere.png using Guid(2360c7192f51e4541bc39385526f23dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3936e1926066681e3a1ce4e8bb41fd0d') in 0.074197 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 2.902711 seconds.
+  path: Assets/2DModelChristopher/Protagoniste_Cote_marche.png
+  artifactKey: Guid(7b95278e647b9d44e96bd4d08c3ad37c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2DModelChristopher/Protagoniste_Cote_marche.png using Guid(7b95278e647b9d44e96bd4d08c3ad37c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17601dc5481e53ca61a3932868fbb239') in 0.008529 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 14.742793 seconds.
+  path: Assets/2DModelChristopher/Protagoniste_Cote_marche.png
+  artifactKey: Guid(7b95278e647b9d44e96bd4d08c3ad37c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2DModelChristopher/Protagoniste_Cote_marche.png using Guid(7b95278e647b9d44e96bd4d08c3ad37c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8ce098c43531e46df2c77773b3f1bf9') in 0.062509 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 1.623018 seconds.
+  path: Assets/2DModelChristopher/Protagoniste_Arriere.png
+  artifactKey: Guid(2360c7192f51e4541bc39385526f23dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2DModelChristopher/Protagoniste_Arriere.png using Guid(2360c7192f51e4541bc39385526f23dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fffde4e46f013d39fef7e64d3cf8c3cd') in 0.011932 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 784.689651 seconds.
+  path: Assets/2DModelChristopher/GraalMap/Mobile - GraalOnline Era - Bed and Chairs.png
+  artifactKey: Guid(db6d898f6b85d7d428e5883a287106d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2DModelChristopher/GraalMap/Mobile - GraalOnline Era - Bed and Chairs.png using Guid(db6d898f6b85d7d428e5883a287106d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bda331dc3d25d48bc7eb0808a5928d35') in 0.014955 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 2.010821 seconds.
+  path: Assets/2DModelChristopher/GraalMap/Mobile - GraalOnline Era - Building.png
+  artifactKey: Guid(d574be07f761b0f41a41334faed79542) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2DModelChristopher/GraalMap/Mobile - GraalOnline Era - Building.png using Guid(d574be07f761b0f41a41334faed79542) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ef74ba878000b22f2b30e526b0a8d9f') in 0.009566 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.686842 seconds.
+  path: Assets/2DModelChristopher/GraalMap/Mobile - GraalOnline Era - Extra.png
+  artifactKey: Guid(d7fcb14037a1be84fb276a21481e77f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2DModelChristopher/GraalMap/Mobile - GraalOnline Era - Extra.png using Guid(d7fcb14037a1be84fb276a21481e77f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8301a13ff19911b8db7ab4566163233a') in 0.009957 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 26.915966 seconds.
+  path: Assets/2DModelChristopher/GraalMap/Mobile - GraalOnline Era - Building.png
+  artifactKey: Guid(d574be07f761b0f41a41334faed79542) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2DModelChristopher/GraalMap/Mobile - GraalOnline Era - Building.png using Guid(d574be07f761b0f41a41334faed79542) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43b2f43ed43ee43a7194ace1071e38e0') in 0.017848 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 4.639290 seconds.
+  path: Assets/2DModelChristopher/Protagoniste_Arriere.png
+  artifactKey: Guid(2360c7192f51e4541bc39385526f23dc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2DModelChristopher/Protagoniste_Arriere.png using Guid(2360c7192f51e4541bc39385526f23dc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '54ca87742f47137bb314ac898a1107e3') in 0.316422 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000337 seconds.
+  path: Assets/3DModelChristopher/VilleVariante1/VV1_Toit.prefab
+  artifactKey: Guid(9300b9c452ed2be4ea9520793de47afb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/3DModelChristopher/VilleVariante1/VV1_Toit.prefab using Guid(9300b9c452ed2be4ea9520793de47afb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '7c7d6a94e3290c66bd8596ee25a249ff') in 0.072567 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/3DModelChristopher/VilleVariante3/VV3_toit.prefab
+  artifactKey: Guid(6f7ab24fe7be12d4ba476bbf1b08be6f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/3DModelChristopher/VilleVariante3/VV3_toit.prefab using Guid(6f7ab24fe7be12d4ba476bbf1b08be6f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'e899859d1de57b0db02d3a80772a5729') in 0.014478 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/ScenesChristopher/test.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/ScenesChristopher/test.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '29985862b9e781d406c3eb739ddfd329') in 0.005670 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/ScenesChristopher/Christopher_Map.unity
+  artifactKey: Guid(ad152f9a8ca9d02448ee2d1d63322fd0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/ScenesChristopher/Christopher_Map.unity using Guid(ad152f9a8ca9d02448ee2d1d63322fd0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '09346aa101afd46316cf03eaa6164822') in 0.025157 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/3DModelChristopher/VilleVariante2/VV2_Mure2.prefab
+  artifactKey: Guid(a06a24ab78db6d8409e50e4e5fadc28c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/3DModelChristopher/VilleVariante2/VV2_Mure2.prefab using Guid(a06a24ab78db6d8409e50e4e5fadc28c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '994d8e26bbe8422a0c2ce48d1842094b') in 0.057518 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.002250 seconds.
+  path: Assets/2DModelChristopher/Protagoniste_Avant_marche.png
+  artifactKey: Guid(68f69fb1727612542a3526470e0d6af6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2DModelChristopher/Protagoniste_Avant_marche.png using Guid(68f69fb1727612542a3526470e0d6af6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '4cea583cace115b8009dfff999fa55d4') in 0.022182 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/ScenesChristopher/ChristopherMarchant2D.unity
+  artifactKey: Guid(5e5a63e0aeb55114f9d145d74fd9f6a9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/ScenesChristopher/ChristopherMarchant2D.unity using Guid(5e5a63e0aeb55114f9d145d74fd9f6a9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '304649f6b21b876f6277b20a94d19c41') in 0.018529 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/3DModelChristopher/VilleVariante2/VV2_Mure1.prefab
+  artifactKey: Guid(9ba81675da674074c9818ba8b1d2afe5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/3DModelChristopher/VilleVariante2/VV2_Mure1.prefab using Guid(9ba81675da674074c9818ba8b1d2afe5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '54b746bf157398f05efc007fa6c57adb') in 0.011650 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/scriptChristopher/scriptPlaceholder.cs
+  artifactKey: Guid(3ce49f319e7984e4d8f192bea5c28b91) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/scriptChristopher/scriptPlaceholder.cs using Guid(3ce49f319e7984e4d8f192bea5c28b91) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '2976c0cc7dfa8e8f8bdef76099a43a5d') in 0.010799 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/2DModelChristopher/Protagoniste_Avant_marche2.png
+  artifactKey: Guid(f8dc4cf8b9203824f9d5442ffcac85f7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2DModelChristopher/Protagoniste_Avant_marche2.png using Guid(f8dc4cf8b9203824f9d5442ffcac85f7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'f15e42ac73bdbb3f5a1f86fdced29d61') in 0.033952 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.006269 seconds.
+  path: Assets/2DModelChristopher/GraalMap/Mobile - GraalOnline Era - Bed and Chairs.png
+  artifactKey: Guid(db6d898f6b85d7d428e5883a287106d1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2DModelChristopher/GraalMap/Mobile - GraalOnline Era - Bed and Chairs.png using Guid(db6d898f6b85d7d428e5883a287106d1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '48de68205d459dae576804eb37bfea62') in 0.020833 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/2DModelChristopher/Protagoniste_Cote_marche.png
+  artifactKey: Guid(7b95278e647b9d44e96bd4d08c3ad37c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2DModelChristopher/Protagoniste_Cote_marche.png using Guid(7b95278e647b9d44e96bd4d08c3ad37c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '8f7b25f93355c79a8b8dfef09b5507a3') in 0.025218 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/3DModelChristopher/VilleVariante3/VV3.prefab
+  artifactKey: Guid(3b77a3ff3c9aac34f86dab17f610cd88) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/3DModelChristopher/VilleVariante3/VV3.prefab using Guid(3b77a3ff3c9aac34f86dab17f610cd88) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '9bc934a8e5dddef5fc8e7702eb98b9ec') in 0.015835 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/2DModelChristopher/GraalMap/Mobile - GraalOnline Era - Flowers.png
+  artifactKey: Guid(d16a70a15ea0a1f4d90f7d1b3dbf15e0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2DModelChristopher/GraalMap/Mobile - GraalOnline Era - Flowers.png using Guid(d16a70a15ea0a1f4d90f7d1b3dbf15e0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '6c5e44d9736f71673d53a2d8ef868114') in 0.022384 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
