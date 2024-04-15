@@ -48,6 +48,10 @@ public class deck : MonoBehaviour
                 CommenceTourJoueur();
             }
         }
+        else
+        {
+            tourJoueurCommence = true;
+        }
     }
 
     public void CommenceTourJoueur()

@@ -14,6 +14,8 @@ public class Attaque : MonoBehaviour
     public GameObject librairie;
     public GameObject deck;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +43,7 @@ public class Attaque : MonoBehaviour
             cibleTrouve = false;
             personnage.GetComponent<comportementJoueur>().cibleTrouve = cibleTrouve;
 
-            //librairie.GetComponent<deck>().deckTrash = librairie.GetComponent<librairieDeck>().ajouterCarte(deck.GetComponent<deck>().deckTrash, gameObject);
+            deck.GetComponent<deck>().deckTrash = librairie.GetComponent<librairieDeck>().ajouterCarte(deck.GetComponent<deck>().deckTrash, gameObject);
             //Destroy(gameObject);
         }
     }

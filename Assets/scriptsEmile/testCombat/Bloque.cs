@@ -13,6 +13,8 @@ public class Bloque : MonoBehaviour
     public GameObject librairie;
     public GameObject deck;
 
+    public GameObject debugGameObject;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +42,7 @@ public class Bloque : MonoBehaviour
             personnage.GetComponent<statistiquesPersonnage>().defense = defense;
             estClique = false;
 
-            librairie.GetComponent<deck>().deckTrash = librairie.GetComponent<librairieDeck>().ajouterCarte(deck.GetComponent<deck>().deckTrash, gameObject);
+            deck.GetComponent<deck>().deckTrash = librairie.GetComponent<librairieDeck>().ajouterCarte(deck.GetComponent<deck>().deckTrash, gameObject);
             Destroy(gameObject);
         }
     }

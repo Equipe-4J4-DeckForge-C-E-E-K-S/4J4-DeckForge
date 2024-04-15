@@ -16,6 +16,10 @@ public class comportementEnnemi : MonoBehaviour
     public int actionChoisie3;
     public int actionChoisie4;
 
+    public int delaiFinTour;
+
+    public bool tourEnnemiEnCours;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,10 +29,17 @@ public class comportementEnnemi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (deck.GetComponent<deck>().tourEnnemi)
+        if (deck.GetComponent<deck>().tourEnnemi == false && tourEnnemiEnCours == false)
         {
+            tourEnnemiEnCours = true;
+        }
+
+        if (deck.GetComponent<deck>().tourEnnemi && tourEnnemiEnCours)
+        {
+            tourEnnemiEnCours = false;
+            Debug.Log("tourEnnemi confirme");
             Ennemi();
-            ChangerLeTour();
+            Invoke("ChangerLeTour", delaiFinTour);
         }
 
         enAttaque = joueur.GetComponent<comportementJoueur>().enAttaque;
@@ -40,27 +51,32 @@ public class comportementEnnemi : MonoBehaviour
 
     public void Ennemi()
     {
-        int nbActions = Random.Range(1, 4);
+        int nbActions = Random.Range(1, 5);
         for (int i = 0; i < nbActions; i++)
         {
+            int delai = i;
+            int TempsActivation = 0 + delai;
+            delaiFinTour += delai + (1/nbActions);
             int actionChoisie = Random.Range(1, 5);
+
             if (actionChoisie == 1)
             {
-                Invoke("Action1", 3);
+                Invoke("Action1", TempsActivation);
             }
             else if (actionChoisie == 2)
             {
-                Invoke("Action2", 3);
+                Invoke("Action2", TempsActivation);
             }
             else if (actionChoisie == 3)
             {
-                Invoke("Action3", 3);
+                Invoke("Action3", TempsActivation);
             }
             else if (actionChoisie == 4)
             {
-                Invoke("Action4", 3);
+                Invoke("Action4", TempsActivation);
             }
         }
+        Debug.Log(delaiFinTour);   
     }
 
     public void Action1()

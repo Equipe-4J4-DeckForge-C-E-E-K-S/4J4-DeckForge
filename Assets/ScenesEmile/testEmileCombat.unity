@@ -1014,6 +1014,7 @@ MonoBehaviour:
   cursorTexture: {fileID: 2800000, guid: c521c39c9b36a64498ea649b42cac145, type: 3}
   cursorHotspot: {x: 0, y: 0}
   joueur: {fileID: 587014299}
+  enAttaque: 0
 --- !u!1 &266346719
 GameObject:
   m_ObjectHideFlags: 0
@@ -3501,6 +3502,7 @@ MonoBehaviour:
   estClique: 1
   librairie: {fileID: 1712367415}
   deck: {fileID: 1442245924}
+  debugGameObject: {fileID: 2795280334094779141, guid: be71904ba16ca72489ba60cc12073951, type: 3}
 --- !u!114 &1404209754
 MonoBehaviour:
   m_ObjectHideFlags: 0
