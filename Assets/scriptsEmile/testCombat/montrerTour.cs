@@ -6,7 +6,8 @@ using TMPro;
 
 public class montrerTour : MonoBehaviour
 {
-    public TextMeshProUGUI urmom;
+    public GameObject deck;
+    public TextMeshProUGUI typeTour;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,13 @@ public class montrerTour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        urmom.text = "is fat";
+        if (deck.GetComponent<deck>().tourJoueur) 
+        {
+            typeTour.text = "type: Joueur";
+        }
+        else
+        {
+            typeTour.text = "type: Ennemi";
+        }
     }
 }

@@ -22,6 +22,7 @@ public class deck : MonoBehaviour
     public TextMeshProUGUI compteurCartes;
     public TextMeshProUGUI compteurPoubelle;
     public bool tourJoueur;
+    public bool tourEnnemi;
     public bool tourJoueurCommence;
     public int nbCartesDonnees;
 
