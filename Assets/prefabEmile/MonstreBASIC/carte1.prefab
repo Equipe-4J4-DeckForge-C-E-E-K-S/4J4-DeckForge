@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2985322214681882930}
   - component: {fileID: 4258009460250260713}
+  - component: {fileID: -6818402639112207368}
   m_Layer: 0
   m_Name: carte1
   m_TagString: Untagged
@@ -56,6 +57,21 @@ MonoBehaviour:
   enAttaque: 0
   librairie: {fileID: 0}
   deck: {fileID: 0}
+--- !u!114 &-6818402639112207368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2795280334094779141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78ae1f9ceac18ba47b439667ec2b9047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attaquer: 1
+  bloquer: 0
+  soigner: 0
 --- !u!1 &3615733263506085268
 GameObject:
   m_ObjectHideFlags: 0
