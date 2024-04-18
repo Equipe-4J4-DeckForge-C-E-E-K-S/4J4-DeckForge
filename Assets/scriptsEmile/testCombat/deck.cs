@@ -72,6 +72,7 @@ public class deck : MonoBehaviour
                 carteADupliquer = deckActuel[0];
                 carteDupliquee = Instantiate(carteADupliquer, canvas);
                 IdentifierCarte(carteDupliquee);
+                carteDupliquee.SetActive(true);
                 deckJoueur = librairie.GetComponent<librairieDeck>().ajouterCarte(deckJoueur, carteDupliquee);
                 deckActuel = librairie.GetComponent<librairieDeck>().enleverCarte(deckActuel, 0);
             }
@@ -123,10 +124,7 @@ public class deck : MonoBehaviour
 
     public void Recharger()
     {
-        if (deckTrash.Length > 0)
-        {
             deckActuel = deckTrash;
             deckActuel = librairie.GetComponent<librairieDeck>().SufflerCartes(deckActuel);
-        }
     }
 }
