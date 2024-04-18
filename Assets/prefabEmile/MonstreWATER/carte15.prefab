@@ -110,6 +110,7 @@ MonoBehaviour:
   attaquer: 1
   bloquer: 0
   soigner: 0
+  prefab: {fileID: 2795280334094779141}
 --- !u!114 &3483619997636172971
 MonoBehaviour:
   m_ObjectHideFlags: 0

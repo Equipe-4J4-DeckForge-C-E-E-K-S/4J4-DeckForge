@@ -40,9 +40,8 @@ public class Bloque : MonoBehaviour
             personnage.GetComponent<statistiquesPersonnage>().defense = defense;
             estClique = false;
 
-            //GameObject carteDupliquee = Instantiate(gameObject, deck.GetComponent<deck>().canvas);
-            //carteDupliquee.SetActive(false);
-            deck.GetComponent<deck>().deckTrash = librairie.GetComponent<librairieDeck>().ajouterCarte(deck.GetComponent<deck>().deckTrash, /*carteDupliquee*/ gameObject);
+            GameObject carteADuplique = GetComponent<carteProfil>().prefab;
+            deck.GetComponent<deck>().deckTrash = librairie.GetComponent<librairieDeck>().ajouterCarte(deck.GetComponent<deck>().deckTrash, carteADuplique);
             Destroy(gameObject);
         }
     }

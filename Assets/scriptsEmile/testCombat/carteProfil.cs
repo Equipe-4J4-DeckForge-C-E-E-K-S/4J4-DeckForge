@@ -7,4 +7,6 @@ public class carteProfil : MonoBehaviour
     public bool attaquer;
     public bool bloquer;
     public bool soigner;
+    public GameObject prefab;
+    public int index;
 }

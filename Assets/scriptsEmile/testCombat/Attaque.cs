@@ -43,8 +43,9 @@ public class Attaque : MonoBehaviour
             cibleTrouve = false;
             personnage.GetComponent<comportementJoueur>().cibleTrouve = cibleTrouve;
 
-            deck.GetComponent<deck>().deckTrash = librairie.GetComponent<librairieDeck>().ajouterCarte(deck.GetComponent<deck>().deckTrash, gameObject);
-            //Destroy(gameObject);
+            GameObject carteADuplique = GetComponent<carteProfil>().prefab;
+            deck.GetComponent<deck>().deckTrash = librairie.GetComponent<librairieDeck>().ajouterCarte(deck.GetComponent<deck>().deckTrash, carteADuplique);
+            Destroy(gameObject);
         }
     }
 
