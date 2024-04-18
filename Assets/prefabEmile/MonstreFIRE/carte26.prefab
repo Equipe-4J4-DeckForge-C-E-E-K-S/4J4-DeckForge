@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2985322214681882930}
   - component: {fileID: 3130325645606936897}
+  - component: {fileID: -6116062926322640487}
   - component: {fileID: 4983649584093250486}
   m_Layer: 0
   m_Name: carte26
@@ -94,6 +95,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &-6116062926322640487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2795280334094779141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78ae1f9ceac18ba47b439667ec2b9047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attaquer: 0
+  bloquer: 0
+  soigner: 1
 --- !u!114 &4983649584093250486
 MonoBehaviour:
   m_ObjectHideFlags: 0
