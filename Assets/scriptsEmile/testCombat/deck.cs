@@ -124,7 +124,7 @@ public class deck : MonoBehaviour
 
     public void Recharger()
     {
-            deckActuel = deckTrash;
-            deckActuel = librairie.GetComponent<librairieDeck>().SufflerCartes(deckActuel);
+        deckActuel = deckTrash;
+        deckActuel = librairie.GetComponent<librairieDeck>().SufflerCartes(deckActuel);
     }
 }
