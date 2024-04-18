@@ -38,8 +38,12 @@ public class Soin : MonoBehaviour
             vie += 2;
             personnage.GetComponent<statistiquesPersonnage>().vie = vie;
             estClique = false;
+
             GameObject carteADuplique = GetComponent<carteProfil>().prefab;
+            int indexASupprimer = GetComponent<carteProfil>().index;
             deck.GetComponent<deck>().deckTrash = librairie.GetComponent<librairieDeck>().ajouterCarte(deck.GetComponent<deck>().deckTrash, carteADuplique);
+            deck.GetComponent<deck>().deckTrash = librairie.GetComponent<librairieDeck>().enleverCarte(deck.GetComponent<deck>().deckTrash, indexASupprimer);
+            deck.GetComponent<deck>().OrganiserDeckJoueur();
             Destroy(gameObject);
     }
 }

@@ -113,6 +113,7 @@ public class deck : MonoBehaviour
         int index = 0;
         foreach (var carte in deckJoueur)
         {
+            carte.GetComponent<carteProfil>().index = index;
             index++;
             Vector2 pos;
             pos.x = -270 + (distanceEntreCartes * index);
