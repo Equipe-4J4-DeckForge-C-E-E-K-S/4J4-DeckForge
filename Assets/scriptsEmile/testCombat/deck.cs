@@ -37,6 +37,25 @@ public class deck : MonoBehaviour
         deckActuel = deckLoc;
     }
 
+    void Update()
+    {
+        compteurCartes.text = deckActuel.Length.ToString();
+        compteurPoubelle.text = deckTrash.Length.ToString();
+
+        if (tourJoueur)
+        {
+            if (tourJoueurCommence)
+            {
+                CommenceTourJoueur();
+            }
+        }
+        else
+        {
+            tourJoueurCommence = true;
+        }
+    }
+
+
     // Update is called once per frame
     public void CommenceTourJoueur()
     {
@@ -53,7 +72,7 @@ public class deck : MonoBehaviour
                 carteADupliquer = deckActuel[0];
                 carteDupliquee = Instantiate(carteADupliquer, canvas);
                 IdentifierCarte(carteDupliquee);
-                deckJoueur = librairie.GetComponent<librairieDeck>().ajouterCarte(deckActuel, carteDupliquee);
+                deckJoueur = librairie.GetComponent<librairieDeck>().ajouterCarte(deckJoueur, carteDupliquee);
                 deckActuel = librairie.GetComponent<librairieDeck>().enleverCarte(deckActuel, 0);
             }
         }
@@ -88,7 +107,7 @@ public class deck : MonoBehaviour
 
     public void OrganiserDeckJoueur()
     {
-        float distanceEntreCartes = ((540 - (deckJoueur.Length * 20)) / (deckJoueur.Length + 1)) - 270;
+        float distanceEntreCartes = ((540 - (deckJoueur.Length * 20)) / (deckJoueur.Length + 1));
 
         int index = 0;
         foreach (var carte in deckJoueur)
@@ -96,7 +115,7 @@ public class deck : MonoBehaviour
             index++;
             Vector2 pos;
             pos.x = -270 + (distanceEntreCartes * index);
-            pos.y = -110;
+            pos.y = -150;
             carte.GetComponent<RectTransform>().anchoredPosition = new Vector2(pos.x, pos.y);
         }
     }

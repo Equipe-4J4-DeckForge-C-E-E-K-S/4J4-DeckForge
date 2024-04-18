@@ -13,8 +13,6 @@ public class Bloque : MonoBehaviour
     public GameObject librairie;
     public GameObject deck;
 
-    public GameObject debugGameObject;
-
     // Start is called before the first frame update
     void Start()
     {
