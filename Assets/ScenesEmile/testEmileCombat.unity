@@ -3954,6 +3954,7 @@ MonoBehaviour:
   canvas: {fileID: 165976861}
   carteADupliquer: {fileID: 0}
   carteDupliquee: {fileID: 0}
+  personnage: {fileID: 587014299}
   deckStatDebug:
   - {fileID: 2795280334094779141, guid: 8de6c3545fed386498b1e212633d5b17, type: 3}
   - {fileID: 2795280334094779141, guid: 9b782ea43faa01e498d4f026c00689b0, type: 3}
@@ -3965,6 +3966,7 @@ MonoBehaviour:
   deckLoc: []
   deckTrash: []
   deckActuel: []
+  deckJoueur: []
   compteurCartes: {fileID: 923351298}
   compteurPoubelle: {fileID: 698751385}
   tourJoueur: 1
