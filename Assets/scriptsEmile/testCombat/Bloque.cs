@@ -13,12 +13,10 @@ public class Bloque : MonoBehaviour
     public GameObject librairie;
     public GameObject deck;
 
-    public GameObject debugGameObject;
-
     // Start is called before the first frame update
     void Start()
     {
-        
+        estClique = true;
     }
 
     // Update is called once per frame
@@ -42,7 +40,9 @@ public class Bloque : MonoBehaviour
             personnage.GetComponent<statistiquesPersonnage>().defense = defense;
             estClique = false;
 
-            deck.GetComponent<deck>().deckTrash = librairie.GetComponent<librairieDeck>().ajouterCarte(deck.GetComponent<deck>().deckTrash, gameObject);
+            //GameObject carteDupliquee = Instantiate(gameObject, deck.GetComponent<deck>().canvas);
+            //carteDupliquee.SetActive(false);
+            deck.GetComponent<deck>().deckTrash = librairie.GetComponent<librairieDeck>().ajouterCarte(deck.GetComponent<deck>().deckTrash, /*carteDupliquee*/ gameObject);
             Destroy(gameObject);
         }
     }
