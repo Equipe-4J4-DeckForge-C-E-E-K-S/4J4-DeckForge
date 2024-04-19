@@ -389,3 +389,459 @@ Received Import Request.
 Start importing Assets/3DModelChristopher/Skyboxes/Skyboxes/Sunset/sky_sunset.jpg using Guid(265257b693bc7994bae75f7d2c3ed8c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89ee228bac9580a7f972d502b2720739') in 0.027428 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 348.404388 seconds.
+  path: Assets/_PoiyomiShaders
+  artifactKey: Guid(10adc09ccb2e69c4b9ce35e5753f3853) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_PoiyomiShaders using Guid(10adc09ccb2e69c4b9ce35e5753f3853) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b1a1268481f2c2221b096e9aca6546d') in 0.001052 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 21.900741 seconds.
+  path: Assets/UniversalRenderPipelineGlobalSettings.asset
+  artifactKey: Guid(878589a08989c3c49bdf9f0091e6386c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniversalRenderPipelineGlobalSettings.asset using Guid(878589a08989c3c49bdf9f0091e6386c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78554940e9cb9cab9d9078598a28677f') in 0.008636 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 9.629661 seconds.
+  path: Assets/csc.rsp
+  artifactKey: Guid(6e9d8530f07c3ec4d80ae54b46aa0bc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/csc.rsp using Guid(6e9d8530f07c3ec4d80ae54b46aa0bc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac70416193202b55a25911a2d91ac1ab') in 0.000799 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 25.618258 seconds.
+  path: Assets/lilToon
+  artifactKey: Guid(05d1d116436047941ad97d1b9064ee05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/lilToon using Guid(05d1d116436047941ad97d1b9064ee05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bd2f169d7d554e1b47dd5ca7e95e3c7') in 0.001401 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.734 seconds
+Refreshing native plugins compatible for Editor in 9.10 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.584 seconds
+Domain Reload Profiling: 5310ms
+	BeginReloadAssembly (612ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (16ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (1ms)
+		CreateAndSetChildDomain (307ms)
+	RebuildCommonClasses (50ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (54ms)
+	LoadAllAssembliesAndSetupDomain (998ms)
+		LoadAssemblies (1097ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (95ms)
+			TypeCache.Refresh (30ms)
+				TypeCache.ScanAssembly (3ms)
+			ScanForSourceGeneratedMonoScriptInfo (44ms)
+			ResolveRequiredComponents (19ms)
+	FinalizeReload (3584ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (819ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (13ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (227ms)
+			ProcessInitializeOnLoadAttributes (435ms)
+			ProcessInitializeOnLoadMethodAttributes (115ms)
+			AfterProcessingInitializeOnLoad (21ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Shader '.poiyomi/Old Versions/Patreon/Tessellation/Outlines Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Wireframe Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Tessellation/Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Outline Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Tessellation/Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Outline Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Wireframe Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Wireframe Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Tessellation/Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Outline Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Wireframe Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Tessellation/Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Tessellation/Outlines Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Outline Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Refreshing native plugins compatible for Editor in 10.19 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5243 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 183 unused Assets / (172.6 MB). Loaded Objects now: 5796.
+Memory consumption went from 394.5 MB to 221.9 MB.
+Total: 65.557500 ms (FindLiveObjects: 0.544100 ms CreateObjectMapping: 0.787500 ms MarkObjects: 3.292000 ms  DeleteObjects: 60.932500 ms)
+
+Prepare: number of updated asset objects reloaded= 24
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 64.345453 seconds.
+  path: Assets/_PoiyomiShaders_Christopher
+  artifactKey: Guid(10adc09ccb2e69c4b9ce35e5753f3853) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_PoiyomiShaders_Christopher using Guid(10adc09ccb2e69c4b9ce35e5753f3853) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08959adca14a4089beb801823e7dbedb') in 0.003905 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Assembly with name 'Poi.Tools' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/poi-tools/PoiToolsDefinition.asmdef)
+Assembly with name 'Poi.Tools' already exists (Assets/_PoiyomiShaders/Scripts/poi-tools/PoiToolsDefinition.asmdef)
+Assembly with name 'ThryAssemblyDefinition' already exists (Assets/_PoiyomiShaders/Scripts/ThryEditor/Editor/ThryAssemblyDefinition.asmdef)
+Assembly with name 'ThryAssemblyDefinition' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/ThryEditor/Editor/ThryAssemblyDefinition.asmdef)
+Assembly with name 'Runtime' already exists (Assets/_PoiyomiShaders/TPS/Scripts/Runtime/Runtime.asmdef)
+Assembly with name 'Runtime' already exists (Assets/_PoiyomiShaders_Christopher/TPS/Scripts/Runtime/Runtime.asmdef)
+Assembly with name 'Poiyomi.ModularShaderSystem' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/Editor/ModularShaderSystem/ModularShaderSystemDefinition.asmdef)
+Assembly with name 'Poiyomi.ModularShaderSystem' already exists (Assets/_PoiyomiShaders/Scripts/Editor/ModularShaderSystem/ModularShaderSystemDefinition.asmdef)
+Assembly with name 'Poi.Tools' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/poi-tools/PoiToolsDefinition.asmdef)
+Assembly with name 'Poi.Tools' already exists (Assets/_PoiyomiShaders/Scripts/poi-tools/PoiToolsDefinition.asmdef)
+Assembly with name 'ThryAssemblyDefinition' already exists (Assets/_PoiyomiShaders/Scripts/ThryEditor/Editor/ThryAssemblyDefinition.asmdef)
+Assembly with name 'ThryAssemblyDefinition' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/ThryEditor/Editor/ThryAssemblyDefinition.asmdef)
+Assembly with name 'Runtime' already exists (Assets/_PoiyomiShaders/TPS/Scripts/Runtime/Runtime.asmdef)
+Assembly with name 'Runtime' already exists (Assets/_PoiyomiShaders_Christopher/TPS/Scripts/Runtime/Runtime.asmdef)
+Assembly with name 'Poiyomi.ModularShaderSystem' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/Editor/ModularShaderSystem/ModularShaderSystemDefinition.asmdef)
+Assembly with name 'Poiyomi.ModularShaderSystem' already exists (Assets/_PoiyomiShaders/Scripts/Editor/ModularShaderSystem/ModularShaderSystemDefinition.asmdef)
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.824 seconds
+Refreshing native plugins compatible for Editor in 8.87 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Assembly with name 'Poi.Tools' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/poi-tools/PoiToolsDefinition.asmdef)
+Assembly with name 'Poi.Tools' already exists (Assets/_PoiyomiShaders/Scripts/poi-tools/PoiToolsDefinition.asmdef)
+Assembly with name 'ThryAssemblyDefinition' already exists (Assets/_PoiyomiShaders/Scripts/ThryEditor/Editor/ThryAssemblyDefinition.asmdef)
+Assembly with name 'ThryAssemblyDefinition' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/ThryEditor/Editor/ThryAssemblyDefinition.asmdef)
+Assembly with name 'Runtime' already exists (Assets/_PoiyomiShaders/TPS/Scripts/Runtime/Runtime.asmdef)
+Assembly with name 'Runtime' already exists (Assets/_PoiyomiShaders_Christopher/TPS/Scripts/Runtime/Runtime.asmdef)
+Assembly with name 'Poiyomi.ModularShaderSystem' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/Editor/ModularShaderSystem/ModularShaderSystemDefinition.asmdef)
+Assembly with name 'Poiyomi.ModularShaderSystem' already exists (Assets/_PoiyomiShaders/Scripts/Editor/ModularShaderSystem/ModularShaderSystemDefinition.asmdef)
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.644 seconds
+Domain Reload Profiling: 3460ms
+	BeginReloadAssembly (241ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (56ms)
+	RebuildCommonClasses (56ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (55ms)
+	LoadAllAssembliesAndSetupDomain (448ms)
+		LoadAssemblies (528ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (59ms)
+			TypeCache.Refresh (19ms)
+				TypeCache.ScanAssembly (6ms)
+			ScanForSourceGeneratedMonoScriptInfo (26ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (2646ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (802ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (13ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (240ms)
+			ProcessInitializeOnLoadAttributes (431ms)
+			ProcessInitializeOnLoadMethodAttributes (96ms)
+			AfterProcessingInitializeOnLoad (16ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Shader '.poiyomi/Old Versions/Patreon/Tessellation/Outlines Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Wireframe Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Tessellation/Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Outline Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Tessellation/Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Outline Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Wireframe Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Tessellation/Outlines Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Tessellation/Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Wireframe Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Outline Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Wireframe Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Tessellation/Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Outline Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Refreshing native plugins compatible for Editor in 14.04 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5246 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 138 unused Assets / (172.5 MB). Loaded Objects now: 5774.
+Memory consumption went from 385.4 MB to 212.9 MB.
+Total: 100.035500 ms (FindLiveObjects: 0.752500 ms CreateObjectMapping: 1.112300 ms MarkObjects: 5.965100 ms  DeleteObjects: 92.203400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Assembly with name 'Poi.Tools' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/poi-tools/PoiToolsDefinition.asmdef)
+Assembly with name 'Poi.Tools' already exists (Assets/_PoiyomiShaders/Scripts/poi-tools/PoiToolsDefinition.asmdef)
+Assembly with name 'ThryAssemblyDefinition' already exists (Assets/_PoiyomiShaders/Scripts/ThryEditor/Editor/ThryAssemblyDefinition.asmdef)
+Assembly with name 'ThryAssemblyDefinition' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/ThryEditor/Editor/ThryAssemblyDefinition.asmdef)
+Assembly with name 'Runtime' already exists (Assets/_PoiyomiShaders/TPS/Scripts/Runtime/Runtime.asmdef)
+Assembly with name 'Runtime' already exists (Assets/_PoiyomiShaders_Christopher/TPS/Scripts/Runtime/Runtime.asmdef)
+Assembly with name 'Poiyomi.ModularShaderSystem' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/Editor/ModularShaderSystem/ModularShaderSystemDefinition.asmdef)
+Assembly with name 'Poiyomi.ModularShaderSystem' already exists (Assets/_PoiyomiShaders/Scripts/Editor/ModularShaderSystem/ModularShaderSystemDefinition.asmdef)
+Assembly with name 'Poi.Tools' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/poi-tools/PoiToolsDefinition.asmdef)
+Assembly with name 'Poi.Tools' already exists (Assets/_PoiyomiShaders/Scripts/poi-tools/PoiToolsDefinition.asmdef)
+Assembly with name 'ThryAssemblyDefinition' already exists (Assets/_PoiyomiShaders/Scripts/ThryEditor/Editor/ThryAssemblyDefinition.asmdef)
+Assembly with name 'ThryAssemblyDefinition' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/ThryEditor/Editor/ThryAssemblyDefinition.asmdef)
+Assembly with name 'Runtime' already exists (Assets/_PoiyomiShaders/TPS/Scripts/Runtime/Runtime.asmdef)
+Assembly with name 'Runtime' already exists (Assets/_PoiyomiShaders_Christopher/TPS/Scripts/Runtime/Runtime.asmdef)
+Assembly with name 'Poiyomi.ModularShaderSystem' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/Editor/ModularShaderSystem/ModularShaderSystemDefinition.asmdef)
+Assembly with name 'Poiyomi.ModularShaderSystem' already exists (Assets/_PoiyomiShaders/Scripts/Editor/ModularShaderSystem/ModularShaderSystemDefinition.asmdef)
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.911 seconds
+Refreshing native plugins compatible for Editor in 9.68 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Assembly with name 'Poi.Tools' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/poi-tools/PoiToolsDefinition.asmdef)
+Assembly with name 'Poi.Tools' already exists (Assets/_PoiyomiShaders/Scripts/poi-tools/PoiToolsDefinition.asmdef)
+Assembly with name 'ThryAssemblyDefinition' already exists (Assets/_PoiyomiShaders/Scripts/ThryEditor/Editor/ThryAssemblyDefinition.asmdef)
+Assembly with name 'ThryAssemblyDefinition' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/ThryEditor/Editor/ThryAssemblyDefinition.asmdef)
+Assembly with name 'Runtime' already exists (Assets/_PoiyomiShaders/TPS/Scripts/Runtime/Runtime.asmdef)
+Assembly with name 'Runtime' already exists (Assets/_PoiyomiShaders_Christopher/TPS/Scripts/Runtime/Runtime.asmdef)
+Assembly with name 'Poiyomi.ModularShaderSystem' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/Editor/ModularShaderSystem/ModularShaderSystemDefinition.asmdef)
+Assembly with name 'Poiyomi.ModularShaderSystem' already exists (Assets/_PoiyomiShaders/Scripts/Editor/ModularShaderSystem/ModularShaderSystemDefinition.asmdef)
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.695 seconds
+Domain Reload Profiling: 3596ms
+	BeginReloadAssembly (285ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (67ms)
+	RebuildCommonClasses (47ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (59ms)
+	LoadAllAssembliesAndSetupDomain (493ms)
+		LoadAssemblies (599ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (61ms)
+			TypeCache.Refresh (18ms)
+				TypeCache.ScanAssembly (7ms)
+			ScanForSourceGeneratedMonoScriptInfo (27ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (2696ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (751ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (8ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (221ms)
+			ProcessInitializeOnLoadAttributes (411ms)
+			ProcessInitializeOnLoadMethodAttributes (91ms)
+			AfterProcessingInitializeOnLoad (14ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Shader '.poiyomi/Old Versions/Patreon/Tessellation/Outlines Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Wireframe Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Tessellation/Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Outline Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Tessellation/Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Outline Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Wireframe Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Wireframe Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Outline Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Tessellation/Outlines Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Tessellation/Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Outline Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Tessellation/Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Wireframe Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Refreshing native plugins compatible for Editor in 8.28 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5246 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 137 unused Assets / (172.5 MB). Loaded Objects now: 5777.
+Memory consumption went from 387.4 MB to 214.9 MB.
+Total: 65.832400 ms (FindLiveObjects: 0.673000 ms CreateObjectMapping: 0.905400 ms MarkObjects: 3.962400 ms  DeleteObjects: 60.289400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 29.994229 seconds.
+  path: Assets/ShadersChristopher
+  artifactKey: Guid(2ad0b735cd0474e4e96d3325b1f0f796) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShadersChristopher using Guid(2ad0b735cd0474e4e96d3325b1f0f796) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc71122f9dc084a1836276888e67fc58') in 0.002064 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Assembly with name 'Poi.Tools' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/poi-tools/PoiToolsDefinition.asmdef)
+Assembly with name 'Poi.Tools' already exists (Assets/_PoiyomiShaders/Scripts/poi-tools/PoiToolsDefinition.asmdef)
+Assembly with name 'ThryAssemblyDefinition' already exists (Assets/_PoiyomiShaders/Scripts/ThryEditor/Editor/ThryAssemblyDefinition.asmdef)
+Assembly with name 'ThryAssemblyDefinition' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/ThryEditor/Editor/ThryAssemblyDefinition.asmdef)
+Assembly with name 'Runtime' already exists (Assets/_PoiyomiShaders/TPS/Scripts/Runtime/Runtime.asmdef)
+Assembly with name 'Runtime' already exists (Assets/_PoiyomiShaders_Christopher/TPS/Scripts/Runtime/Runtime.asmdef)
+Assembly with name 'Poiyomi.ModularShaderSystem' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/Editor/ModularShaderSystem/ModularShaderSystemDefinition.asmdef)
+Assembly with name 'Poiyomi.ModularShaderSystem' already exists (Assets/_PoiyomiShaders/Scripts/Editor/ModularShaderSystem/ModularShaderSystemDefinition.asmdef)
+Assembly with name 'Poi.Tools' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/poi-tools/PoiToolsDefinition.asmdef)
+Assembly with name 'Poi.Tools' already exists (Assets/_PoiyomiShaders/Scripts/poi-tools/PoiToolsDefinition.asmdef)
+Assembly with name 'ThryAssemblyDefinition' already exists (Assets/_PoiyomiShaders/Scripts/ThryEditor/Editor/ThryAssemblyDefinition.asmdef)
+Assembly with name 'ThryAssemblyDefinition' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/ThryEditor/Editor/ThryAssemblyDefinition.asmdef)
+Assembly with name 'Runtime' already exists (Assets/_PoiyomiShaders/TPS/Scripts/Runtime/Runtime.asmdef)
+Assembly with name 'Runtime' already exists (Assets/_PoiyomiShaders_Christopher/TPS/Scripts/Runtime/Runtime.asmdef)
+Assembly with name 'Poiyomi.ModularShaderSystem' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/Editor/ModularShaderSystem/ModularShaderSystemDefinition.asmdef)
+Assembly with name 'Poiyomi.ModularShaderSystem' already exists (Assets/_PoiyomiShaders/Scripts/Editor/ModularShaderSystem/ModularShaderSystemDefinition.asmdef)
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.841 seconds
+Refreshing native plugins compatible for Editor in 8.43 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Assembly with name 'Poi.Tools' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/poi-tools/PoiToolsDefinition.asmdef)
+Assembly with name 'Poi.Tools' already exists (Assets/_PoiyomiShaders/Scripts/poi-tools/PoiToolsDefinition.asmdef)
+Assembly with name 'ThryAssemblyDefinition' already exists (Assets/_PoiyomiShaders/Scripts/ThryEditor/Editor/ThryAssemblyDefinition.asmdef)
+Assembly with name 'ThryAssemblyDefinition' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/ThryEditor/Editor/ThryAssemblyDefinition.asmdef)
+Assembly with name 'Runtime' already exists (Assets/_PoiyomiShaders/TPS/Scripts/Runtime/Runtime.asmdef)
+Assembly with name 'Runtime' already exists (Assets/_PoiyomiShaders_Christopher/TPS/Scripts/Runtime/Runtime.asmdef)
+Assembly with name 'Poiyomi.ModularShaderSystem' already exists (Assets/_PoiyomiShaders_Christopher/Scripts/Editor/ModularShaderSystem/ModularShaderSystemDefinition.asmdef)
+Assembly with name 'Poiyomi.ModularShaderSystem' already exists (Assets/_PoiyomiShaders/Scripts/Editor/ModularShaderSystem/ModularShaderSystemDefinition.asmdef)
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.739 seconds
+Domain Reload Profiling: 3569ms
+	BeginReloadAssembly (272ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (68ms)
+	RebuildCommonClasses (54ms)
+	RebuildNativeTypeToScriptingClass (26ms)
+	initialDomainReloadingComplete (60ms)
+	LoadAllAssembliesAndSetupDomain (418ms)
+		LoadAssemblies (540ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (23ms)
+			TypeCache.Refresh (10ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (2740ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (754ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (9ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (235ms)
+			ProcessInitializeOnLoadAttributes (390ms)
+			ProcessInitializeOnLoadMethodAttributes (96ms)
+			AfterProcessingInitializeOnLoad (13ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Shader '.poiyomi/Old Versions/Patreon/Tessellation/Outlines Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Wireframe Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Tessellation/Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Outline Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Tessellation/Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Outline Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Wireframe Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Tessellation/Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Outline Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Wireframe Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Particle2/Outline Transparent': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Tessellation/Outlines Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Wireframe Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Shader '.poiyomi/Old Versions/Patreon/Tessellation/Cutout': fallback shader 'Toon/Lit Cutout (Double)' not found
+Refreshing native plugins compatible for Editor in 10.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5246 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 137 unused Assets / (172.5 MB). Loaded Objects now: 5780.
+Memory consumption went from 389.4 MB to 216.8 MB.
+Total: 68.820900 ms (FindLiveObjects: 0.525900 ms CreateObjectMapping: 0.691800 ms MarkObjects: 3.646500 ms  DeleteObjects: 63.955500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
