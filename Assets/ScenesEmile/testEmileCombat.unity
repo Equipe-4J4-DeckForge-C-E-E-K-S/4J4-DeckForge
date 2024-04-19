@@ -3958,13 +3958,13 @@ MonoBehaviour:
   carteDupliquee: {fileID: 0}
   personnage: {fileID: 587014299}
   deckStatDebug:
-  - {fileID: 2795280334094779141, guid: 8de6c3545fed386498b1e212633d5b17, type: 3}
-  - {fileID: 2795280334094779141, guid: 9b782ea43faa01e498d4f026c00689b0, type: 3}
-  - {fileID: 2795280334094779141, guid: e28ec1095c2770c4d894ed9d3880f39d, type: 3}
-  - {fileID: 2795280334094779141, guid: 86245e886d863dc448c36eb4f5a71d57, type: 3}
-  - {fileID: 2795280334094779141, guid: 0d10c0e43d4f4b34081f818d3492813a, type: 3}
-  - {fileID: 2795280334094779141, guid: 58b08a6e45b21a24c8a187b23f4986ba, type: 3}
-  - {fileID: 2795280334094779141, guid: c40e11c37c3099d448c5ea3242e7a1cb, type: 3}
+  - {fileID: 2795280334094779141, guid: 836491653bf62ab4ebc31da4938add55, type: 3}
+  - {fileID: 2795280334094779141, guid: 64051ff1a7c8345408180dfe268fdcd8, type: 3}
+  - {fileID: 2795280334094779141, guid: bd7ca5955e5812b488a2259e973cd7d6, type: 3}
+  - {fileID: 2795280334094779141, guid: 24bdcbe53c1bc104f8fb5b5e4bfff9b3, type: 3}
+  - {fileID: 2795280334094779141, guid: 0d28741c6b3b6be46a549e0021608e07, type: 3}
+  - {fileID: 2795280334094779141, guid: c02512c498a05fe409e0e60404a68afe, type: 3}
+  - {fileID: 2795280334094779141, guid: 10c9a2c08b5062c46a528466b3c2a8f7, type: 3}
   deckLoc: []
   deckTrash: []
   deckActuel: []
