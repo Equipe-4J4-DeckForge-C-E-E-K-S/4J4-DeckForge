@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -9218843098922917925}
   - component: {fileID: 657841198874494688}
   m_Layer: 0
-  m_Name: carte21
+  m_Name: carte21BON
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,7 +110,8 @@ MonoBehaviour:
   attaquer: 1
   bloquer: 0
   soigner: 0
-  prefab: {fileID: 2795280334094779141}
+  prefab: {fileID: 2795280334094779141, guid: ee6e10e61ebc94347b470d7ab8e82504, type: 3}
+  index: 0
 --- !u!114 &657841198874494688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,6 +131,8 @@ MonoBehaviour:
   enAttaque: 0
   librairie: {fileID: 0}
   deck: {fileID: 0}
+  carteADuplique: {fileID: 0}
+  indexASupprimer: 0
 --- !u!1 &4258141575620355410
 GameObject:
   m_ObjectHideFlags: 0

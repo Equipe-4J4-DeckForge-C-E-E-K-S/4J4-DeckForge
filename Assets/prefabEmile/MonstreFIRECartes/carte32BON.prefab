@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2985322214681882930}
-  - component: {fileID: -8703618348635923620}
-  - component: {fileID: -3437439304529206185}
-  - component: {fileID: 5000310838698707375}
+  - component: {fileID: 2361512451194056934}
+  - component: {fileID: -4263095052145398143}
+  - component: {fileID: 3661578974048222049}
   m_Layer: 0
-  m_Name: carte23
+  m_Name: carte32BON
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,7 +39,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &-8703618348635923620
+--- !u!114 &2361512451194056934
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83,7 +83,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5000310838698707375}
+      - m_Target: {fileID: 3661578974048222049}
         m_TargetAssemblyTypeName: Soin, Assembly-CSharp
         m_MethodName: Soigner
         m_Mode: 1
@@ -95,7 +95,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &-3437439304529206185
+--- !u!114 &-4263095052145398143
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,8 +110,9 @@ MonoBehaviour:
   attaquer: 0
   bloquer: 0
   soigner: 1
-  prefab: {fileID: 2795280334094779141}
---- !u!114 &5000310838698707375
+  prefab: {fileID: 2795280334094779141, guid: 1ee3250d1fe7c764eb108af23f1a664b, type: 3}
+  index: 0
+--- !u!114 &3661578974048222049
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -193,7 +194,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7dc888fad1fee0340a5e2c7ef29183df, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9975a6208a4abe0449cc25e21318abc6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
