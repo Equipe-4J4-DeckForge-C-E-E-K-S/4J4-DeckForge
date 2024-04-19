@@ -127,5 +127,10 @@ public class deck : MonoBehaviour
     {
             deckActuel = deckTrash;
             deckActuel = librairie.GetComponent<librairieDeck>().SufflerCartes(deckActuel);
+
+        foreach (GameObject carte in deckTrash)
+        {
+            deckTrash = librairie.GetComponent<librairieDeck>().enleverCarte(deckTrash, 0);
+        }
     }
 }
