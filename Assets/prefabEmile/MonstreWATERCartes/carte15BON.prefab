@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2985322214681882930}
-  - component: {fileID: 5817306999480408906}
-  - component: {fileID: -6995314384215465452}
-  - component: {fileID: 3795873416486447969}
+  - component: {fileID: -1690897497339508008}
+  - component: {fileID: -1132575801380136291}
+  - component: {fileID: 3483619997636172971}
   m_Layer: 0
-  m_Name: carte12
+  m_Name: carte15BON
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,7 +39,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5817306999480408906
+--- !u!114 &-1690897497339508008
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83,7 +83,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3795873416486447969}
+      - m_Target: {fileID: 3483619997636172971}
         m_TargetAssemblyTypeName: Attaque, Assembly-CSharp
         m_MethodName: Attaquer
         m_Mode: 1
@@ -95,7 +95,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &-6995314384215465452
+--- !u!114 &-1132575801380136291
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,8 +110,9 @@ MonoBehaviour:
   attaquer: 1
   bloquer: 0
   soigner: 0
-  prefab: {fileID: 2795280334094779141}
---- !u!114 &3795873416486447969
+  prefab: {fileID: 2795280334094779141, guid: a779ff5fbabde10499ed12dce75d83df, type: 3}
+  index: 0
+--- !u!114 &3483619997636172971
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,6 +131,8 @@ MonoBehaviour:
   enAttaque: 0
   librairie: {fileID: 0}
   deck: {fileID: 0}
+  carteADuplique: {fileID: 0}
+  indexASupprimer: 0
 --- !u!1 &4258141575620355410
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,7 +198,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4e44f03ca72f83647896ac1092d1eb3d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 644d68ded8099f8449d198ee16f89e94, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

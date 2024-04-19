@@ -110,7 +110,8 @@ MonoBehaviour:
   attaquer: 1
   bloquer: 0
   soigner: 0
-  prefab: {fileID: 2795280334094779141}
+  prefab: {fileID: 2795280334094779141, guid: 3f907f2d101396f4d8d25c9748edc56f, type: 3}
+  index: 0
 --- !u!114 &2397307166611459031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,6 +131,8 @@ MonoBehaviour:
   enAttaque: 0
   librairie: {fileID: 0}
   deck: {fileID: 0}
+  carteADuplique: {fileID: 0}
+  indexASupprimer: 0
 --- !u!1 &4258141575620355410
 GameObject:
   m_ObjectHideFlags: 0

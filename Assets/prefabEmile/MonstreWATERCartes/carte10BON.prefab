@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2985322214681882930}
-  - component: {fileID: -2722830136735055445}
-  - component: {fileID: -635296265250760903}
-  - component: {fileID: 1830704228091055224}
+  - component: {fileID: 7142284354549182610}
+  - component: {fileID: -953575350114466286}
+  - component: {fileID: 2458437639241335844}
   m_Layer: 0
-  m_Name: carte20
+  m_Name: carte10BON
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,7 +39,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &-2722830136735055445
+--- !u!114 &7142284354549182610
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83,9 +83,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1830704228091055224}
-        m_TargetAssemblyTypeName: Soin, Assembly-CSharp
-        m_MethodName: Soigner
+      - m_Target: {fileID: 2458437639241335844}
+        m_TargetAssemblyTypeName: Bloque, Assembly-CSharp
+        m_MethodName: Bloquer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -95,7 +95,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &-635296265250760903
+--- !u!114 &-953575350114466286
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,10 +108,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attaquer: 0
-  bloquer: 0
-  soigner: 1
-  prefab: {fileID: 2795280334094779141}
---- !u!114 &1830704228091055224
+  bloquer: 1
+  soigner: 0
+  prefab: {fileID: 2795280334094779141, guid: e8e46abcc0b0ffd498c2eeeeaad3a7f1, type: 3}
+  index: 0
+--- !u!114 &2458437639241335844
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,11 +121,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2795280334094779141}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a683e41112438c245bc0fc3e292bf8c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 32adebcc1c9ba80449ee2165e309a95b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   personnage: {fileID: 0}
-  vie: 0
+  defense: 0
   estClique: 0
   librairie: {fileID: 0}
   deck: {fileID: 0}
@@ -193,7 +194,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3c89bf28daf444542a57db1793ac2f90, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1e96c40670ab53e4ab3be129d97b893d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

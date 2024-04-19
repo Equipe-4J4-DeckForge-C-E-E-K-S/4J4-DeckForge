@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2985322214681882930}
-  - component: {fileID: 7142284354549182610}
-  - component: {fileID: -953575350114466286}
-  - component: {fileID: 2458437639241335844}
+  - component: {fileID: 5349661563972258253}
+  - component: {fileID: 3902018174000718976}
+  - component: {fileID: 5504777535972204732}
   m_Layer: 0
-  m_Name: carte10
+  m_Name: carte13BON
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,7 +39,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7142284354549182610
+--- !u!114 &5349661563972258253
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83,7 +83,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2458437639241335844}
+      - m_Target: {fileID: 5504777535972204732}
         m_TargetAssemblyTypeName: Bloque, Assembly-CSharp
         m_MethodName: Bloquer
         m_Mode: 1
@@ -95,7 +95,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &-953575350114466286
+--- !u!114 &3902018174000718976
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,8 +110,9 @@ MonoBehaviour:
   attaquer: 0
   bloquer: 1
   soigner: 0
-  prefab: {fileID: 2795280334094779141}
---- !u!114 &2458437639241335844
+  prefab: {fileID: 2795280334094779141, guid: 0507948adcebc6246a7526320d2c623c, type: 3}
+  index: 0
+--- !u!114 &5504777535972204732
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -193,7 +194,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1e96c40670ab53e4ab3be129d97b893d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a099228f80570a447b7d6cd958d53dc8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
