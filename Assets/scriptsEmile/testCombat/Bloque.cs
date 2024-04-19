@@ -43,8 +43,9 @@ public class Bloque : MonoBehaviour
             GameObject carteADuplique = GetComponent<carteProfil>().prefab;
             int indexASupprimer = GetComponent<carteProfil>().index;
             deck.GetComponent<deck>().deckTrash = librairie.GetComponent<librairieDeck>().ajouterCarte(deck.GetComponent<deck>().deckTrash, carteADuplique);
-            deck.GetComponent<deck>().deckTrash = librairie.GetComponent<librairieDeck>().enleverCarte(deck.GetComponent<deck>().deckTrash, indexASupprimer);
+            deck.GetComponent<deck>().deckJoueur = librairie.GetComponent<librairieDeck>().enleverCarte(deck.GetComponent<deck>().deckJoueur, indexASupprimer);
             deck.GetComponent<deck>().OrganiserDeckJoueur();
+            Debug.Log("oki");
             Destroy(gameObject);
         }
     }

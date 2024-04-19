@@ -866,7 +866,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &194977988
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1000,6 +1000,8 @@ MonoBehaviour:
   enAttaque: 0
   librairie: {fileID: 1712367415}
   deck: {fileID: 1442245924}
+  carteADuplique: {fileID: 0}
+  indexASupprimer: 0
 --- !u!114 &194977993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3327,7 +3329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1404209752
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3992,7 +3994,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1532336274
 RectTransform:
   m_ObjectHideFlags: 0
