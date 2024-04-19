@@ -14,6 +14,9 @@ public class Attaque : MonoBehaviour
     public GameObject librairie;
     public GameObject deck;
 
+    public GameObject carteADuplique;
+    public int indexASupprimer;
+
 
 
     // Start is called before the first frame update
@@ -43,8 +46,13 @@ public class Attaque : MonoBehaviour
             cibleTrouve = false;
             personnage.GetComponent<comportementJoueur>().cibleTrouve = cibleTrouve;
 
-            deck.GetComponent<deck>().deckTrash = librairie.GetComponent<librairieDeck>().ajouterCarte(deck.GetComponent<deck>().deckTrash, gameObject);
-            //Destroy(gameObject);
+            carteADuplique = GetComponent<carteProfil>().prefab;
+            indexASupprimer = GetComponent<carteProfil>().index;
+
+            deck.GetComponent<deck>().deckTrash = librairie.GetComponent<librairieDeck>().ajouterCarte(deck.GetComponent<deck>().deckTrash, carteADuplique);
+            deck.GetComponent<deck>().deckJoueur = librairie.GetComponent<librairieDeck>().enleverCarte(deck.GetComponent<deck>().deckJoueur, indexASupprimer);
+            deck.GetComponent<deck>().OrganiserDeckJoueur();
+            Destroy(gameObject);
         }
     }
 

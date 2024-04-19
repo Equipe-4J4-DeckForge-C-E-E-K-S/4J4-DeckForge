@@ -113,6 +113,7 @@ public class deck : MonoBehaviour
         int index = 0;
         foreach (var carte in deckJoueur)
         {
+            carte.GetComponent<carteProfil>().index = index;
             index++;
             Vector2 pos;
             pos.x = -270 + (distanceEntreCartes * index);
@@ -124,7 +125,12 @@ public class deck : MonoBehaviour
 
     public void Recharger()
     {
-        deckActuel = deckTrash;
-        deckActuel = librairie.GetComponent<librairieDeck>().SufflerCartes(deckActuel);
+            deckActuel = deckTrash;
+            deckActuel = librairie.GetComponent<librairieDeck>().SufflerCartes(deckActuel);
+
+        foreach (GameObject carte in deckTrash)
+        {
+            deckTrash = librairie.GetComponent<librairieDeck>().enleverCarte(deckTrash, 0);
+        }
     }
 }
