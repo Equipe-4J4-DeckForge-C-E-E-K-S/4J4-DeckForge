@@ -1,29 +1,44 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public float delayBeforeLoading = 2f; // Adjust the delay time as needed
-    public float fadeDuration = 1f; // Duration of the crossfade effect
+    public float fadeDuration = 2f;
+    public GameObject loadingScreen; // Reference to your loading screen canvas
 
     public void PlayGame()
     {
-        // Start the delay coroutine
-        StartCoroutine(DelayedLoadScene());
+        StartCoroutine(TransitionToNextScene());
     }
 
-    IEnumerator DelayedLoadScene()
+    IEnumerator TransitionToNextScene()
     {
         // Fade out
         yield return StartCoroutine(FadeOut(fadeDuration));
 
-        // Load the next scene in the build index
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        // Activate the loading screen
+        loadingScreen.SetActive(true);
+
+        // Load the next scene asynchronously
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        asyncLoad.allowSceneActivation = false;
+
+        // Wait until the next scene is fully loaded
+        while (!asyncLoad.isDone)
+        {
+            if (asyncLoad.progress >= 0.9f) // Check if the scene is almost loaded
+            {
+                asyncLoad.allowSceneActivation = true; // Activate the scene
+            }
+            yield return null;
+        }
 
         // Fade in
         yield return StartCoroutine(FadeIn(fadeDuration));
+
+        // Deactivate the loading screen
+        loadingScreen.SetActive(false);
     }
 
     IEnumerator FadeOut(float duration)
