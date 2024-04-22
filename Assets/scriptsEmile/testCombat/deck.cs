@@ -112,8 +112,7 @@ public class Deck : MonoBehaviour
 
     public void OrganiserDeckJoueur()
     {
-        float distanceEntreCartes = ((ecartPourMettreCartes - (deckJoueur.Length * 300)) / (deckJoueur.Length + 1));
-        posCarteDepart = -1 * (ecartPourMettreCartes /2);
+        float distanceEntreCartes = ((ecartPourMettreCartes - (deckJoueur.Length * 30)) / (deckJoueur.Length + 1));
 
         int index = 0;
         foreach (var carte in deckJoueur)
@@ -122,10 +121,6 @@ public class Deck : MonoBehaviour
             index++;
             Vector2 pos;
             pos.x = posCarteDepart + (distanceEntreCartes * index);
-            Debug.Log("posCarteDepart: " + posCarteDepart);
-            Debug.Log("distanceEntreCartes: " + distanceEntreCartes);
-            Debug.Log("index: " + index);
-            Debug.Log("posX: " + pos.x);
 
             pos.y = posYCarteJeu;
             carte.GetComponent<RectTransform>().anchoredPosition = new Vector2(pos.x, pos.y);

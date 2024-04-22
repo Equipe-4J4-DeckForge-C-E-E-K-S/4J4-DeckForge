@@ -3986,10 +3986,10 @@ MonoBehaviour:
   tourJoueur: 1
   tourEnnemi: 0
   tourJoueurCommence: 1
-  nbCartesDonnees: 2
+  nbCartesDonnees: 11
   posYCarteJeu: -370
-  ecartPourMettreCartes: 540
-  posCarteDepart: -270
+  ecartPourMettreCartes: 975
+  posCarteDepart: -487.5
 --- !u!1 &1532336273
 GameObject:
   m_ObjectHideFlags: 0
