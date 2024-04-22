@@ -29,12 +29,12 @@ public class comportementEnnemi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (deck.GetComponent<deck>().tourEnnemi == false && tourEnnemiEnCours == false)
+        if (deck.GetComponent<Deck>().tourEnnemi == false && tourEnnemiEnCours == false)
         {
             tourEnnemiEnCours = true;
         }
 
-        if (deck.GetComponent<deck>().tourEnnemi && tourEnnemiEnCours)
+        if (deck.GetComponent<Deck>().tourEnnemi && tourEnnemiEnCours)
         {
             tourEnnemiEnCours = false;
             Debug.Log("tourEnnemi confirme");
@@ -112,8 +112,8 @@ public class comportementEnnemi : MonoBehaviour
 
     public void ChangerLeTour() 
     {
-        deck.GetComponent<deck>().tourEnnemi = false;
-        deck.GetComponent<deck>().tourJoueur = true;
+        deck.GetComponent<Deck>().tourEnnemi = false;
+        deck.GetComponent<Deck>().tourJoueur = true;
     }
 }
 

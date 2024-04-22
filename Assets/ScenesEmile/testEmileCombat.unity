@@ -184,6 +184,10 @@ MonoBehaviour:
   vie: 10
   defense: 1
   attaque: 3
+  typeBasique: 0
+  typeEau: 0
+  typeFeu: 0
+  typePlante: 0
 --- !u!114 &19270880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1536,6 +1540,10 @@ MonoBehaviour:
   vie: 10
   defense: 1
   attaque: 3
+  typeBasique: 0
+  typeEau: 0
+  typeFeu: 0
+  typePlante: 0
 --- !u!114 &587014305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1565,7 +1573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ennemiAAttaque: {fileID: 0}
   objetADupliquer: {fileID: 2795280334094779141, guid: 8de6c3545fed386498b1e212633d5b17, type: 3}
-  ligma: {fileID: 0}
+  ligma: []
   canvas: {fileID: 165976861}
   enAttaque: 0
   cibleTrouve: 0
@@ -1717,6 +1725,10 @@ MonoBehaviour:
   vie: 10
   defense: 1
   attaque: 3
+  typeBasique: 0
+  typeEau: 0
+  typeFeu: 0
+  typePlante: 0
 --- !u!114 &611206444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3975,6 +3987,9 @@ MonoBehaviour:
   tourEnnemi: 0
   tourJoueurCommence: 1
   nbCartesDonnees: 2
+  posYCarteJeu: -370
+  ecartPourMettreCartes: 540
+  posCarteDepart: -270
 --- !u!1 &1532336273
 GameObject:
   m_ObjectHideFlags: 0
