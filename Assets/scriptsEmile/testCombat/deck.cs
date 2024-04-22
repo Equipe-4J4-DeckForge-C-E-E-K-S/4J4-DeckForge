@@ -28,6 +28,11 @@ public class deck : MonoBehaviour
     public bool tourJoueurCommence;
     public int nbCartesDonnees;
 
+    public float posYCarteJeu = -370f;
+    public float ecartPourMettreCartes = 540;
+    public float posCarteDepart = -270;
+
+
     //800w  340h
 
     void Start()
@@ -116,8 +121,8 @@ public class deck : MonoBehaviour
             carte.GetComponent<carteProfil>().index = index;
             index++;
             Vector2 pos;
-            pos.x = -270 + (distanceEntreCartes * index);
-            pos.y = -150;
+            pos.x = posCarteDepart + (distanceEntreCartes * index);
+            pos.y = posYCarteJeu;
             carte.GetComponent<RectTransform>().anchoredPosition = new Vector2(pos.x, pos.y);
         }
     }
