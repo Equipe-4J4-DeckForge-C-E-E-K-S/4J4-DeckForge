@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class deck : MonoBehaviour
+public class Deck : MonoBehaviour
 {
     public GameObject librairie;
     public Transform canvas;
@@ -13,8 +13,7 @@ public class deck : MonoBehaviour
     public GameObject personnage;
 
     public GameObject[] deckStatDebug;
-    static GameObject[] deckStat;
-
+    public static GameObject[] deckStat;
 
     public GameObject[] deckLoc;
     public GameObject[] deckTrash;
@@ -27,6 +26,11 @@ public class deck : MonoBehaviour
     public bool tourEnnemi;
     public bool tourJoueurCommence;
     public int nbCartesDonnees;
+
+    public float posYCarteJeu = -370f;
+    public float ecartPourMettreCartes = 540;
+    public float posCarteDepart = -270;
+
 
     //800w  340h
 
@@ -108,7 +112,7 @@ public class deck : MonoBehaviour
 
     public void OrganiserDeckJoueur()
     {
-        float distanceEntreCartes = ((540 - (deckJoueur.Length * 20)) / (deckJoueur.Length + 1));
+        float distanceEntreCartes = ((ecartPourMettreCartes - (deckJoueur.Length * 30)) / (deckJoueur.Length + 1));
 
         int index = 0;
         foreach (var carte in deckJoueur)
@@ -116,8 +120,9 @@ public class deck : MonoBehaviour
             carte.GetComponent<carteProfil>().index = index;
             index++;
             Vector2 pos;
-            pos.x = -270 + (distanceEntreCartes * index);
-            pos.y = -150;
+            pos.x = posCarteDepart + (distanceEntreCartes * index);
+
+            pos.y = posYCarteJeu;
             carte.GetComponent<RectTransform>().anchoredPosition = new Vector2(pos.x, pos.y);
         }
     }

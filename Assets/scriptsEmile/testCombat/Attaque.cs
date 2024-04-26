@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,7 +29,7 @@ public class Attaque : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (deck.GetComponent<deck>().tourJoueur)
+        if (deck.GetComponent<Deck>().tourJoueur)
         {
             GetComponent<Button>().enabled = true;
         }
@@ -42,16 +43,69 @@ public class Attaque : MonoBehaviour
         {
             attaque = personnage.GetComponent<statistiquesPersonnage>().attaque;
             cible = personnage.GetComponent<comportementJoueur>().ennemiAAttaque;
-            personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie -= attaque;
+            float defCible = cible.GetComponent<statistiquesPersonnage>().defense;
+
+            bool typeEauCarte = GetComponent<carteProfil>().typeEau;
+            bool typeFeuCarte = GetComponent<carteProfil>().typeFeu;
+            bool typePlanteCarte = GetComponent<carteProfil>().typePlante;
+
+            bool typeFeuEnnemi = cible.GetComponent<statistiquesPersonnage>().typeFeu;
+            bool typeEauEnnemi = cible.GetComponent<statistiquesPersonnage>().typeEau;
+            bool typePlanteEnnemi = cible.GetComponent<statistiquesPersonnage>().typePlante;
+
+            if (typeEauCarte && typeFeuEnnemi)
+            {
+                personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie -= ((attaque * ((10 - defCible) / 10)) * 2);
+                float vieCible = personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie;
+                personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie = Mathf.Round(vieCible * 10.0f) * 0.1f;
+
+            }
+            else if (typeFeuCarte && typePlanteEnnemi)
+            {
+                personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie -= ((attaque * ((10 - defCible) / 10)) * 2);
+                float vieCible = personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie;
+                personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie = Mathf.Round(vieCible * 10.0f) * 0.1f;
+            }
+            else if (typePlanteCarte && typeEauEnnemi)
+            {
+                personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie -= ((attaque * ((10 - defCible) / 10)) * 2);
+                float vieCible = personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie;
+                personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie = Mathf.Round(vieCible * 10.0f) * 0.1f;
+            }
+            else if (typeEauCarte && typePlanteEnnemi)
+            {
+                personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie -= ((attaque * ((10 - defCible) / 10)) * 0.5f);
+                float vieCible = personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie;
+                personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie = Mathf.Round(vieCible * 10.0f) * 0.1f;
+            }
+            else if (typeFeuCarte && typeEauEnnemi)
+            {
+                personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie -= ((attaque * ((10 - defCible) / 10)) * 0.5f);
+                float vieCible = personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie;
+                personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie = Mathf.Round(vieCible * 10.0f) * 0.1f;
+            }
+            else if (typePlanteCarte && typeFeuEnnemi)
+            {
+                personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie -= ((attaque * ((10 - defCible) / 10)) * 0.5f);
+                float vieCible = personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie;
+                personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie = Mathf.Round(vieCible * 10.0f) * 0.1f;
+            }
+            else
+            {
+                personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie -= (attaque * ((10 - defCible) / 10));
+                float vieCible = personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie;
+                personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie = Mathf.Round(vieCible * 10.0f) * 0.1f;
+            }
+
             cibleTrouve = false;
             personnage.GetComponent<comportementJoueur>().cibleTrouve = cibleTrouve;
 
             carteADuplique = GetComponent<carteProfil>().prefab;
             indexASupprimer = GetComponent<carteProfil>().index;
 
-            deck.GetComponent<deck>().deckTrash = librairie.GetComponent<librairieDeck>().ajouterCarte(deck.GetComponent<deck>().deckTrash, carteADuplique);
-            deck.GetComponent<deck>().deckJoueur = librairie.GetComponent<librairieDeck>().enleverCarte(deck.GetComponent<deck>().deckJoueur, indexASupprimer);
-            deck.GetComponent<deck>().OrganiserDeckJoueur();
+            deck.GetComponent<Deck>().deckTrash = librairie.GetComponent<librairieDeck>().ajouterCarte(deck.GetComponent<Deck>().deckTrash, carteADuplique);
+            deck.GetComponent<Deck>().deckJoueur = librairie.GetComponent<librairieDeck>().enleverCarte(deck.GetComponent<Deck>().deckJoueur, indexASupprimer);
+            deck.GetComponent<Deck>().OrganiserDeckJoueur();
             Destroy(gameObject);
         }
     }

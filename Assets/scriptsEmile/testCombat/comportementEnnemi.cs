@@ -29,15 +29,14 @@ public class comportementEnnemi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (deck.GetComponent<deck>().tourEnnemi == false && tourEnnemiEnCours == false)
+        if (deck.GetComponent<Deck>().tourEnnemi == false && tourEnnemiEnCours == false)
         {
             tourEnnemiEnCours = true;
         }
 
-        if (deck.GetComponent<deck>().tourEnnemi && tourEnnemiEnCours)
+        if (deck.GetComponent<Deck>().tourEnnemi && tourEnnemiEnCours)
         {
             tourEnnemiEnCours = false;
-            Debug.Log("tourEnnemi confirme");
             Ennemi();
             Invoke("ChangerLeTour", delaiFinTour);
         }
@@ -51,12 +50,17 @@ public class comportementEnnemi : MonoBehaviour
 
     public void Ennemi()
     {
+        delaiFinTour = 0;
         int nbActions = Random.Range(1, 5);
+        Debug.Log("nombres actions: " + nbActions);
         for (int i = 0; i < nbActions; i++)
         {
             int delai = i;
+            Debug.Log("delai:" + i);
             int TempsActivation = 0 + delai;
-            delaiFinTour += delai + (1/nbActions);
+            Debug.Log("temps d'activation:" + TempsActivation);
+            delaiFinTour += (delai + (1/nbActions));
+            Debug.Log("delai fin tour boucle:" + delaiFinTour);
             int actionChoisie = Random.Range(1, 5);
 
             if (actionChoisie == 1)
@@ -76,7 +80,7 @@ public class comportementEnnemi : MonoBehaviour
                 Invoke("Action4", TempsActivation);
             }
         }
-        Debug.Log(delaiFinTour);   
+        Debug.Log("delai fin tour: " + delaiFinTour);
     }
 
     public void Action1()
@@ -104,16 +108,20 @@ public class comportementEnnemi : MonoBehaviour
 
     public void RegarderListeActions(int actionChoisie)
     {
+        bool typeEau = GetComponent<statistiquesPersonnage>().typeEau;
+        bool typeFeu = GetComponent<statistiquesPersonnage>().typeFeu;
+        bool typePlante = GetComponent<statistiquesPersonnage>().typePlante;
+        
         if (actionChoisie >= 0)
         {
-            librairie.GetComponent<librairieAttaque>().AttaquerNormal(joueur, GetComponent<statistiquesPersonnage>().attaque);
+            librairie.GetComponent<librairieAttaque>().AttaquerNormal(joueur, GetComponent<statistiquesPersonnage>().attaque, typeEau, typeFeu, typePlante);
         }
     }
 
     public void ChangerLeTour() 
     {
-        deck.GetComponent<deck>().tourEnnemi = false;
-        deck.GetComponent<deck>().tourJoueur = true;
+        deck.GetComponent<Deck>().tourEnnemi = false;
+        deck.GetComponent<Deck>().tourJoueur = true;
     }
 }
 
