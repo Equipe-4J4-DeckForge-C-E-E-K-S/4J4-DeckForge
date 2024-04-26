@@ -56,30 +56,45 @@ public class Attaque : MonoBehaviour
             if (typeEauCarte && typeFeuEnnemi)
             {
                 personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie -= ((attaque * ((10 - defCible) / 10)) * 2);
+                float vieCible = personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie;
+                personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie = Mathf.Round(vieCible * 10.0f) * 0.1f;
+
             }
             else if (typeFeuCarte && typePlanteEnnemi)
             {
                 personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie -= ((attaque * ((10 - defCible) / 10)) * 2);
+                float vieCible = personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie;
+                personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie = Mathf.Round(vieCible * 10.0f) * 0.1f;
             }
             else if (typePlanteCarte && typeEauEnnemi)
             {
                 personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie -= ((attaque * ((10 - defCible) / 10)) * 2);
+                float vieCible = personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie;
+                personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie = Mathf.Round(vieCible * 10.0f) * 0.1f;
             }
             else if (typeEauCarte && typePlanteEnnemi)
             {
                 personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie -= ((attaque * ((10 - defCible) / 10)) * 0.5f);
+                float vieCible = personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie;
+                personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie = Mathf.Round(vieCible * 10.0f) * 0.1f;
             }
             else if (typeFeuCarte && typeEauEnnemi)
             {
                 personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie -= ((attaque * ((10 - defCible) / 10)) * 0.5f);
+                float vieCible = personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie;
+                personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie = Mathf.Round(vieCible * 10.0f) * 0.1f;
             }
             else if (typePlanteCarte && typeFeuEnnemi)
             {
                 personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie -= ((attaque * ((10 - defCible) / 10)) * 0.5f);
+                float vieCible = personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie;
+                personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie = Mathf.Round(vieCible * 10.0f) * 0.1f;
             }
             else
             {
                 personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie -= (attaque * ((10 - defCible) / 10));
+                float vieCible = personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie;
+                personnage.GetComponent<comportementJoueur>().ennemiAAttaque.GetComponent<statistiquesPersonnage>().vie = Mathf.Round(vieCible * 10.0f) * 0.1f;
             }
 
             cibleTrouve = false;

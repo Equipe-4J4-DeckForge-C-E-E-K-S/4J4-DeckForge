@@ -37,7 +37,6 @@ public class comportementEnnemi : MonoBehaviour
         if (deck.GetComponent<Deck>().tourEnnemi && tourEnnemiEnCours)
         {
             tourEnnemiEnCours = false;
-            Debug.Log("tourEnnemi confirme");
             Ennemi();
             Invoke("ChangerLeTour", delaiFinTour);
         }
@@ -51,12 +50,17 @@ public class comportementEnnemi : MonoBehaviour
 
     public void Ennemi()
     {
+        delaiFinTour = 0;
         int nbActions = Random.Range(1, 5);
+        Debug.Log("nombres actions: " + nbActions);
         for (int i = 0; i < nbActions; i++)
         {
             int delai = i;
+            Debug.Log("delai:" + i);
             int TempsActivation = 0 + delai;
-            delaiFinTour += delai + (1/nbActions);
+            Debug.Log("temps d'activation:" + TempsActivation);
+            delaiFinTour += (delai + (1/nbActions));
+            Debug.Log("delai fin tour boucle:" + delaiFinTour);
             int actionChoisie = Random.Range(1, 5);
 
             if (actionChoisie == 1)
@@ -76,7 +80,7 @@ public class comportementEnnemi : MonoBehaviour
                 Invoke("Action4", TempsActivation);
             }
         }
-        Debug.Log(delaiFinTour);   
+        Debug.Log("delai fin tour: " + delaiFinTour);
     }
 
     public void Action1()

@@ -183,6 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vie: 10
   defense: 1
+  defenseInitiale: 0
   attaque: 3
   typeBasique: 0
   typeEau: 0
@@ -1539,6 +1540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vie: 10
   defense: 1
+  defenseInitiale: 0
   attaque: 3
   typeBasique: 0
   typeEau: 0
@@ -1724,6 +1726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vie: 10
   defense: 1
+  defenseInitiale: 0
   attaque: 3
   typeBasique: 0
   typeEau: 0
@@ -3986,7 +3989,7 @@ MonoBehaviour:
   tourJoueur: 1
   tourEnnemi: 0
   tourJoueurCommence: 1
-  nbCartesDonnees: 11
+  nbCartesDonnees: 1
   posYCarteJeu: -370
   ecartPourMettreCartes: 975
   posCarteDepart: -487.5
