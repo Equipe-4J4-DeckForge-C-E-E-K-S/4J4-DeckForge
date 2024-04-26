@@ -6,6 +6,7 @@ public class statistiquesPersonnage : MonoBehaviour
 {
     public float vie;
     public float defense;
+    public float defenseInitiale;
     public float attaque;
 
     public bool typeBasique;
@@ -16,7 +17,7 @@ public class statistiquesPersonnage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        defenseInitiale = defense;
     }
 
     // Update is called once per frame

@@ -104,9 +104,13 @@ public class comportementEnnemi : MonoBehaviour
 
     public void RegarderListeActions(int actionChoisie)
     {
+        bool typeEau = GetComponent<statistiquesPersonnage>().typeEau;
+        bool typeFeu = GetComponent<statistiquesPersonnage>().typeFeu;
+        bool typePlante = GetComponent<statistiquesPersonnage>().typePlante;
+        
         if (actionChoisie >= 0)
         {
-            librairie.GetComponent<librairieAttaque>().AttaquerNormal(joueur, GetComponent<statistiquesPersonnage>().attaque);
+            librairie.GetComponent<librairieAttaque>().AttaquerNormal(joueur, GetComponent<statistiquesPersonnage>().attaque, typeEau, typeFeu, typePlante);
         }
     }
 
