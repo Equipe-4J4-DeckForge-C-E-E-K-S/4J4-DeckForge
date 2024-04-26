@@ -63,6 +63,7 @@ public class Deck : MonoBehaviour
     // Update is called once per frame
     public void CommenceTourJoueur()
     {
+        personnage.GetComponent<statistiquesPersonnage>().defense = personnage.GetComponent<statistiquesPersonnage>().defenseInitiale;
         tourJoueurCommence = false;
         for (int carte = 0; carte < nbCartesDonnees; carte++)
         {
