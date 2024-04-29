@@ -48,6 +48,14 @@ public class comportementEnnemi : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        if (GetComponent<statistiquesPersonnage>().vie <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public void Ennemi()
     {
         delaiFinTour = 0;

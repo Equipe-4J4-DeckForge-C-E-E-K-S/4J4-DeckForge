@@ -18,6 +18,7 @@ public class Attaque : MonoBehaviour
     public GameObject carteADuplique;
     public int indexASupprimer;
 
+    public bool finNiveau;
 
 
     // Start is called before the first frame update
@@ -29,13 +30,18 @@ public class Attaque : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (deck.GetComponent<Deck>().tourJoueur)
+        finNiveau = librairie.GetComponent<comportementFin>().finNiveau;
+
+        if (finNiveau == false)
         {
-            GetComponent<Button>().enabled = true;
-        }
-        else
-        {
-            GetComponent<Button>().enabled = false;
+            if (deck.GetComponent<Deck>().tourJoueur)
+            {
+                GetComponent<Button>().enabled = true;
+            }
+            else
+            {
+                GetComponent<Button>().enabled = false;
+            }
         }
 
         cibleTrouve = personnage.GetComponent<comportementJoueur>().cibleTrouve;
