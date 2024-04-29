@@ -112,6 +112,10 @@ MonoBehaviour:
   soigner: 0
   prefab: {fileID: 2795280334094779141, guid: bd7ca5955e5812b488a2259e973cd7d6, type: 3}
   index: 0
+  typeBasique: 0
+  typeEau: 0
+  typeFeu: 0
+  typePlante: 0
 --- !u!114 &7310546905521643803
 MonoBehaviour:
   m_ObjectHideFlags: 0
