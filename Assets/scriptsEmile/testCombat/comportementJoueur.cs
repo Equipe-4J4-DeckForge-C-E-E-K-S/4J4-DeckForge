@@ -26,7 +26,7 @@ public class comportementJoueur : MonoBehaviour
     {
         if(GetComponent<statistiquesPersonnage>().vie <= 0)
         {
-            librairie.GetComponent<comportementFin>().FinirNiveau();
+            librairie.GetComponent<comportementFin>().FinirNiveau(false);
         }   
     }
 }

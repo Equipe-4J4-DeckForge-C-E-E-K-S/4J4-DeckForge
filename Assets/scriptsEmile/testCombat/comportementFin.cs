@@ -9,6 +9,12 @@ public class comportementFin : MonoBehaviour
     public bool test;
     public bool finNiveau;
 
+    public GameObject messageVictoire;
+    public GameObject messageDefaite;
+    public GameObject bouton;
+
+    public bool resultatNiveau;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,18 +26,30 @@ public class comportementFin : MonoBehaviour
     {
         if (test)
         {
-            FinirNiveau();
+            FinirNiveau(true);
         }
     }
 
-    public void FinirNiveau()
+    public void FinirNiveau(bool victoire)
     {
         finNiveau = true;
 
         for (int i=0; i < (deck.GetComponent<Deck>().deckJoueur.Length); i++)
         {
             deck.GetComponent<Deck>().deckJoueur[i].GetComponent<Button>().enabled = false;
-            //Debug.Log("oki");
         }
+
+        if (victoire)
+        {
+            messageVictoire.SetActive(true);
+            resultatNiveau = true;
+        }
+        else
+        {
+            messageDefaite.SetActive(true);
+            resultatNiveau = false;
+        }
+
+        bouton.SetActive(true);
     }
 }
