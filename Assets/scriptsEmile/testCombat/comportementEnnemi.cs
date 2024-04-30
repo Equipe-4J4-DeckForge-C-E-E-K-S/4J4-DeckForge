@@ -8,6 +8,8 @@ public class comportementEnnemi : MonoBehaviour
     public GameObject cible;
     public bool enAttaque;
 
+    public bool doitChercher;
+
     public GameObject librairie;
     public GameObject deck;
     public GameObject gestionnaireEnnemi;
@@ -49,11 +51,6 @@ public class comportementEnnemi : MonoBehaviour
         }
     }
 
-    public void LancerAttaque(int delaiAttaque)
-    {
-        Invoke("Ennemi", delaiAttaque);
-    }
-
     public void Ennemi()
     {
         delaiFinTour = 0;
@@ -87,7 +84,7 @@ public class comportementEnnemi : MonoBehaviour
             }
         }
         //Debug.Log("delai fin tour: " + delaiFinTour);
-        gestionnaireEnnemi.GetComponent<comportementGestionnaireEnnemi>().delai += delaiFinTour;
+        Invoke("LancerProchaineAttaque", delaiFinTour);
     }
 
     public void Action1()
@@ -112,6 +109,10 @@ public class comportementEnnemi : MonoBehaviour
         RegarderListeActions(actionChoisie4);
     }
 
+    public void LancerProchaineAttaque() 
+    {
+        gestionnaireEnnemi.GetComponent<comportementGestionnaireEnnemi>().AttaquerJoueur();
+    }
 
     public void RegarderListeActions(int actionChoisie)
     {

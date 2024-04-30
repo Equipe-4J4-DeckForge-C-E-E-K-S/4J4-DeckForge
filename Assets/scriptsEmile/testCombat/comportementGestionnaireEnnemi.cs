@@ -28,9 +28,11 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
     public GameObject deck;
 
     public bool tourEnnemiEnCours;
+    public bool tourEnnemiTermine;
 
     public int delai;
     public int difficulte;
+    public int indexListeLocale;
 
     // Start is called before the first frame update
     void Start()
@@ -60,7 +62,12 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
             librairie.GetComponent<comportementFin>().FinirNiveau(true);
         }
 
-        //Debug.Log("delai hors loop " + delai);
+
+        if(tourEnnemiTermine)
+        {
+            Invoke("ChangerLeTour", delai);
+            tourEnnemiTermine = false;
+        }
     }
 
     public void FaireApparaitreEnnemi()
@@ -148,14 +155,20 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
 
     public void AttaquerJoueur()
     {
-        delai = 0;
-        foreach (var ennemi in listeLocale)
+        indexListeLocale ++;
+        if (indexListeLocale == listeLocale.Length + 1)
         {
-            Debug.Log("delai pre loop " +delai);
-            ennemi.GetComponent<comportementEnnemi>().LancerAttaque(delai);
-            Debug.Log("delai p loop " +delai);
+            tourEnnemiTermine = true;
+        }
+        else if (indexListeLocale > listeLocale.Length + 1)
+        {
+            indexListeLocale = 1;
         }
 
-        Invoke("ChangerLeTour", delai);
+        if (indexListeLocale < listeLocale.Length + 1)
+        {
+            listeLocale[(indexListeLocale - 1)].GetComponent<comportementEnnemi>().Ennemi();
+        }
+
     }
 }
