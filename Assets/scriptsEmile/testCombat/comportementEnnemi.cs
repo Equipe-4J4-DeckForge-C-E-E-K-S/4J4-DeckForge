@@ -10,6 +10,7 @@ public class comportementEnnemi : MonoBehaviour
 
     public GameObject librairie;
     public GameObject deck;
+    public GameObject gestionnaireEnnemi;
 
     public int actionChoisie1;
     public int actionChoisie2;
@@ -18,30 +19,15 @@ public class comportementEnnemi : MonoBehaviour
 
     public int delaiFinTour;
 
-    public bool tourEnnemiEnCours;
-
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (deck.GetComponent<Deck>().tourEnnemi == false && tourEnnemiEnCours == false)
-        {
-            tourEnnemiEnCours = true;
-        }
-
-        if (deck.GetComponent<Deck>().tourEnnemi && tourEnnemiEnCours)
-        {
-            tourEnnemiEnCours = false;
-            Ennemi();
-            Invoke("ChangerLeTour", delaiFinTour);
-        }
-
-        enAttaque = joueur.GetComponent<comportementJoueur>().enAttaque;
         if (enAttaque)
         {
             cible.SetActive(true);
@@ -52,6 +38,7 @@ public class comportementEnnemi : MonoBehaviour
     {
         if (GetComponent<statistiquesPersonnage>().vie <= 0)
         {
+            gestionnaireEnnemi.GetComponent<comportementGestionnaireEnnemi>().listeLocale = librairie.GetComponent<librairieDeck>().enleverCarte(gestionnaireEnnemi.GetComponent<comportementGestionnaireEnnemi>().listeLocale, 0);
             Destroy(gameObject);
         }
     }
@@ -67,7 +54,7 @@ public class comportementEnnemi : MonoBehaviour
             Debug.Log("delai:" + i);
             int TempsActivation = 0 + delai;
             Debug.Log("temps d'activation:" + TempsActivation);
-            delaiFinTour += (delai + (1/nbActions));
+            delaiFinTour += (delai + (1 / nbActions));
             Debug.Log("delai fin tour boucle:" + delaiFinTour);
             int actionChoisie = Random.Range(1, 5);
 
@@ -89,6 +76,7 @@ public class comportementEnnemi : MonoBehaviour
             }
         }
         Debug.Log("delai fin tour: " + delaiFinTour);
+        gestionnaireEnnemi.GetComponent<comportementGestionnaireEnnemi>().delai = delaiFinTour;
     }
 
     public void Action1()
@@ -119,18 +107,10 @@ public class comportementEnnemi : MonoBehaviour
         bool typeEau = GetComponent<statistiquesPersonnage>().typeEau;
         bool typeFeu = GetComponent<statistiquesPersonnage>().typeFeu;
         bool typePlante = GetComponent<statistiquesPersonnage>().typePlante;
-        
+
         if (actionChoisie >= 0)
         {
             librairie.GetComponent<librairieAttaque>().AttaquerNormal(joueur, GetComponent<statistiquesPersonnage>().attaque, typeEau, typeFeu, typePlante);
         }
     }
-
-    public void ChangerLeTour() 
-    {
-        deck.GetComponent<Deck>().tourEnnemi = false;
-        deck.GetComponent<Deck>().tourJoueur = true;
-    }
 }
-
-

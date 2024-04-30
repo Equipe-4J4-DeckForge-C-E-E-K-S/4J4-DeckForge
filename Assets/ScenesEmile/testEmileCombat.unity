@@ -1151,12 +1151,12 @@ MonoBehaviour:
   enAttaque: 0
   librairie: {fileID: 1712367415}
   deck: {fileID: 1442245924}
+  gestionnaireEnnemi: {fileID: 0}
   actionChoisie1: 0
   actionChoisie2: 0
   actionChoisie3: 0
   actionChoisie4: 0
   delaiFinTour: 0
-  tourEnnemiEnCours: 0
 --- !u!1 &657041742
 GameObject:
   m_ObjectHideFlags: 0
@@ -3093,6 +3093,7 @@ GameObject:
   - component: {fileID: 1712367420}
   - component: {fileID: 1712367421}
   - component: {fileID: 1712367422}
+  - component: {fileID: 1712367423}
   m_Layer: 5
   m_Name: stuff
   m_TagString: Untagged
@@ -3217,6 +3218,38 @@ MonoBehaviour:
   messageDefaite: {fileID: 281719468}
   bouton: {fileID: 2124115673}
   resultatNiveau: 0
+--- !u!114 &1712367423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712367415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b54c9591eebdec6478a179589061bd42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biomeBasique: 0
+  biomeEau: 0
+  biomeFeu: 0
+  biomePlante: 0
+  indexLocal: []
+  indexBasique: []
+  indexEau: []
+  indexFeu: []
+  indexPlante: []
+  listeLocale: []
+  librairie: {fileID: 1712367415}
+  canvas: {fileID: 165976861}
+  ecartPourMettreEnnemi: 0
+  posYEnnemi: 0
+  posEnnemiDepart: 0
+  joueur: {fileID: 587014299}
+  deck: {fileID: 1442245924}
+  tourEnnemiEnCours: 0
+  delai: 0
+  difficulte: 0
 --- !u!1 &1845866241
 GameObject:
   m_ObjectHideFlags: 0
