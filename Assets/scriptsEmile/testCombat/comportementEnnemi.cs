@@ -30,7 +30,13 @@ public class comportementEnnemi : MonoBehaviour
     {
         if (enAttaque)
         {
+            cible.GetComponent<comportementCible>().parent = gameObject;
+            cible.GetComponent<comportementCible>().joueur = joueur;
             cible.SetActive(true);
+        }
+        else if (enAttaque == false)
+        {
+            cible.SetActive(false);
         }
     }
 
@@ -43,19 +49,24 @@ public class comportementEnnemi : MonoBehaviour
         }
     }
 
+    public void LancerAttaque(int delaiAttaque)
+    {
+        Invoke("Ennemi", delaiAttaque);
+    }
+
     public void Ennemi()
     {
         delaiFinTour = 0;
         int nbActions = Random.Range(1, 5);
-        Debug.Log("nombres actions: " + nbActions);
+        //Debug.Log("nombres actions: " + nbActions);
         for (int i = 0; i < nbActions; i++)
         {
             int delai = i;
-            Debug.Log("delai:" + i);
+            //Debug.Log("delai:" + i);
             int TempsActivation = 0 + delai;
-            Debug.Log("temps d'activation:" + TempsActivation);
+            //Debug.Log("temps d'activation:" + TempsActivation);
             delaiFinTour += (delai + (1 / nbActions));
-            Debug.Log("delai fin tour boucle:" + delaiFinTour);
+            //Debug.Log("delai fin tour boucle:" + delaiFinTour);
             int actionChoisie = Random.Range(1, 5);
 
             if (actionChoisie == 1)
@@ -75,8 +86,8 @@ public class comportementEnnemi : MonoBehaviour
                 Invoke("Action4", TempsActivation);
             }
         }
-        Debug.Log("delai fin tour: " + delaiFinTour);
-        gestionnaireEnnemi.GetComponent<comportementGestionnaireEnnemi>().delai = delaiFinTour;
+        //Debug.Log("delai fin tour: " + delaiFinTour);
+        gestionnaireEnnemi.GetComponent<comportementGestionnaireEnnemi>().delai += delaiFinTour;
     }
 
     public void Action1()

@@ -20,9 +20,9 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
     public GameObject librairie;
     public Transform canvas;
 
-    public float ecartPourMettreEnnemi;
-    public float posYEnnemi;
-    public float posEnnemiDepart;
+    public float ecartPourMettreEnnemi = 500f;
+    public float posYEnnemi = -30f;
+    public float posEnnemiDepart = 200f;
 
     public GameObject joueur;
     public GameObject deck;
@@ -53,6 +53,14 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
         }
 
         GererReactionAttaqueEnnemi();
+
+
+        if (listeLocale.Length <= 0)
+        {
+            librairie.GetComponent<comportementFin>().FinirNiveau(true);
+        }
+
+        //Debug.Log("delai hors loop " + delai);
     }
 
     public void FaireApparaitreEnnemi()
@@ -74,7 +82,8 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
             indexLocal = indexPlante;
         }
 
-        int nbEnnemi = Random.Range(1, 3);
+
+        int nbEnnemi = 2;//Random.Range(1, 3);
 
         for (int i = 0; i < nbEnnemi; i++)
         {
@@ -83,6 +92,11 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
             ennemi.GetComponent<statistiquesPersonnage>().vie = ((ennemi.GetComponent<statistiquesPersonnage>().vie * difficulte) / nbEnnemi);
             ennemi.GetComponent<statistiquesPersonnage>().attaque = ((ennemi.GetComponent<statistiquesPersonnage>().attaque * difficulte) / nbEnnemi);
             ennemi.GetComponent<statistiquesPersonnage>().defense = ((ennemi.GetComponent<statistiquesPersonnage>().defense * difficulte) / nbEnnemi);
+            ennemi.GetComponent<comportementEnnemi>().joueur = joueur;
+            ennemi.GetComponent<comportementEnnemi>().librairie = librairie;
+            ennemi.GetComponent<comportementEnnemi>().deck = deck;
+            ennemi.GetComponent<comportementEnnemi>().gestionnaireEnnemi = gameObject;
+
             listeLocale = librairie.GetComponent<librairieDeck>().ajouterCarte(listeLocale, ennemi);
             ennemi.SetActive(true);
         }
@@ -92,7 +106,7 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
 
     public void OrganiserPositionEnnemi()
     {
-        float distanceEntreEnnemis = ((ecartPourMettreEnnemi - (listeLocale.Length * 30)) / (listeLocale.Length + 1));
+        float distanceEntreEnnemis = ((ecartPourMettreEnnemi - (listeLocale.Length * 10)) / (listeLocale.Length + 1));
 
         int index = 0;
         foreach (var ennemi in listeLocale)
@@ -137,7 +151,9 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
         delai = 0;
         foreach (var ennemi in listeLocale)
         {
-            Invoke("ennemi.GetComponent<comportementEnnemi>().Ennemi()", delai);
+            Debug.Log("delai pre loop " +delai);
+            ennemi.GetComponent<comportementEnnemi>().LancerAttaque(delai);
+            Debug.Log("delai p loop " +delai);
         }
 
         Invoke("ChangerLeTour", delai);

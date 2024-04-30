@@ -38,11 +38,6 @@ public class Bloque : MonoBehaviour
                 GetComponent<Button>().enabled = false;
             }
         }
-
-        if (GetComponent<Button>().enabled == false)
-        {
-            Debug.Log("oki");
-        }
     }
 
     public void Bloquer()
