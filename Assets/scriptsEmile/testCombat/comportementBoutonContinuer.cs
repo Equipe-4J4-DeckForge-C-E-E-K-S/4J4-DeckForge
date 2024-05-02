@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class comportementBoutonContinuer : MonoBehaviour
 {
     public GameObject librairie;
+    public GameObject joueur;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class comportementBoutonContinuer : MonoBehaviour
         if(resultat)
         {
             SceneManager.LoadScene("testEmileCombat");
+            comportementJoueur.viePartie = (joueur.GetComponent<statistiquesPersonnage>().vie + 20f);
         }
         /*else
         {

@@ -160,7 +160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 812, y: -272}
+  m_AnchoredPosition: {x: 812, y: -176.00002}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &38555807
@@ -761,7 +761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5cff5969350d4040abc4ef2fbdba924, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vie: 10
+  vie: 100
   defense: 1
   defenseInitiale: 0
   attaque: 3
@@ -2656,7 +2656,7 @@ MonoBehaviour:
   tourJoueur: 1
   tourEnnemi: 0
   tourJoueurCommence: 1
-  nbCartesDonnees: 1
+  nbCartesDonnees: 3
   posYCarteJeu: -370
   ecartPourMettreCartes: 975
   posCarteDepart: -487.5
@@ -3110,9 +3110,9 @@ MonoBehaviour:
   listeLocale: []
   librairie: {fileID: 1712367415}
   canvas: {fileID: 165976861}
-  ecartPourMettreEnnemi: 500
-  posYEnnemi: -30
-  posEnnemiDepart: 200
+  ecartPourMettreEnnemi: 1300
+  posYEnnemi: 0
+  posEnnemiDepart: -200
   joueur: {fileID: 587014299}
   deck: {fileID: 1442245924}
   tourEnnemiEnCours: 0

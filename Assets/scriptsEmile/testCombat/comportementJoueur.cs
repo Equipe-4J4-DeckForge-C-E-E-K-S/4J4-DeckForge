@@ -12,6 +12,8 @@ public class comportementJoueur : MonoBehaviour
     public float floatX;
     public float floatY;
 
+    public static float viePartie = 100f;
+
     public GameObject librairie;
 
    //public GameObject deck;
@@ -19,6 +21,7 @@ public class comportementJoueur : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<statistiquesPersonnage>().vie = viePartie;
     }
 
     // Update is called once per frame
