@@ -90,7 +90,7 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
         }
 
 
-        int nbEnnemi = 3;//Random.Range(1, 3);
+        int nbEnnemi = Random.Range(1, 4);
 
         for (int i = 0; i < nbEnnemi; i++)
         {

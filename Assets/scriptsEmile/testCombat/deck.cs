@@ -39,6 +39,7 @@ public class Deck : MonoBehaviour
         deckStat = deckStatDebug;
         deckLoc = deckStat;
         deckActuel = deckLoc;
+        deckActuel = librairie.GetComponent<librairieDeck>().SufflerCartes(deckActuel);
     }
 
     void Update()

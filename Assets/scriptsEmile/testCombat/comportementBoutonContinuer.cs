@@ -25,12 +25,8 @@ public class comportementBoutonContinuer : MonoBehaviour
         
         if(resultat)
         {
-            SceneManager.LoadScene("testEmileCombat");
             comportementJoueur.viePartie = (joueur.GetComponent<statistiquesPersonnage>().vie + 20f);
+            SceneManager.LoadScene("testEmileCombat");
         }
-        /*else
-        {
-            
-        }*/
     }
 }
