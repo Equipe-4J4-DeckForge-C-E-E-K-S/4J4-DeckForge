@@ -112,6 +112,10 @@ MonoBehaviour:
   soigner: 0
   prefab: {fileID: 2795280334094779141, guid: 9b782ea43faa01e498d4f026c00689b0, type: 3}
   index: 0
+  typeBasique: 1
+  typeEau: 0
+  typeFeu: 0
+  typePlante: 0
 --- !u!114 &-1516672706220665953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,6 +133,7 @@ MonoBehaviour:
   estClique: 0
   librairie: {fileID: 0}
   deck: {fileID: 0}
+  finNiveau: 0
 --- !u!1 &3615733263506085268
 GameObject:
   m_ObjectHideFlags: 0
