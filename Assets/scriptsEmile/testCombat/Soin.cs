@@ -13,6 +13,8 @@ public class Soin : MonoBehaviour
     public GameObject librairie;
     public GameObject deck;
 
+    public bool finNiveau;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,13 +24,18 @@ public class Soin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(deck.GetComponent<Deck>().tourJoueur)
+        finNiveau = librairie.GetComponent<comportementFin>().finNiveau;
+
+        if (finNiveau == false)
         {
-            GetComponent<Button>().enabled = true;
-        }
-        else
-        {
-            GetComponent<Button>().enabled = false;
+            if (deck.GetComponent<Deck>().tourJoueur)
+            {
+                GetComponent<Button>().enabled = true;
+            }
+            else
+            {
+                GetComponent<Button>().enabled = false;
+            }
         }
     }
 

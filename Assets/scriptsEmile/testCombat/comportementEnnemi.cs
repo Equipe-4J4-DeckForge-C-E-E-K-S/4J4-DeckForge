@@ -8,8 +8,11 @@ public class comportementEnnemi : MonoBehaviour
     public GameObject cible;
     public bool enAttaque;
 
+    public bool doitChercher;
+
     public GameObject librairie;
     public GameObject deck;
+    public GameObject gestionnaireEnnemi;
 
     public int actionChoisie1;
     public int actionChoisie2;
@@ -18,33 +21,33 @@ public class comportementEnnemi : MonoBehaviour
 
     public int delaiFinTour;
 
-    public bool tourEnnemiEnCours;
-
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (deck.GetComponent<Deck>().tourEnnemi == false && tourEnnemiEnCours == false)
-        {
-            tourEnnemiEnCours = true;
-        }
-
-        if (deck.GetComponent<Deck>().tourEnnemi && tourEnnemiEnCours)
-        {
-            tourEnnemiEnCours = false;
-            Ennemi();
-            Invoke("ChangerLeTour", delaiFinTour);
-        }
-
-        enAttaque = joueur.GetComponent<comportementJoueur>().enAttaque;
         if (enAttaque)
         {
+            cible.GetComponent<comportementCible>().parent = gameObject;
+            cible.GetComponent<comportementCible>().joueur = joueur;
             cible.SetActive(true);
+        }
+        else if (enAttaque == false)
+        {
+            cible.SetActive(false);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (GetComponent<statistiquesPersonnage>().vie <= 0)
+        {
+            gestionnaireEnnemi.GetComponent<comportementGestionnaireEnnemi>().listeLocale = librairie.GetComponent<librairieDeck>().enleverCarte(gestionnaireEnnemi.GetComponent<comportementGestionnaireEnnemi>().listeLocale, 0);
+            Destroy(gameObject);
         }
     }
 
@@ -52,15 +55,15 @@ public class comportementEnnemi : MonoBehaviour
     {
         delaiFinTour = 0;
         int nbActions = Random.Range(1, 5);
-        Debug.Log("nombres actions: " + nbActions);
+        //Debug.Log("nombres actions: " + nbActions);
         for (int i = 0; i < nbActions; i++)
         {
             int delai = i;
-            Debug.Log("delai:" + i);
+            //Debug.Log("delai:" + i);
             int TempsActivation = 0 + delai;
-            Debug.Log("temps d'activation:" + TempsActivation);
-            delaiFinTour += (delai + (1/nbActions));
-            Debug.Log("delai fin tour boucle:" + delaiFinTour);
+            //Debug.Log("temps d'activation:" + TempsActivation);
+            delaiFinTour += (delai + (1 / nbActions));
+            //Debug.Log("delai fin tour boucle:" + delaiFinTour);
             int actionChoisie = Random.Range(1, 5);
 
             if (actionChoisie == 1)
@@ -80,7 +83,8 @@ public class comportementEnnemi : MonoBehaviour
                 Invoke("Action4", TempsActivation);
             }
         }
-        Debug.Log("delai fin tour: " + delaiFinTour);
+        //Debug.Log("delai fin tour: " + delaiFinTour);
+        Invoke("LancerProchaineAttaque", delaiFinTour);
     }
 
     public void Action1()
@@ -105,24 +109,20 @@ public class comportementEnnemi : MonoBehaviour
         RegarderListeActions(actionChoisie4);
     }
 
+    public void LancerProchaineAttaque() 
+    {
+        gestionnaireEnnemi.GetComponent<comportementGestionnaireEnnemi>().AttaquerJoueur();
+    }
 
     public void RegarderListeActions(int actionChoisie)
     {
         bool typeEau = GetComponent<statistiquesPersonnage>().typeEau;
         bool typeFeu = GetComponent<statistiquesPersonnage>().typeFeu;
         bool typePlante = GetComponent<statistiquesPersonnage>().typePlante;
-        
+
         if (actionChoisie >= 0)
         {
             librairie.GetComponent<librairieAttaque>().AttaquerNormal(joueur, GetComponent<statistiquesPersonnage>().attaque, typeEau, typeFeu, typePlante);
         }
     }
-
-    public void ChangerLeTour() 
-    {
-        deck.GetComponent<Deck>().tourEnnemi = false;
-        deck.GetComponent<Deck>().tourJoueur = true;
-    }
 }
-
-
