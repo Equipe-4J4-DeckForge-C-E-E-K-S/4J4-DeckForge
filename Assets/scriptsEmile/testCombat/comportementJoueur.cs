@@ -6,21 +6,30 @@ public class comportementJoueur : MonoBehaviour
 {
     public GameObject ennemiAAttaque;
     public GameObject objetADupliquer;
-    public GameObject ligma;
     public Transform canvas;
     public bool enAttaque;
     public bool cibleTrouve;
     public float floatX;
     public float floatY;
 
+    public static float viePartie = 100f;
+
+    public GameObject librairie;
+
+   //public GameObject deck;
+
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<statistiquesPersonnage>().vie = viePartie;
     }
 
     // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        
+        if(GetComponent<statistiquesPersonnage>().vie <= 0)
+        {
+            librairie.GetComponent<comportementFin>().FinirNiveau(false);
+        }   
     }
 }

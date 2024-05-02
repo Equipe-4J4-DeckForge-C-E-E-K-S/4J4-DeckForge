@@ -28,8 +28,8 @@ RectTransform:
   m_GameObject: {fileID: 2795280334094779141}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2586099818285285557}
   m_Father: {fileID: 0}
@@ -112,6 +112,10 @@ MonoBehaviour:
   soigner: 0
   prefab: {fileID: 2795280334094779141, guid: cb5a9b7e615c26a448fe03039df4ad4e, type: 3}
   index: 0
+  typeBasique: 0
+  typeEau: 0
+  typeFeu: 1
+  typePlante: 0
 --- !u!114 &176844491623045949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,6 +137,7 @@ MonoBehaviour:
   deck: {fileID: 0}
   carteADuplique: {fileID: 0}
   indexASupprimer: 0
+  finNiveau: 0
 --- !u!1 &4258141575620355410
 GameObject:
   m_ObjectHideFlags: 0

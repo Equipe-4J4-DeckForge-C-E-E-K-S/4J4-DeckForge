@@ -95,7 +95,6 @@ public class librairieDeck : MonoBehaviour
         {
             if (inverse)
             {
-                Debug.Log(inverse);
                 if (index + 1 < deckUtilise.Length)
                 {
                     nouveauDeck[index] = deckUtilise[index + 1];
@@ -107,7 +106,6 @@ public class librairieDeck : MonoBehaviour
             }
             else
             {
-                Debug.Log(inverse);
                 nouveauDeck[index] = deckUtilise[index - 1];
             }
             inverse = !inverse;

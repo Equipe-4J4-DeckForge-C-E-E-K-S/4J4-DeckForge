@@ -9,4 +9,9 @@ public class carteProfil : MonoBehaviour
     public bool soigner;
     public GameObject prefab;
     public int index;
+
+    public bool typeBasique;
+    public bool typeEau;
+    public bool typeFeu;
+    public bool typePlante;
 }
