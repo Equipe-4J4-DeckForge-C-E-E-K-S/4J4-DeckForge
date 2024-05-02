@@ -31,7 +31,7 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
     public bool tourEnnemiTermine;
 
     public int delai;
-    public int difficulte;
+    public static float difficulte;
     public int indexListeLocale;
 
     // Start is called before the first frame update
@@ -43,6 +43,7 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (deck.GetComponent<Deck>().tourEnnemi == false && tourEnnemiEnCours == false)
         {
             tourEnnemiEnCours = true;
@@ -72,6 +73,11 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
 
     public void FaireApparaitreEnnemi()
     {
+        if (difficulte <= 0)
+        {
+            difficulte = 1;
+        }
+
         if (biomeBasique)
         {
             indexLocal = indexBasique;
@@ -96,6 +102,7 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
         {
             int choixEnnemi = Random.Range(0, indexLocal.Length);
             GameObject ennemi = Instantiate(indexLocal[choixEnnemi], canvas);
+            Debug.Log("difficulte" + difficulte);
             ennemi.GetComponent<statistiquesPersonnage>().vie = ((ennemi.GetComponent<statistiquesPersonnage>().vie * difficulte) / nbEnnemi);
             ennemi.GetComponent<statistiquesPersonnage>().vie = Mathf.Round(ennemi.GetComponent<statistiquesPersonnage>().vie * 10.0f) * 0.1f;
             ennemi.GetComponent<statistiquesPersonnage>().attaque = ((ennemi.GetComponent<statistiquesPersonnage>().attaque * difficulte) / nbEnnemi);

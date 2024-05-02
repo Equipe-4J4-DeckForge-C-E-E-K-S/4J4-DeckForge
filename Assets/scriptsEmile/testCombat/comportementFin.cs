@@ -28,7 +28,7 @@ public class comportementFin : MonoBehaviour
         if (test)
         {
             FinirNiveau(true);
-        }
+        }   
     }
 
     public void FinirNiveau(bool victoire)
@@ -44,12 +44,12 @@ public class comportementFin : MonoBehaviour
         {
             messageVictoire.SetActive(true);
             resultatNiveau = true;
+            bouton.SetActive(true);
         }
         else
         {
             SceneManager.LoadScene("GAMEOVER");
         }
 
-        bouton.SetActive(true);
     }
 }
