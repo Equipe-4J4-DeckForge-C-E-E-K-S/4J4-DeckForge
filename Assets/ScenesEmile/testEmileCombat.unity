@@ -3100,8 +3100,8 @@ MonoBehaviour:
   biomeFeu: 0
   biomePlante: 0
   indexLocal:
-  - {fileID: 8131188196628768124, guid: 4bb34d952f21c20449ef7de01b4cf0db, type: 3}
-  - {fileID: 8131188196628768124, guid: 51fc5d30f05de084c8bd082df0c29292, type: 3}
+  - {fileID: 8131188196628768124, guid: 828f29edfcc34a948898a1050eec7874, type: 3}
+  - {fileID: 8131188196628768124, guid: 10029fb7a6a0fee4b93652956a00796b, type: 3}
   - {fileID: 8131188196628768124, guid: 1a2c85ac52323864a890beaac5c4d985, type: 3}
   indexBasique: []
   indexEau: []
