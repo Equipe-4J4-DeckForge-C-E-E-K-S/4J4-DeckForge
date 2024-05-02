@@ -19,6 +19,8 @@ public class comportementEnnemi : MonoBehaviour
     public int actionChoisie3;
     public int actionChoisie4;
 
+    public int index;
+
     public int delaiFinTour;
 
     // Start is called before the first frame update
@@ -46,7 +48,7 @@ public class comportementEnnemi : MonoBehaviour
     {
         if (GetComponent<statistiquesPersonnage>().vie <= 0)
         {
-            gestionnaireEnnemi.GetComponent<comportementGestionnaireEnnemi>().listeLocale = librairie.GetComponent<librairieDeck>().enleverCarte(gestionnaireEnnemi.GetComponent<comportementGestionnaireEnnemi>().listeLocale, 0);
+            gestionnaireEnnemi.GetComponent<comportementGestionnaireEnnemi>().listeLocale = librairie.GetComponent<librairieDeck>().enleverCarte(gestionnaireEnnemi.GetComponent<comportementGestionnaireEnnemi>().listeLocale, index);
             Destroy(gameObject);
         }
     }

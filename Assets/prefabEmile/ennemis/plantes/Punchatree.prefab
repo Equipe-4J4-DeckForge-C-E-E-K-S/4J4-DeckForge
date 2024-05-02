@@ -649,10 +649,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5cff5969350d4040abc4ef2fbdba924, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vie: 10
-  defense: 1
+  vie: 17
+  defense: 3
   defenseInitiale: 0
-  attaque: 3
+  attaque: 1
   typeBasique: 0
   typeEau: 0
   typeFeu: 0
@@ -680,6 +680,7 @@ MonoBehaviour:
   actionChoisie2: 0
   actionChoisie3: 0
   actionChoisie4: 0
+  index: 0
   delaiFinTour: 0
 --- !u!114 &3086214724010669878
 MonoBehaviour:
