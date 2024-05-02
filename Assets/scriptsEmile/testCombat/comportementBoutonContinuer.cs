@@ -24,11 +24,11 @@ public class comportementBoutonContinuer : MonoBehaviour
         
         if(resultat)
         {
-            //SceneManager.LoadScene("testEmileShop");
-        }
-        else
-        {
             SceneManager.LoadScene("testEmileCombat");
         }
+        /*else
+        {
+            
+        }*/
     }
 }

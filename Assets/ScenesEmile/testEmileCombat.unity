@@ -1000,6 +1000,7 @@ MonoBehaviour:
   joueur: {fileID: 587014299}
   cible: {fileID: 1531138875}
   enAttaque: 0
+  doitChercher: 0
   librairie: {fileID: 1712367415}
   deck: {fileID: 1442245924}
   gestionnaireEnnemi: {fileID: 1712367415}
@@ -3099,8 +3100,9 @@ MonoBehaviour:
   biomeFeu: 0
   biomePlante: 0
   indexLocal:
-  - {fileID: 8131188196628768124, guid: 73c9160015e69e148809598056b45d02, type: 3}
-  - {fileID: 8131188196628768124, guid: 73c9160015e69e148809598056b45d02, type: 3}
+  - {fileID: 8131188196628768124, guid: 51fc5d30f05de084c8bd082df0c29292, type: 3}
+  - {fileID: 8131188196628768124, guid: 10029fb7a6a0fee4b93652956a00796b, type: 3}
+  - {fileID: 8131188196628768124, guid: 828f29edfcc34a948898a1050eec7874, type: 3}
   indexBasique: []
   indexEau: []
   indexFeu: []
@@ -3114,8 +3116,10 @@ MonoBehaviour:
   joueur: {fileID: 587014299}
   deck: {fileID: 1442245924}
   tourEnnemiEnCours: 0
+  tourEnnemiTermine: 0
   delai: 0
   difficulte: 1
+  indexListeLocale: 0
 --- !u!1 &1766633488
 GameObject:
   m_ObjectHideFlags: 0

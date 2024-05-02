@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class comportementFin : MonoBehaviour
 {
@@ -46,8 +47,7 @@ public class comportementFin : MonoBehaviour
         }
         else
         {
-            messageDefaite.SetActive(true);
-            resultatNiveau = false;
+            SceneManager.LoadScene("GAMEOVER");
         }
 
         bouton.SetActive(true);
