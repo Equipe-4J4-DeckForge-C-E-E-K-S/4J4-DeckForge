@@ -8690,7 +8690,7 @@ MonoBehaviour:
   tourJoueur: 1
   tourEnnemi: 0
   tourJoueurCommence: 1
-  nbCartesDonnees: 2
+  nbCartesDonnees: 3
   posYCarteJeu: -370
   ecartPourMettreCartes: 540
   posCarteDepart: -270
