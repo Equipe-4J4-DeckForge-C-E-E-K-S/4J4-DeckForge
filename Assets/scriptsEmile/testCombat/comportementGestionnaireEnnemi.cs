@@ -137,6 +137,16 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
         }
     }
 
+    public void ReclasserOrdreEnnemi()
+    {
+        int i = 0;
+        foreach (var ennemi in listeLocale)
+        {
+            ennemi.GetComponent<comportementEnnemi>().index = i;
+            i++;
+        }
+    }
+
 
     public void GererReactionAttaqueEnnemi()
     {
