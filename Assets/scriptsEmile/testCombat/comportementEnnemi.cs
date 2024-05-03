@@ -50,6 +50,7 @@ public class comportementEnnemi : MonoBehaviour
         {
             gestionnaireEnnemi.GetComponent<comportementGestionnaireEnnemi>().listeLocale = librairie.GetComponent<librairieDeck>().enleverCarte(gestionnaireEnnemi.GetComponent<comportementGestionnaireEnnemi>().listeLocale, index);
             Destroy(gameObject);
+            gestionnaireEnnemi.GetComponent<comportementGestionnaireEnnemi>().ReclasserOrdreEnnemi();
         }
     }
 
