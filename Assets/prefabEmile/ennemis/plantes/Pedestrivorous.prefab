@@ -650,7 +650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vie: 10
-  defense: 1
+  defense: 2
   defenseInitiale: 0
   attaque: 3
   typeBasique: 0
@@ -680,6 +680,7 @@ MonoBehaviour:
   actionChoisie2: 0
   actionChoisie3: 0
   actionChoisie4: 0
+  index: 0
   delaiFinTour: 0
 --- !u!114 &3086214724010669878
 MonoBehaviour:

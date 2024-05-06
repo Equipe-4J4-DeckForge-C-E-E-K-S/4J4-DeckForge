@@ -102,13 +102,13 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
         {
             int choixEnnemi = Random.Range(0, indexLocal.Length);
             GameObject ennemi = Instantiate(indexLocal[choixEnnemi], canvas);
-            Debug.Log("difficulte" + difficulte);
             ennemi.GetComponent<statistiquesPersonnage>().vie = ((ennemi.GetComponent<statistiquesPersonnage>().vie * difficulte) / nbEnnemi);
             ennemi.GetComponent<statistiquesPersonnage>().vie = Mathf.Round(ennemi.GetComponent<statistiquesPersonnage>().vie * 10.0f) * 0.1f;
             ennemi.GetComponent<statistiquesPersonnage>().attaque = ((ennemi.GetComponent<statistiquesPersonnage>().attaque * difficulte) / nbEnnemi);
             ennemi.GetComponent<statistiquesPersonnage>().attaque = Mathf.Round(ennemi.GetComponent<statistiquesPersonnage>().attaque * 10.0f) * 0.1f;
             ennemi.GetComponent<statistiquesPersonnage>().defense = ((ennemi.GetComponent<statistiquesPersonnage>().defense * difficulte) / nbEnnemi);
             ennemi.GetComponent<statistiquesPersonnage>().defense = Mathf.Round(ennemi.GetComponent<statistiquesPersonnage>().defense * 10.0f) * 0.1f;
+            ennemi.GetComponent<comportementEnnemi>().index = i;
             ennemi.GetComponent<comportementEnnemi>().joueur = joueur;
             ennemi.GetComponent<comportementEnnemi>().librairie = librairie;
             ennemi.GetComponent<comportementEnnemi>().deck = deck;
@@ -134,6 +134,16 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
 
             pos.y = posYEnnemi;
             ennemi.GetComponent<RectTransform>().anchoredPosition = new Vector2(pos.x, pos.y);
+        }
+    }
+
+    public void ReclasserOrdreEnnemi()
+    {
+        int i = 0;
+        foreach (var ennemi in listeLocale)
+        {
+            ennemi.GetComponent<comportementEnnemi>().index = i;
+            i++;
         }
     }
 
