@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.U2D;
 
 public class Deck : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Deck : MonoBehaviour
     public GameObject carteADupliquer;
     public GameObject carteDupliquee;
     public GameObject personnage;
+    public GameObject btnContinuer;
 
     public GameObject[] deckStatDebug;
     public static GameObject[] deckStat;
@@ -29,17 +31,19 @@ public class Deck : MonoBehaviour
     public int nbCartesDonnees;
 
     public float posYCarteJeu = -370f;
-    public float ecartPourMettreCartes = 540;
-    public float posCarteDepart = -270;
+    public float ecartPourMettreCartes = 975f;
+    public float posCarteDepart = -487.5f;
+
+    public float difficulteDEBUG;
 
 
     //800w  340h
 
     void Start()
     {
-        Debug.Log("oki");
         if (comportementGestionnaireEnnemi.difficulte <= 1)
         {
+            Debug.Log("oki");
             for (int i = 0; i < 25; i++)
             {
                 int carteAleatoireChoisie = Random.Range(0, deckFull.Length);
@@ -95,6 +99,7 @@ public class Deck : MonoBehaviour
                 deckActuel = librairie.GetComponent<librairieDeck>().enleverCarte(deckActuel, 0);
             }
         }
+        btnContinuer.transform.SetSiblingIndex(100);
         OrganiserDeckJoueur();
     }
 
@@ -135,7 +140,6 @@ public class Deck : MonoBehaviour
             index++;
             Vector2 pos;
             pos.x = posCarteDepart + (distanceEntreCartes * index);
-
             pos.y = posYCarteJeu;
             carte.GetComponent<RectTransform>().anchoredPosition = new Vector2(pos.x, pos.y);
         }
