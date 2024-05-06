@@ -111,6 +111,7 @@ MonoBehaviour:
   bloquer: 0
   soigner: 0
   prefab: {fileID: 2795280334094779141, guid: 400e3644a5154fe4888a1f2a92d316e7, type: 3}
+  imgButton: {fileID: 3830442017021597120}
   index: 0
   typeBasique: 0
   typeEau: 1

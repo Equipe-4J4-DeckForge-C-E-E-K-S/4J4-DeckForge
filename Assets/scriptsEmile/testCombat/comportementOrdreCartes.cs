@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class comportementOrdreCartes : MonoBehaviour
 {
@@ -22,16 +23,17 @@ public class comportementOrdreCartes : MonoBehaviour
 
     public void DireOrdreCartes()
     {
-        int spriteOrder = objetAcheck.transform.GetSiblingIndex();
-        objetAcheck.transform.SetSiblingIndex(100);
-        Debug.Log(spriteOrder);
+        //int spriteOrder = objetAcheck.transform.GetSiblingIndex();
+        //objetAcheck.transform.SetSiblingIndex(100);
+        //Debug.Log(spriteOrder);
 
         int index = 0;
-        /*foreach (var carte in deck.GetComponent<Deck>().deckJoueur)
+        foreach (var carte in deck.GetComponent<Deck>().deckJoueur)
         {
-            int spriteOrder = carte.transform.GetSiblingIndex();
-            Debug.Log(spriteOrder);
-            carte.transform.SetSiblingIndex(0);
-        }*/
+            //int spriteOrder = carte.transform.GetSiblingIndex();
+            //Debug.Log(spriteOrder);
+            //carte.transform.SetSiblingIndex(0);
+            carte.GetComponent<carteProfil>().imgButton.GetComponent<Image>().color = new Color32(190, 190, 190, 255);
+        }
     }
 }

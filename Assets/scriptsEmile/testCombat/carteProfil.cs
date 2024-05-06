@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class carteProfil : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class carteProfil : MonoBehaviour
     public bool bloquer;
     public bool soigner;
     public GameObject prefab;
+
+    public Image imgButton;
+
     public int index;
 
     public bool typeBasique;
