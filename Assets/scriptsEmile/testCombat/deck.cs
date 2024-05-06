@@ -106,6 +106,8 @@ public class Deck : MonoBehaviour
 
     public void IdentifierCarte(GameObject carteAIdentifier)
     {
+        carteAIdentifier.GetComponent<comportementCarteDeck>().deck = gameObject;
+
         if (carteAIdentifier.GetComponent<carteProfil>().attaquer)
         {
             carteAIdentifier.GetComponent<Attaque>().personnage = personnage;

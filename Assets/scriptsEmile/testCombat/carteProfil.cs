@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class carteProfil : MonoBehaviour
+public class carteProfil : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public bool attaquer;
     public bool bloquer;
@@ -21,15 +21,16 @@ public class carteProfil : MonoBehaviour
     public bool typePlante;
 
 
-    void OnMouseOver()
+
+    public void OnPointerEnter(PointerEventData eventData)
     {
         imgButton.GetComponent<Image>().color = new Color32(190, 190, 190, 255);
-        Debug.Log("Mouse is over GameObject.");
+        Debug.Log("Mouse enter");
     }
 
-    void OnMouseExit()
+    public void OnPointerExit(PointerEventData eventData)
     {
-        imgButton.GetComponent<Image>().color = new Color32(190, 190, 190, 255);
-        Debug.Log("Mouse is no longer on GameObject.");
+        imgButton.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+        Debug.Log("Mouse exit");
     }
 }
