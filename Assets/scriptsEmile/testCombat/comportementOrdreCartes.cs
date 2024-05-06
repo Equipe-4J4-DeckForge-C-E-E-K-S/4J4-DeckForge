@@ -33,7 +33,6 @@ public class comportementOrdreCartes : MonoBehaviour
             //int spriteOrder = carte.transform.GetSiblingIndex();
             //Debug.Log(spriteOrder);
             //carte.transform.SetSiblingIndex(0);
-            carte.GetComponent<carteProfil>().imgButton.GetComponent<Image>().color = new Color32(190, 190, 190, 255);
         }
     }
 }

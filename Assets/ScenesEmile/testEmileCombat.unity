@@ -2642,9 +2642,9 @@ MonoBehaviour:
   personnage: {fileID: 587014299}
   btnContinuer: {fileID: 2124115673}
   deckStatDebug:
-  - {fileID: 2795280334094779141, guid: 836491653bf62ab4ebc31da4938add55, type: 3}
-  - {fileID: 2795280334094779141, guid: 64051ff1a7c8345408180dfe268fdcd8, type: 3}
-  - {fileID: 2795280334094779141, guid: bd7ca5955e5812b488a2259e973cd7d6, type: 3}
+  - {fileID: 2795280334094779141, guid: 8de6c3545fed386498b1e212633d5b17, type: 3}
+  - {fileID: 2795280334094779141, guid: 9b782ea43faa01e498d4f026c00689b0, type: 3}
+  - {fileID: 2795280334094779141, guid: e28ec1095c2770c4d894ed9d3880f39d, type: 3}
   - {fileID: 2795280334094779141, guid: 24bdcbe53c1bc104f8fb5b5e4bfff9b3, type: 3}
   - {fileID: 2795280334094779141, guid: 0d28741c6b3b6be46a549e0021608e07, type: 3}
   - {fileID: 2795280334094779141, guid: c02512c498a05fe409e0e60404a68afe, type: 3}
