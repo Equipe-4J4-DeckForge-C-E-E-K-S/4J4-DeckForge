@@ -110,12 +110,14 @@ public class Deck : MonoBehaviour
 
         if (carteAIdentifier.GetComponent<carteProfil>().attaquer)
         {
+            Debug.Log("oki");
             carteAIdentifier.GetComponent<Attaque>().personnage = personnage;
             carteAIdentifier.GetComponent<Attaque>().librairie = librairie;
             carteAIdentifier.GetComponent<Attaque>().deck = gameObject;
         }
         else if (carteAIdentifier.GetComponent<carteProfil>().bloquer)
         {
+            Debug.Log("oki");
             carteAIdentifier.GetComponent<Bloque>().personnage = personnage;
             carteAIdentifier.GetComponent<Bloque>().librairie = librairie;
             carteAIdentifier.GetComponent<Bloque>().deck = gameObject;
@@ -123,6 +125,7 @@ public class Deck : MonoBehaviour
         }
         else if (carteAIdentifier.GetComponent<carteProfil>().soigner)
         {
+            Debug.Log("oki");
             carteAIdentifier.GetComponent<Soin>().personnage = personnage;
             carteAIdentifier.GetComponent<Soin>().librairie = librairie;
             carteAIdentifier.GetComponent<Soin>().deck = gameObject;
@@ -132,7 +135,7 @@ public class Deck : MonoBehaviour
 
     public void OrganiserDeckJoueur()
     {
-        float distanceEntreCartes = ((ecartPourMettreCartes - (deckJoueur.Length * 30)) / (deckJoueur.Length + 1));
+        float distanceEntreCartes = ((ecartPourMettreCartes - (deckJoueur.Length)) / (deckJoueur.Length + 1));
 
         int index = 0;
         foreach (var carte in deckJoueur)
@@ -143,6 +146,9 @@ public class Deck : MonoBehaviour
             pos.x = posCarteDepart + (distanceEntreCartes * index);
             pos.y = posYCarteJeu;
             carte.GetComponent<RectTransform>().anchoredPosition = new Vector2(pos.x, pos.y);
+            carte.GetComponent<carteProfil>().indexSiblingInitial = carte.transform.GetSiblingIndex();
+            carte.GetComponent<carteProfil>().posXinitial = pos.x;
+            carte.GetComponent<carteProfil>().posYinitial = pos.y;
         }
     }
 

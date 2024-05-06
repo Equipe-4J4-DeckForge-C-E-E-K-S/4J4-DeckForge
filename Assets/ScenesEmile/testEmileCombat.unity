@@ -2700,10 +2700,10 @@ MonoBehaviour:
   tourJoueur: 1
   tourEnnemi: 0
   tourJoueurCommence: 1
-  nbCartesDonnees: 3
+  nbCartesDonnees: 25
   posYCarteJeu: -370
-  ecartPourMettreCartes: 975
-  posCarteDepart: -487.5
+  ecartPourMettreCartes: 1055
+  posCarteDepart: -600
   difficulteDEBUG: 0
 --- !u!1 &1442850223
 GameObject:
