@@ -114,12 +114,17 @@ MonoBehaviour:
   prefab: {fileID: 2795280334094779141, guid: 64051ff1a7c8345408180dfe268fdcd8, type: 3}
   imgButton: {fileID: 9048177982670151378}
   index: 0
+  indexSiblingInitial: 0
   typeBasique: 1
   typeEau: 0
   typeFeu: 0
   typePlante: 0
   posXinitial: 0
   posYinitial: 0
+  survole: 0
+  scale: 3
+  hauteur: 0
+  hauteurDebug: 0
 --- !u!114 &-674420196387308747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,9 +141,10 @@ MonoBehaviour:
   peutDistancierCartes: 0
   peutRapprocherCartes: 0
   index: 0
-  distanceVersGauche: 1
-  distanceVersDroite: 1
-  ecart: 5
+  distanceVersGauche: 100
+  distanceVersDroite: 100
+  posXDebug: 0
+  ecart: 100
 --- !u!114 &-1516672706220665953
 MonoBehaviour:
   m_ObjectHideFlags: 0

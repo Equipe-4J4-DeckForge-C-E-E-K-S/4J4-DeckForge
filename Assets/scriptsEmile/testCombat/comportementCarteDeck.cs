@@ -14,6 +14,8 @@ public class comportementCarteDeck : MonoBehaviour, IPointerEnterHandler, IPoint
     public float distanceVersGauche;
     public float distanceVersDroite;
 
+    public float posXDebug;
+
     public float ecart;
 
 
@@ -21,50 +23,70 @@ public class comportementCarteDeck : MonoBehaviour, IPointerEnterHandler, IPoint
     {
         index = GetComponent<carteProfil>().index;
         RapprocherCartes();
+        DistancerCartes();
     }
 
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        DistancerCartes();
-        Debug.Log("Mouse enter");
+        peutDistancierCartes = true;
+        peutRapprocherCartes = false;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         peutRapprocherCartes = true;
-        Debug.Log("Mouse exit");
+        peutDistancierCartes = false;
     }
 
     public void DistancerCartes() 
     {
-        for (int i = 0; i < deck.GetComponent<Deck>().deckJoueur.Length; i++)
+        if (peutDistancierCartes)
         {
-            if (i < index)
+            for (int i = 0; i < deck.GetComponent<Deck>().deckJoueur.Length; i++)
             {
-                Vector2 pos = deck.GetComponent<Deck>().deckJoueur[i].GetComponent<RectTransform>().anchoredPosition;
-                if ((deck.GetComponent<Deck>().deckJoueur[i].GetComponent<carteProfil>().posXinitial - ecart) < pos.x)
+                Vector2 poS = deck.GetComponent<Deck>().deckJoueur[i].GetComponent<RectTransform>().anchoredPosition;
+                if (poS.x == deck.GetComponent<Deck>().deckJoueur[i].GetComponent<carteProfil>().posXinitial)
                 {
-                    pos.x -= distanceVersGauche * Time.deltaTime;
+                    Debug.Log(deck.GetComponent<Deck>().deckJoueur[i].GetComponent<carteProfil>().index);
+                    Debug.Log("true");
                 }
-                else
+
+
+                if (i < index)
                 {
-                    pos.x = (deck.GetComponent<Deck>().deckJoueur[i].GetComponent<carteProfil>().posXinitial - ecart);
+                    Vector2 pos = deck.GetComponent<Deck>().deckJoueur[i].GetComponent<RectTransform>().anchoredPosition;
+
+                    if ((deck.GetComponent<Deck>().deckJoueur[i].GetComponent<carteProfil>().posXinitial - (ecart/2)) < pos.x)
+                    {
+                        pos.x -= distanceVersGauche * Time.deltaTime;
+                        posXDebug = pos.x;
+                    }
+                    else
+                    {
+                        pos.x = (deck.GetComponent<Deck>().deckJoueur[i].GetComponent<carteProfil>().posXinitial - (ecart / 2));
+                    }
+                    deck.GetComponent<Deck>().deckJoueur[i].GetComponent<RectTransform>().anchoredPosition = new Vector2(pos.x, pos.y);
                 }
-                deck.GetComponent<Deck>().deckJoueur[i].GetComponent<RectTransform>().anchoredPosition = new Vector2(pos.x, pos.y);
-            }
-            else if (i > index)
-            {
-                Vector2 pos = deck.GetComponent<Deck>().deckJoueur[i].GetComponent<RectTransform>().anchoredPosition;
-                if ((deck.GetComponent<Deck>().deckJoueur[i].GetComponent<carteProfil>().posXinitial + ecart) > pos.x)
+                else if (i > index)
                 {
-                    pos.x += distanceVersDroite * Time.deltaTime;
+                    Vector2 pos = deck.GetComponent<Deck>().deckJoueur[i].GetComponent<RectTransform>().anchoredPosition;
+
+                    if ((deck.GetComponent<Deck>().deckJoueur[i].GetComponent<carteProfil>().posXinitial + (ecart / 2)) >= pos.x)
+                    {
+                        pos.x += distanceVersDroite * Time.deltaTime;
+                    }
+                    else
+                    {
+                        pos.x = (deck.GetComponent<Deck>().deckJoueur[i].GetComponent<carteProfil>().posXinitial + (ecart / 2));
+
+                        if (i == (deck.GetComponent<Deck>().deckJoueur.Length - 1))
+                        {
+                            peutDistancierCartes = false;
+                        }
+                    }
+                    deck.GetComponent<Deck>().deckJoueur[i].GetComponent<RectTransform>().anchoredPosition = new Vector2(pos.x, pos.y);
                 }
-                else
-                {
-                    pos.x = (deck.GetComponent<Deck>().deckJoueur[i].GetComponent<carteProfil>().posXinitial + ecart);
-                }
-                deck.GetComponent<Deck>().deckJoueur[i].GetComponent<RectTransform>().anchoredPosition = new Vector2(pos.x, pos.y);
             }
         }
     }
@@ -73,6 +95,7 @@ public class comportementCarteDeck : MonoBehaviour, IPointerEnterHandler, IPoint
     {
         if (peutRapprocherCartes)
         {
+
             for (int i = 0; i < deck.GetComponent<Deck>().deckJoueur.Length; i++)
             {
                 if (i < index)
@@ -82,6 +105,7 @@ public class comportementCarteDeck : MonoBehaviour, IPointerEnterHandler, IPoint
                     if (deck.GetComponent<Deck>().deckJoueur[i].GetComponent<carteProfil>().posXinitial > pos.x)
                     {
                         pos.x += distanceVersGauche * Time.deltaTime;
+                        posXDebug = pos.x;
                     }
                     else
                     {
@@ -98,7 +122,7 @@ public class comportementCarteDeck : MonoBehaviour, IPointerEnterHandler, IPoint
                     }
                     else
                     {
-                        pos.x = deck.GetComponent<Deck>().deckJoueur[i].GetComponent<carteProfil>().posXinitial + ecart;
+                        pos.x = deck.GetComponent<Deck>().deckJoueur[i].GetComponent<carteProfil>().posXinitial;
                         if (i == (deck.GetComponent<Deck>().deckJoueur.Length - 1))
                         {
                             peutRapprocherCartes = false;

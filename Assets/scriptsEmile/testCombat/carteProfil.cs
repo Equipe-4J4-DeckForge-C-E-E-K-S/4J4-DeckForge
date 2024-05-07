@@ -29,9 +29,12 @@ public class carteProfil : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public float scale = 3;
     public float hauteur;
+    public float hauteurDebug;
 
     void Update() 
     {
+        Vector2 pos = GetComponent<RectTransform>().anchoredPosition;
+        hauteurDebug = (pos.y - posYinitial);
         if (survole)
         {
             if (scale < 3.3f)
@@ -44,17 +47,16 @@ public class carteProfil : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
                 scale = 3.3f;
             }
             
-            if (hauteur < 10f)
+            if ((pos.y-posYinitial) < 70f)
             {
-               Vector2 pos = GetComponent<RectTransform>().anchoredPosition;
-               hauteur += (4f * Time.deltaTime);
+               hauteur += (10f * Time.deltaTime);
                pos.y += hauteur;
                GetComponent<RectTransform>().anchoredPosition = new Vector2(pos.x, pos.y);
             }
-            else if (hauteur > 10f)
-            {
-                hauteur = 10;
-                GetComponent<RectTransform>().anchoredPosition = new Vector2(posXinitial, posYinitial + 10f);
+            else if ((pos.y - posYinitial) > 70f)
+            {;
+                hauteur = 70f;
+                GetComponent<RectTransform>().anchoredPosition = new Vector2(posXinitial, (posYinitial + 70f));
             }
         }
     }
@@ -64,7 +66,6 @@ public class carteProfil : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         survole = true;
         imgButton.GetComponent<Image>().color = new Color32(190, 190, 190, 255);
         transform.SetSiblingIndex(100);
-        Debug.Log("Mouse enter");
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -76,6 +77,5 @@ public class carteProfil : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         GetComponent<RectTransform>().anchoredPosition = new Vector2(posXinitial, posYinitial);
         transform.SetSiblingIndex(indexSiblingInitial);
         imgButton.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
-        Debug.Log("Mouse exit");
     }
 }

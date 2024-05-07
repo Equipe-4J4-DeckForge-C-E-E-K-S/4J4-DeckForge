@@ -110,14 +110,12 @@ public class Deck : MonoBehaviour
 
         if (carteAIdentifier.GetComponent<carteProfil>().attaquer)
         {
-            Debug.Log("oki");
             carteAIdentifier.GetComponent<Attaque>().personnage = personnage;
             carteAIdentifier.GetComponent<Attaque>().librairie = librairie;
             carteAIdentifier.GetComponent<Attaque>().deck = gameObject;
         }
         else if (carteAIdentifier.GetComponent<carteProfil>().bloquer)
         {
-            Debug.Log("oki");
             carteAIdentifier.GetComponent<Bloque>().personnage = personnage;
             carteAIdentifier.GetComponent<Bloque>().librairie = librairie;
             carteAIdentifier.GetComponent<Bloque>().deck = gameObject;
@@ -125,7 +123,6 @@ public class Deck : MonoBehaviour
         }
         else if (carteAIdentifier.GetComponent<carteProfil>().soigner)
         {
-            Debug.Log("oki");
             carteAIdentifier.GetComponent<Soin>().personnage = personnage;
             carteAIdentifier.GetComponent<Soin>().librairie = librairie;
             carteAIdentifier.GetComponent<Soin>().deck = gameObject;
