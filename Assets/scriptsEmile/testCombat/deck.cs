@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class deck : MonoBehaviour
+public class Deck : MonoBehaviour
 {
     public GameObject librairie;
     public Transform canvas;
@@ -13,9 +13,9 @@ public class deck : MonoBehaviour
     public GameObject personnage;
 
     public GameObject[] deckStatDebug;
-    static GameObject[] deckStat;
+    public static GameObject[] deckStat;
 
-
+    public GameObject[] deckFull;
     public GameObject[] deckLoc;
     public GameObject[] deckTrash;
     public GameObject[] deckActuel;
@@ -28,13 +28,30 @@ public class deck : MonoBehaviour
     public bool tourJoueurCommence;
     public int nbCartesDonnees;
 
+    public float posYCarteJeu = -370f;
+    public float ecartPourMettreCartes = 540;
+    public float posCarteDepart = -270;
+
+
     //800w  340h
 
     void Start()
     {
-        deckStat = deckStatDebug;
+        Debug.Log("oki");
+        if (comportementGestionnaireEnnemi.difficulte <= 1)
+        {
+            for (int i = 0; i < 25; i++)
+            {
+                int carteAleatoireChoisie = Random.Range(0, deckFull.Length);
+                GameObject carteChoisie = deckFull[carteAleatoireChoisie];
+                deckStatDebug = librairie.gameObject.GetComponent<librairieDeck>().ajouterCarte(deckStatDebug, carteChoisie);
+            }
+            deckStat = deckStatDebug;
+        }
+
         deckLoc = deckStat;
         deckActuel = deckLoc;
+        deckActuel = librairie.GetComponent<librairieDeck>().SufflerCartes(deckActuel);
     }
 
     void Update()
@@ -59,6 +76,7 @@ public class deck : MonoBehaviour
     // Update is called once per frame
     public void CommenceTourJoueur()
     {
+        personnage.GetComponent<statistiquesPersonnage>().defense = personnage.GetComponent<statistiquesPersonnage>().defenseInitiale;
         tourJoueurCommence = false;
         for (int carte = 0; carte < nbCartesDonnees; carte++)
         {
@@ -108,7 +126,7 @@ public class deck : MonoBehaviour
 
     public void OrganiserDeckJoueur()
     {
-        float distanceEntreCartes = ((540 - (deckJoueur.Length * 20)) / (deckJoueur.Length + 1));
+        float distanceEntreCartes = ((ecartPourMettreCartes - (deckJoueur.Length * 30)) / (deckJoueur.Length + 1));
 
         int index = 0;
         foreach (var carte in deckJoueur)
@@ -116,8 +134,9 @@ public class deck : MonoBehaviour
             carte.GetComponent<carteProfil>().index = index;
             index++;
             Vector2 pos;
-            pos.x = -270 + (distanceEntreCartes * index);
-            pos.y = -150;
+            pos.x = posCarteDepart + (distanceEntreCartes * index);
+
+            pos.y = posYCarteJeu;
             carte.GetComponent<RectTransform>().anchoredPosition = new Vector2(pos.x, pos.y);
         }
     }

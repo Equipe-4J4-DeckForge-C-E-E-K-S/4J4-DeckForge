@@ -18,7 +18,7 @@ public class montrerTour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (deck.GetComponent<deck>().tourJoueur) 
+        if (deck.GetComponent<Deck>().tourJoueur) 
         {
             typeTour.text = "type: Joueur";
         }
