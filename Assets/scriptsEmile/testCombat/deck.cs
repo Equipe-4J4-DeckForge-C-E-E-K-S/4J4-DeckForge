@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.U2D;
 
 public class Deck : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Deck : MonoBehaviour
     public GameObject carteADupliquer;
     public GameObject carteDupliquee;
     public GameObject personnage;
+    public GameObject btnContinuer;
 
     public GameObject[] deckStatDebug;
     public static GameObject[] deckStat;
@@ -29,15 +31,16 @@ public class Deck : MonoBehaviour
     public int nbCartesDonnees;
 
     public float posYCarteJeu = -370f;
-    public float ecartPourMettreCartes = 540;
-    public float posCarteDepart = -270;
+    public float ecartPourMettreCartes = 975f;
+    public float posCarteDepart = -487.5f;
+
+    public float difficulteDEBUG;
 
 
     //800w  340h
 
     void Start()
     {
-        Debug.Log("oki");
         if (comportementGestionnaireEnnemi.difficulte <= 1)
         {
             for (int i = 0; i < 25; i++)
@@ -102,6 +105,8 @@ public class Deck : MonoBehaviour
 
     public void IdentifierCarte(GameObject carteAIdentifier)
     {
+        carteAIdentifier.GetComponent<comportementCarteDeck>().deck = gameObject;
+
         if (carteAIdentifier.GetComponent<carteProfil>().attaquer)
         {
             carteAIdentifier.GetComponent<Attaque>().personnage = personnage;
@@ -126,7 +131,7 @@ public class Deck : MonoBehaviour
 
     public void OrganiserDeckJoueur()
     {
-        float distanceEntreCartes = ((ecartPourMettreCartes - (deckJoueur.Length * 30)) / (deckJoueur.Length + 1));
+        float distanceEntreCartes = ((ecartPourMettreCartes - (deckJoueur.Length)) / (deckJoueur.Length + 1));
 
         int index = 0;
         foreach (var carte in deckJoueur)
@@ -135,17 +140,20 @@ public class Deck : MonoBehaviour
             index++;
             Vector2 pos;
             pos.x = posCarteDepart + (distanceEntreCartes * index);
-
             pos.y = posYCarteJeu;
             carte.GetComponent<RectTransform>().anchoredPosition = new Vector2(pos.x, pos.y);
+            carte.GetComponent<carteProfil>().indexSiblingInitial = carte.transform.GetSiblingIndex();
+            carte.GetComponent<carteProfil>().posXinitial = pos.x;
+            carte.GetComponent<carteProfil>().posYinitial = pos.y;
         }
+        btnContinuer.transform.SetSiblingIndex(100);
     }
 
 
     public void Recharger()
     {
-            deckActuel = deckTrash;
-            deckActuel = librairie.GetComponent<librairieDeck>().SufflerCartes(deckActuel);
+        deckActuel = deckTrash;
+        deckActuel = librairie.GetComponent<librairieDeck>().SufflerCartes(deckActuel);
 
         foreach (GameObject carte in deckTrash)
         {

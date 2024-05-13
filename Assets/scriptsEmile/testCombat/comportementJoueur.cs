@@ -16,12 +16,29 @@ public class comportementJoueur : MonoBehaviour
 
     public GameObject librairie;
 
-   //public GameObject deck;
+   public GameObject deck;
+
+   public int carteAttaqueUtilisee;
 
     // Start is called before the first frame update
     void Start()
     {
         GetComponent<statistiquesPersonnage>().vie = viePartie;
+    }
+
+    void Update()
+    {
+        if (cibleTrouve)
+        {
+            for (int i = 0; i < deck.GetComponent<Deck>().deckJoueur.Length; i++) 
+            {
+                if (i == carteAttaqueUtilisee)
+                {
+                    deck.GetComponent<Deck>().deckJoueur[i].GetComponent<Attaque>().cibleTrouve = true;
+                }
+            }
+            cibleTrouve=false;
+        }
     }
 
     // Update is called once per frame
