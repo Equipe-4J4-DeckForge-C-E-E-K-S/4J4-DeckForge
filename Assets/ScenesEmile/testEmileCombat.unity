@@ -804,6 +804,8 @@ MonoBehaviour:
   floatX: -200
   floatY: -110
   librairie: {fileID: 1712367415}
+  deck: {fileID: 1442245924}
+  carteAttaqueUtilisee: 0
 --- !u!114 &587014307
 MonoBehaviour:
   m_ObjectHideFlags: 0

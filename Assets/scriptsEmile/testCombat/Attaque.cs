@@ -14,6 +14,7 @@ public class Attaque : MonoBehaviour
 
     public GameObject librairie;
     public GameObject deck;
+    public GameObject carteBouton;
 
     public GameObject carteADuplique;
     public int indexASupprimer;
@@ -21,6 +22,7 @@ public class Attaque : MonoBehaviour
     public bool finNiveau;
 
     public bool debug;
+    public int debug2;
 
 
     // Start is called before the first frame update
@@ -32,11 +34,6 @@ public class Attaque : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (debug)
-        {*/
-            //Debug.Log("index update: " + GetComponent<carteProfil>().index);
-        //}
-
         finNiveau = librairie.GetComponent<comportementFin>().finNiveau;
 
         if (finNiveau == false)
@@ -51,11 +48,8 @@ public class Attaque : MonoBehaviour
             }
         }
 
-        cibleTrouve = personnage.GetComponent<comportementJoueur>().cibleTrouve;
         if (cibleTrouve)
         {
-            Debug.Log("index cible: " + GetComponent<carteProfil>().index);
-
             attaque = personnage.GetComponent<statistiquesPersonnage>().attaque;
             cible = personnage.GetComponent<comportementJoueur>().ennemiAAttaque;
             float defCible = cible.GetComponent<statistiquesPersonnage>().defense;
@@ -168,7 +162,7 @@ public class Attaque : MonoBehaviour
         //carteADuplique = GetComponent<carteProfil>().prefab;
         //indexASupprimer = GetComponent<carteProfil>().index;
 
-        enAttaque = true;
-        personnage.GetComponent<comportementJoueur>().enAttaque = enAttaque;
+        personnage.GetComponent<comportementJoueur>().enAttaque = true;
+        personnage.GetComponent<comportementJoueur>().carteAttaqueUtilisee = GetComponent<carteProfil>().index;
     }
 }
