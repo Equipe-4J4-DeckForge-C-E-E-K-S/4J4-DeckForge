@@ -13,6 +13,7 @@ public class comportementJoueur : MonoBehaviour
     public float floatY;
 
     public static float viePartie = 100f;
+    public static float defPartie = 1f;
 
     public GameObject librairie;
 
@@ -20,14 +21,24 @@ public class comportementJoueur : MonoBehaviour
 
    public int carteAttaqueUtilisee;
 
+    public bool enrDefInitiale = true;
+
     // Start is called before the first frame update
     void Start()
     {
         GetComponent<statistiquesPersonnage>().vie = viePartie;
+        defPartie = 10;
     }
 
     void Update()
     {
+        if(enrDefInitiale)
+        {
+            GetComponent<statistiquesPersonnage>().defense = defPartie;
+            GetComponent<statistiquesPersonnage>().defenseInitiale = defPartie;
+            enrDefInitiale=false;
+        }
+
         if (cibleTrouve)
         {
             for (int i = 0; i < deck.GetComponent<Deck>().deckJoueur.Length; i++) 

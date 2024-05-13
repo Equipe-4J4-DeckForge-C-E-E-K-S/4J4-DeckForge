@@ -12,7 +12,10 @@ public class Deck : MonoBehaviour
     public GameObject carteADupliquer;
     public GameObject carteDupliquee;
     public GameObject personnage;
+
     public GameObject btnContinuer;
+    public GameObject btnFinTour;
+    public TextMeshProUGUI txtFinTour;
 
     public GameObject[] deckStatDebug;
     public static GameObject[] deckStat;
@@ -31,8 +34,8 @@ public class Deck : MonoBehaviour
     public int nbCartesDonnees;
 
     public float posYCarteJeu = -370f;
-    public float ecartPourMettreCartes = 975f;
-    public float posCarteDepart = -487.5f;
+    public float ecartPourMettreCartes = 955f;
+    public float posCarteDepart = -600f;
 
     public float difficulteDEBUG;
 
@@ -68,10 +71,12 @@ public class Deck : MonoBehaviour
             {
                 CommenceTourJoueur();
             }
+            btnFinTour.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
         }
         else
         {
             tourJoueurCommence = true;
+            btnFinTour.GetComponent<Image>().color = new Color32(164, 164, 164, 242);
         }
     }
 
@@ -146,6 +151,7 @@ public class Deck : MonoBehaviour
             carte.GetComponent<carteProfil>().posXinitial = pos.x;
             carte.GetComponent<carteProfil>().posYinitial = pos.y;
         }
+        btnFinTour.transform.SetSiblingIndex(100);
         btnContinuer.transform.SetSiblingIndex(100);
     }
 

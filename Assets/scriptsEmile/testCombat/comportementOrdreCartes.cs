@@ -27,7 +27,7 @@ public class comportementOrdreCartes : MonoBehaviour
         //objetAcheck.transform.SetSiblingIndex(100);
         //Debug.Log(spriteOrder);
 
-        int index = 0;
+        //int index = 0;
         foreach (var carte in deck.GetComponent<Deck>().deckJoueur)
         {
             //int spriteOrder = carte.transform.GetSiblingIndex();
