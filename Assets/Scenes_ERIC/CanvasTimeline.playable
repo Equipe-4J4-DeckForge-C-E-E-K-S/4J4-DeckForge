@@ -442,7 +442,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 3.1750000000006704
+    m_Start: 88.53333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 7721639411296407248}
     m_Duration: 42.391666666666
