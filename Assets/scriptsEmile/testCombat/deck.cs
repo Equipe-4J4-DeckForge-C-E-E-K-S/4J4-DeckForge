@@ -98,7 +98,6 @@ public class Deck : MonoBehaviour
                 deckActuel = librairie.GetComponent<librairieDeck>().enleverCarte(deckActuel, 0);
             }
         }
-        btnContinuer.transform.SetSiblingIndex(100);
         OrganiserDeckJoueur();
     }
 
@@ -147,13 +146,14 @@ public class Deck : MonoBehaviour
             carte.GetComponent<carteProfil>().posXinitial = pos.x;
             carte.GetComponent<carteProfil>().posYinitial = pos.y;
         }
+        btnContinuer.transform.SetSiblingIndex(100);
     }
 
 
     public void Recharger()
     {
-            deckActuel = deckTrash;
-            deckActuel = librairie.GetComponent<librairieDeck>().SufflerCartes(deckActuel);
+        deckActuel = deckTrash;
+        deckActuel = librairie.GetComponent<librairieDeck>().SufflerCartes(deckActuel);
 
         foreach (GameObject carte in deckTrash)
         {
