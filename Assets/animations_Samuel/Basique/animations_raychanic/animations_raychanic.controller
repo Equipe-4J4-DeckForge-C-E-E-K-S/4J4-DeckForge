@@ -46,7 +46,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 8d0a2708e9ff86149ae5cde4eee0d972, type: 2}
+  m_Motion: {fileID: 7400000, guid: 9fd507cbabcd7ae488302ae24d133d57, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -58,7 +58,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: animations
+  m_Name: animations_raychanic
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Attaque
@@ -94,7 +94,7 @@ AnimatorStateMachine:
     m_Position: {x: 400, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2422766991024899030}
-    m_Position: {x: 400, y: -10, z: 0}
+    m_Position: {x: 400, y: -30, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -126,7 +126,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: f027316f6fb528e4a8e45fc4c7df574e, type: 2}
+  m_Motion: {fileID: 7400000, guid: 3eea7a49283a9ae48b8a4f88aa11fea5, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
