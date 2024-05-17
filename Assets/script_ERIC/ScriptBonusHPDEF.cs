@@ -7,15 +7,6 @@ using UnityEngine.UI; // Import the UI namespace
 
 public class ScriptBonusHPDEF : MonoBehaviour
 {
-    public float vie;
-    public float defense;
-    public float defenseInitiale;
-    public float attaque;
-
-    public bool typeBasique;
-    public bool typeEau;
-    public bool typeFeu;
-    public bool typePlante;
 
     public TextMeshProUGUI playerCueText; // Declare a TextMeshProUGUI object
 
@@ -29,10 +20,6 @@ public class ScriptBonusHPDEF : MonoBehaviour
     private bool hasPlayerChosen = false; // Flag to track if the player has made a choice
 
     // Start is called before the first frame update
-    void Start()
-    {
-        defenseInitiale = defense;
-    }
 
     // Update is called once per frame
     void Update()
@@ -45,7 +32,7 @@ public class ScriptBonusHPDEF : MonoBehaviour
     {
         if (!hasPlayerChosen)
         {
-            vie += 10; // Example increase in HP
+            comportementJoueur.viePartie += 10f; // Example increase in HP
             playerCueText.text = "HP +10"; // Set the text
             playerChoiceImage.sprite = heartSprite; // Set the image to the heart sprite
             hasPlayerChosen = true; // Set the flag to true
@@ -59,8 +46,8 @@ public class ScriptBonusHPDEF : MonoBehaviour
     {
         if (!hasPlayerChosen)
         {
-            defense += 5; // Example increase in Defense
-            playerCueText.text = "Defense +5"; // Set the text
+            comportementJoueur.defPartie += 0.5f; // Example increase in Defense
+            playerCueText.text = "Defense +0.5"; // Set the text
             playerChoiceImage.sprite = shieldSprite; // Set the image to the shield sprite
             hasPlayerChosen = true; // Set the flag to true
             increaseHPButton.interactable = false; // Disable the HP button
