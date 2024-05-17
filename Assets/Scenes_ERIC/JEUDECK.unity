@@ -4055,6 +4055,9 @@ MonoBehaviour:
   floatX: -200
   floatY: -110
   librairie: {fileID: 1712367415}
+  deck: {fileID: 0}
+  carteAttaqueUtilisee: 0
+  enrDefInitiale: 1
 --- !u!114 &587014307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8631,9 +8634,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   librairie: {fileID: 1712367415}
   canvas: {fileID: 165976861}
+  grille: {fileID: 0}
   carteADupliquer: {fileID: 0}
   carteDupliquee: {fileID: 0}
   personnage: {fileID: 587014299}
+  btnContinuer: {fileID: 0}
+  btnFinTour: {fileID: 0}
+  txtFinTour: {fileID: 0}
   deckStatDebug: []
   deckFull:
   - {fileID: 2795280334094779141, guid: 836491653bf62ab4ebc31da4938add55, type: 3}
@@ -8690,10 +8697,11 @@ MonoBehaviour:
   tourJoueur: 1
   tourEnnemi: 0
   tourJoueurCommence: 1
-  nbCartesDonnees: 3
+  nbCartesDonnees: 2
   posYCarteJeu: -370
   ecartPourMettreCartes: 540
   posCarteDepart: -270
+  difficulteDEBUG: 0
 --- !u!1 &1494207859
 GameObject:
   m_ObjectHideFlags: 0
