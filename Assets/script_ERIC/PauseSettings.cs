@@ -48,5 +48,3 @@ public class PauseSettings : MonoBehaviour
         Application.Quit();
     }
 }
-
-
