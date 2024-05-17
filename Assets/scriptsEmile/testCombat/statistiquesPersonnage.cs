@@ -23,6 +23,5 @@ public class statistiquesPersonnage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 }
