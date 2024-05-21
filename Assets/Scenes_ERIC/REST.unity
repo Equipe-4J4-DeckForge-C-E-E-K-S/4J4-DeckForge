@@ -224,7 +224,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 31.7499, z: 357.42633, w: 23.740608}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -254,7 +254,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -163, y: 430}
+  m_AnchoredPosition: {x: -30, y: 430}
   m_SizeDelta: {x: 830.646, y: 180.531}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &91006244
@@ -577,7 +577,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 150, y: 428}
+  m_AnchoredPosition: {x: 115, y: 428}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &262525237
@@ -1411,14 +1411,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d0ffb3b3bf93f45b12ac0faded4db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vie: 0
-  defense: 0
-  defenseInitiale: 0
-  attaque: 0
-  typeBasique: 0
-  typeEau: 0
-  typeFeu: 0
-  typePlante: 0
   playerCueText: {fileID: 0}
   increaseHPButton: {fileID: 0}
   increaseDefenseButton: {fileID: 0}
@@ -1454,14 +1446,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d0ffb3b3bf93f45b12ac0faded4db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vie: 0
-  defense: 0
-  defenseInitiale: 0
-  attaque: 0
-  typeBasique: 0
-  typeEau: 0
-  typeFeu: 0
-  typePlante: 0
   playerCueText: {fileID: 25353248}
   increaseHPButton: {fileID: 1241510367}
   increaseDefenseButton: {fileID: 413023487}

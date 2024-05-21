@@ -27,7 +27,6 @@ public class comportementJoueur : MonoBehaviour
     void Start()
     {
         GetComponent<statistiquesPersonnage>().vie = viePartie;
-        defPartie = 10;
     }
 
     void Update()
