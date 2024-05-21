@@ -9,7 +9,6 @@ public class Deck : MonoBehaviour
 {
     public GameObject librairie;
     public Transform canvas;
-    public Transform grille;
     public GameObject carteADupliquer;
     public GameObject carteDupliquee;
     public GameObject personnage;

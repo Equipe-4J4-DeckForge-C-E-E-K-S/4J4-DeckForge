@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2985322214681882930}
   - component: {fileID: 6467112604529069933}
+  - component: {fileID: 3451414096625759703}
   m_Layer: 0
   m_Name: carte39
   m_TagString: Untagged
@@ -26,7 +27,7 @@ RectTransform:
   m_GameObject: {fileID: 2795280334094779141}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2586099818285285557}
@@ -93,6 +94,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3451414096625759703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2795280334094779141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88f4c6caa720f474391ee9520d1af64f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btnInventaire: {fileID: 0}
+  carteZoom: {fileID: 0}
+  prefab: {fileID: 0}
+  imgButton: {fileID: 4258141575620355410}
+  posYInitial: 0
+  scaleInitial: 0
+  scale: 0
+  hauteur: 0
+  survole: 0
 --- !u!1 &4258141575620355410
 GameObject:
   m_ObjectHideFlags: 0

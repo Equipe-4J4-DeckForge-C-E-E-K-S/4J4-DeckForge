@@ -11,6 +11,7 @@ public class carteProfil : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public bool bloquer;
     public bool soigner;
     public GameObject prefab;
+    public GameObject prefabInventaire;
 
     public Image imgButton;
 
