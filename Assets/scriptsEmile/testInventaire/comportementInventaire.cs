@@ -33,11 +33,8 @@ public class comportementInventaire : MonoBehaviour
         grille.SetActive(true);
         foreach (var carte in cartesInventaire)
         {
-            Vector2 pos = carte.GetComponent<RectTransform>().anchoredPosition;
             float scale = carte.GetComponent<RectTransform>().localScale.x;
-
-            //carte.GetComponent<comportementInventaireCarte>().posYInitial = pos.y;
-            //carte.GetComponent<comportementInventaireCarte>().scaleInitial = scale;
+            carte.GetComponent<comportementInventaireCarte>().scaleInitial = scale;
         }
     }
 }
