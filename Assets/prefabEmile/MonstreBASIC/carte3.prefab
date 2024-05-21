@@ -162,6 +162,7 @@ MonoBehaviour:
   personnage: {fileID: 0}
   cible: {fileID: 0}
   attaque: 0
+  attaqueCarte: 1
   cibleTrouve: 0
   enAttaque: 0
   librairie: {fileID: 0}

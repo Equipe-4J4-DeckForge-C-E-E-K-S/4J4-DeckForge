@@ -161,7 +161,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personnage: {fileID: 0}
   cible: {fileID: 0}
-  attaque: 0
+  attaque: 4
+  attaqueCarte: 0
   cibleTrouve: 0
   enAttaque: 0
   librairie: {fileID: 0}
