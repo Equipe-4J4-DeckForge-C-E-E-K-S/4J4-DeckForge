@@ -43,9 +43,7 @@ public class Bloque : MonoBehaviour
     public void Bloquer()
     {
         if(estClique){
-            defense = personnage.GetComponent<statistiquesPersonnage>().defense;
-            defense *= 2;
-            personnage.GetComponent<statistiquesPersonnage>().defense = defense;
+            personnage.GetComponent<statistiquesPersonnage>().defense += defense;
             estClique = false;
 
             GameObject carteADuplique = GetComponent<carteProfil>().prefab;

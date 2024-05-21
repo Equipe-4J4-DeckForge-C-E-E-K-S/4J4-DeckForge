@@ -9,6 +9,7 @@ public class Attaque : MonoBehaviour
     public GameObject personnage;
     public GameObject cible;
     public float attaque;
+    public float attaqueCarte;
     public bool cibleTrouve;
     public bool enAttaque;
 
@@ -51,6 +52,8 @@ public class Attaque : MonoBehaviour
         if (cibleTrouve)
         {
             attaque = personnage.GetComponent<statistiquesPersonnage>().attaque;
+            attaque = attaque * attaqueCarte;
+
             cible = personnage.GetComponent<comportementJoueur>().ennemiAAttaque;
             float defCible = cible.GetComponent<statistiquesPersonnage>().defense;
 

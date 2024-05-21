@@ -41,9 +41,7 @@ public class Soin : MonoBehaviour
 
     public void Soigner()
     {
-            vie = personnage.GetComponent<statistiquesPersonnage>().vie;
-            vie += 2;
-            personnage.GetComponent<statistiquesPersonnage>().vie = vie;
+            personnage.GetComponent<statistiquesPersonnage>().vie += vie;
             estClique = false;
 
             GameObject carteADuplique = GetComponent<carteProfil>().prefab;
