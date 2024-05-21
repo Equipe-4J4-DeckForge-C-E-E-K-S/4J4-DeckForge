@@ -112,6 +112,7 @@ MonoBehaviour:
   bloquer: 0
   soigner: 0
   prefab: {fileID: 2795280334094779141, guid: f5660e28fe4538e488da21de6439d0ef, type: 3}
+  prefabInventaire: {fileID: 2795280334094779141, guid: 7fcf9435e81940243a83d147101483f5, type: 3}
   imgButton: {fileID: 3830442017021597120}
   index: 0
   indexSiblingInitial: 0
@@ -165,9 +166,12 @@ MonoBehaviour:
   enAttaque: 0
   librairie: {fileID: 0}
   deck: {fileID: 0}
+  carteBouton: {fileID: 0}
   carteADuplique: {fileID: 0}
   indexASupprimer: 0
   finNiveau: 0
+  debug: 0
+  debug2: 0
 --- !u!1 &4258141575620355410
 GameObject:
   m_ObjectHideFlags: 0

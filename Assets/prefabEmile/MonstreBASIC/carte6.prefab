@@ -112,14 +112,20 @@ MonoBehaviour:
   bloquer: 1
   soigner: 0
   prefab: {fileID: 2795280334094779141, guid: c02512c498a05fe409e0e60404a68afe, type: 3}
+  prefabInventaire: {fileID: 2795280334094779141, guid: fa2760c248ecd5c41839bc731a4a3396, type: 3}
   imgButton: {fileID: 3830442017021597120}
   index: 0
+  indexSiblingInitial: 0
   typeBasique: 1
   typeEau: 0
   typeFeu: 0
   typePlante: 0
   posXinitial: 0
   posYinitial: 0
+  survole: 0
+  scale: 3
+  hauteur: 0
+  hauteurDebug: 0
 --- !u!114 &-9017960045834404352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,7 +144,9 @@ MonoBehaviour:
   index: 0
   distanceVersGauche: 0
   distanceVersDroite: 0
+  posXDebug: 0
   ecart: 0
+  ennemisRemisEnPlace: 1
 --- !u!114 &9214854682385951260
 MonoBehaviour:
   m_ObjectHideFlags: 0

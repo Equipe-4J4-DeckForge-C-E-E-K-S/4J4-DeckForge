@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using static UnityEditor.PlayerSettings;
 
-public class comportementInventaireCarte : MonoBehaviour
+public class comportementInventaireCarte : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public GameObject btnInventaire;
     public GameObject carteZoom;
@@ -53,11 +55,16 @@ public class comportementInventaireCarte : MonoBehaviour
         }
     }
 
+    public void ReactionClic()
+    {
+        //btnInventaire.GetComponent<comportementBoutonInventaire>().prefabADuplique = prefab;
+        btnInventaire.SetActive(true);
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         survole = true;
         //imgButton.GetComponent<Image>().color = new Color32(190, 190, 190, 255);
-        transform.SetSiblingIndex(100);
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -70,5 +77,4 @@ public class comportementInventaireCarte : MonoBehaviour
         GetComponent<RectTransform>().anchoredPosition = new Vector2(pos.x, posYInitial);
         //imgButton.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
     }
-}
 }

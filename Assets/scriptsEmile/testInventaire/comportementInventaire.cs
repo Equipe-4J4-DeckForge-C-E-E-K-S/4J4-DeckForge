@@ -26,17 +26,17 @@ public class comportementInventaire : MonoBehaviour
     {
         foreach (var carte in Deck.deckStat)
         {
-            GameObject carteDupliquee = Instantiate(carte/*.GetComponent<carteProfil>().prefabInventaire*/, grille.GetComponent<Transform>());
+            GameObject carteDupliquee = Instantiate(carte.GetComponent<carteProfil>().prefabInventaire, grille.GetComponent<Transform>());
             cartesInventaire = librairie.GetComponent<librairieDeck>().ajouterCarte(cartesInventaire, carteDupliquee);
         }
-        grille.SetActive(false);
-        foreach (var carte in cartesInventaire)
+        grille.SetActive(true);
+        /*foreach (var carte in cartesInventaire)
         {
             Vector2 pos = carte.GetComponent<RectTransform>().anchoredPosition;
             float scale = carte.GetComponent<RectTransform>().localScale.x;
 
             carte.GetComponent<comportementInventaireCarte>().posYInitial = pos.y;
             carte.GetComponent<comportementInventaireCarte>().scaleInitial = scale;
-        }
+        }*/
     }
 }
