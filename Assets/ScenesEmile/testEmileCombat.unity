@@ -1535,7 +1535,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726024465}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 41.742588}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.209068, y: 1.209068, z: 1.209068}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1543,7 +1543,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 49, y: -80}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &726024467
@@ -2701,7 +2701,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   librairie: {fileID: 1712367415}
   canvas: {fileID: 165976861}
-  grille: {fileID: 726024466}
   carteADupliquer: {fileID: 0}
   carteDupliquee: {fileID: 0}
   personnage: {fileID: 587014299}
@@ -3357,7 +3356,7 @@ GameObject:
   - component: {fileID: 1810610328}
   - component: {fileID: 1810610327}
   - component: {fileID: 1810610326}
-  - component: {fileID: 1810610325}
+  - component: {fileID: 1810610329}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -3385,21 +3384,6 @@ RectTransform:
   m_AnchoredPosition: {x: -700, y: -179}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1810610325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1810610323}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ff190b47ab68bd4c89e4d69f3805119, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  carteOrdreDebug: 
-  deck: {fileID: 1442245924}
-  objetAcheck: {fileID: 2124115673}
 --- !u!114 &1810610326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3444,9 +3428,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1810610325}
-        m_TargetAssemblyTypeName: comportementOrdreCartes, Assembly-CSharp
-        m_MethodName: DireOrdreCartes
+      - m_Target: {fileID: 1810610329}
+        m_TargetAssemblyTypeName: comportementInventaire, Assembly-CSharp
+        m_MethodName: MontrerInventaire
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3494,6 +3478,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810610323}
   m_CullTransparentMesh: 1
+--- !u!114 &1810610329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810610323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1706e8793dc4a3e4eafda9a8f09e327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grille: {fileID: 726024465}
+  cartesInventaire: []
+  librairie: {fileID: 1712367415}
+  deck: {fileID: 1442245924}
 --- !u!1 &1824889654
 GameObject:
   m_ObjectHideFlags: 0
@@ -3687,7 +3687,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Voir ordre render cartes
+  m_text: Montrer Inventaire
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

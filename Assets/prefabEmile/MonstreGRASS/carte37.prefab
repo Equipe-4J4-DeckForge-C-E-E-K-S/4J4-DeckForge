@@ -112,6 +112,7 @@ MonoBehaviour:
   bloquer: 1
   soigner: 0
   prefab: {fileID: 2795280334094779141, guid: 823eacc68ee42164587b185a8cd00a6b, type: 3}
+  prefabInventaire: {fileID: 2795280334094779141, guid: a4c2c4377429fef47bf65b1a5e4221df, type: 3}
   imgButton: {fileID: 3830442017021597120}
   index: 0
   indexSiblingInitial: 0
