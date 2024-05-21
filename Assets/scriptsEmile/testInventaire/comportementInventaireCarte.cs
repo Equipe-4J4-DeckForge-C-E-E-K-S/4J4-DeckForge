@@ -8,9 +8,13 @@ using static UnityEditor.PlayerSettings;
 public class comportementInventaireCarte : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public GameObject btnInventaire;
+    public GameObject grilleInventaire;
+    public int indexInventaire;
     public GameObject carteZoom;
     public GameObject prefab;
     public GameObject imgButton;
+
+    public Image imgCarte;
 
     public float posYInitial;
     public float scaleInitial;
@@ -65,7 +69,7 @@ public class comportementInventaireCarte : MonoBehaviour, IPointerEnterHandler, 
     public void ReactionClic()
     {
         //btnInventaire.GetComponent<comportementBoutonInventaire>().prefabADuplique = prefab;
-        btnInventaire.SetActive(true);
+        grilleInventaire.GetComponent<comportementInventaire>().peutMontrerBtn = true;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
