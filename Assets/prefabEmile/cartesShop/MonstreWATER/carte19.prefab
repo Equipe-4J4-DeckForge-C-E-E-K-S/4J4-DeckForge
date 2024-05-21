@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2985322214681882930}
   - component: {fileID: -326718518600939724}
+  - component: {fileID: -9088898567506471118}
   m_Layer: 0
   m_Name: carte19
   m_TagString: Untagged
@@ -93,6 +94,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &-9088898567506471118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2795280334094779141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88f4c6caa720f474391ee9520d1af64f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btnInventaire: {fileID: 0}
+  carteZoom: {fileID: 0}
+  prefab: {fileID: 0}
+  imgButton: {fileID: 4258141575620355410}
+  posYInitial: 0
+  scaleInitial: 0
+  scale: 0
+  hauteur: 0
+  survole: 0
 --- !u!1 &4258141575620355410
 GameObject:
   m_ObjectHideFlags: 0
