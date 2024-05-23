@@ -82,9 +82,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Bloque, Assembly-CSharp
-        m_MethodName: Bloquer
+      - m_Target: {fileID: -1359010521534150541}
+        m_TargetAssemblyTypeName: comportementInventaireCarte, Assembly-CSharp
+        m_MethodName: ReactionClic
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -107,14 +107,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btnInventaire: {fileID: 0}
+  grilleInventaire: {fileID: 0}
+  indexInventaire: 0
   carteZoom: {fileID: 0}
   prefab: {fileID: 0}
   imgButton: {fileID: 4258141575620355410}
+  spriteCarte: {fileID: 0}
   posYInitial: 0
   scaleInitial: 0
   scale: 0
   hauteur: 0
   survole: 0
+  debug: 0
 --- !u!1 &4258141575620355410
 GameObject:
   m_ObjectHideFlags: 0

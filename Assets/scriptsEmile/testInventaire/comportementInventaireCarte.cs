@@ -14,7 +14,7 @@ public class comportementInventaireCarte : MonoBehaviour, IPointerEnterHandler, 
     public GameObject prefab;
     public GameObject imgButton;
 
-    public Image imgCarte;
+    public Sprite spriteCarte;
 
     public float posYInitial;
     public float scaleInitial;
@@ -28,12 +28,13 @@ public class comportementInventaireCarte : MonoBehaviour, IPointerEnterHandler, 
     void Start()
     {
         scale = scaleInitial;
+        spriteCarte = imgButton.GetComponent<Image>().sprite;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (survole)
+        if (survole && (grilleInventaire.GetComponent<comportementInventaire>().peutMontrerBtn == false))
         {
             Vector2 pos = GetComponent<RectTransform>().anchoredPosition;
 
@@ -68,8 +69,11 @@ public class comportementInventaireCarte : MonoBehaviour, IPointerEnterHandler, 
 
     public void ReactionClic()
     {
-        //btnInventaire.GetComponent<comportementBoutonInventaire>().prefabADuplique = prefab;
+        Debug.Log(btnInventaire);
         grilleInventaire.GetComponent<comportementInventaire>().peutMontrerBtn = true;
+        btnInventaire.GetComponent<comportementInventaireBouton>().prefabADuplique = prefab;
+        btnInventaire.GetComponent<comportementInventaireBouton>().indexASupprime = indexInventaire;
+        carteZoom.GetComponent<Image>().sprite = spriteCarte;
     }
 
     public void OnPointerEnter(PointerEventData eventData)

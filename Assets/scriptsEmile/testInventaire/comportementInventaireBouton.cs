@@ -19,6 +19,7 @@ public class comportementInventaireBouton : MonoBehaviour
     public void EnleverCarte()
     {
         Deck.deckStat = librairie.GetComponent<librairieDeck>().enleverCarte(Deck.deckStat, indexASupprime);
+        //Deck.deckStat = librairie.GetComponent<librairieDeck>().ajouterCarte(Deck.deckStat, prefabADuplique);
         grilleInventaire.GetComponent<comportementInventaire>().peutMontrerBtn = false;
         grilleInventaire.GetComponent<comportementInventaire>().FermerInventaire();
     }
