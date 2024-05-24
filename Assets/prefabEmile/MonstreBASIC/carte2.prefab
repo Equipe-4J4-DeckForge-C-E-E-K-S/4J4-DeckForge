@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   personnage: {fileID: 0}
-  defense: 0
+  defense: 2
   estClique: 0
   librairie: {fileID: 0}
   deck: {fileID: 0}

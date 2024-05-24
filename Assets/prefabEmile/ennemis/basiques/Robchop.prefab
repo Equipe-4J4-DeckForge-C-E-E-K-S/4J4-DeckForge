@@ -872,7 +872,7 @@ MonoBehaviour:
   vie: 10
   defense: 1
   defenseInitiale: 0
-  attaque: 3
+  attaque: 4
   typeBasique: 1
   typeEau: 0
   typeFeu: 0

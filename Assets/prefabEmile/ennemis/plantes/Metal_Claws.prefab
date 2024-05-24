@@ -869,10 +869,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5cff5969350d4040abc4ef2fbdba924, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vie: 15
-  defense: 0
+  vie: 30
+  defense: 3
   defenseInitiale: 0
-  attaque: 4
+  attaque: 6
   typeBasique: 0
   typeEau: 0
   typeFeu: 0
