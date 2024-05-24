@@ -12,6 +12,7 @@ public class carteProfil : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public bool soigner;
     public GameObject prefab;
     public GameObject prefabInventaire;
+    public GameObject inventaire;
 
     public Image imgButton;
 
@@ -36,7 +37,7 @@ public class carteProfil : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         Vector2 pos = GetComponent<RectTransform>().anchoredPosition;
         hauteurDebug = (pos.y - posYinitial);
-        if (survole)
+        if (survole && inventaire.GetComponent<comportementInventaire>().inventaireEstMontre == false)
         {
             if (scale < 3.3f)
             {
@@ -64,19 +65,25 @@ public class carteProfil : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        survole = true;
-        imgButton.GetComponent<Image>().color = new Color32(190, 190, 190, 255);
-        transform.SetSiblingIndex(100);
+        if (inventaire.GetComponent<comportementInventaire>().inventaireEstMontre == false)
+        {
+            survole = true;
+            imgButton.GetComponent<Image>().color = new Color32(190, 190, 190, 255);
+            transform.SetSiblingIndex(100);
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        survole = false;
         scale = 3f;
         hauteur = 0f;
         GetComponent<RectTransform>().localScale = new Vector3(3,3,3);
         GetComponent<RectTransform>().anchoredPosition = new Vector2(posXinitial, posYinitial);
-        transform.SetSiblingIndex(indexSiblingInitial);
-        imgButton.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+        if (inventaire.GetComponent<comportementInventaire>().inventaireEstMontre == false)
+        {
+            survole = false;
+            transform.SetSiblingIndex(indexSiblingInitial);
+            imgButton.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+        }
     }
 }

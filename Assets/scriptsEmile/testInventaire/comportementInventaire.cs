@@ -11,6 +11,7 @@ public class comportementInventaire : MonoBehaviour
     public GameObject deck;
     public GameObject carteZoom;
     public bool peutMontrerBtn;
+    public bool inventaireEstMontre;
 
     public GameObject btnEnlever;
     public GameObject btnAnnuler;
@@ -32,7 +33,7 @@ public class comportementInventaire : MonoBehaviour
         }
         else
         {
-            //btnEnlever.SetActive(false);
+            btnEnlever.SetActive(false);
             btnAnnuler.SetActive(false);
             carteZoom.SetActive(false);
         }
@@ -41,6 +42,7 @@ public class comportementInventaire : MonoBehaviour
 
     public void MontrerInventaire()
     {
+        inventaireEstMontre = true;
         foreach (var carte in Deck.deckStat)
         {
             GameObject carteDupliquee = Instantiate(carte.GetComponent<carteProfil>().prefabInventaire, grille.GetComponent<Transform>());
@@ -71,6 +73,11 @@ public class comportementInventaire : MonoBehaviour
         {
             Destroy(carte);
         }
-        gameObject.SetActive(false);
+        foreach (var carte in cartesInventaire)
+        {
+            cartesInventaire = librairie.GetComponent<librairieDeck>().enleverCarte(cartesInventaire, 0);
+        }
+        inventaireEstMontre = false;
+        grille.SetActive(false);
     }
 }

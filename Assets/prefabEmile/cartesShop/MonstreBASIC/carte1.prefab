@@ -110,7 +110,7 @@ MonoBehaviour:
   grilleInventaire: {fileID: 0}
   indexInventaire: 0
   carteZoom: {fileID: 0}
-  prefab: {fileID: 0}
+  prefab: {fileID: 2795280334094779141, guid: 836491653bf62ab4ebc31da4938add55, type: 3}
   imgButton: {fileID: 3615733263506085268}
   spriteCarte: {fileID: 0}
   posYInitial: 0

@@ -71,7 +71,7 @@ public class comportementInventaireCarte : MonoBehaviour, IPointerEnterHandler, 
     {
         Debug.Log(btnInventaire);
         grilleInventaire.GetComponent<comportementInventaire>().peutMontrerBtn = true;
-        btnInventaire.GetComponent<comportementInventaireBouton>().prefabADuplique = prefab;
+        btnInventaire.GetComponent<comportementInventaireBouton>().prefabADuplique = prefab; // A ENLEVER
         btnInventaire.GetComponent<comportementInventaireBouton>().indexASupprime = indexInventaire;
         carteZoom.GetComponent<Image>().sprite = spriteCarte;
     }

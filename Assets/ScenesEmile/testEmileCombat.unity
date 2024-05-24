@@ -327,7 +327,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 'Enlever
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2651,7 +2653,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Annuler
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3090,6 +3092,7 @@ MonoBehaviour:
   carteADupliquer: {fileID: 0}
   carteDupliquee: {fileID: 0}
   personnage: {fileID: 587014299}
+  inventaire: {fileID: 1810610323}
   btnContinuer: {fileID: 2124115673}
   btnFinTour: {fileID: 38555805}
   txtFinTour: {fileID: 508298414}
@@ -3300,7 +3303,7 @@ RectTransform:
   m_GameObject: {fileID: 1476465575}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.1628, y: 3.1628, z: 3.1628}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1287003932}
@@ -3308,7 +3311,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -78.06067, y: -25.619507}
+  m_AnchoredPosition: {x: -306, y: -430.3}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1476465577
@@ -3421,7 +3424,7 @@ MonoBehaviour:
   indexASupprime: 0
   deck: {fileID: 1442245924}
   librairie: {fileID: 1712367415}
-  grilleInventaire: {fileID: 726024465}
+  grilleInventaire: {fileID: 1810610323}
 --- !u!1 &1531138875
 GameObject:
   m_ObjectHideFlags: 0
@@ -3600,7 +3603,7 @@ RectTransform:
   m_GameObject: {fileID: 1574120506}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.1628, y: 3.1628, z: 3.1628}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 44505826}
@@ -3608,7 +3611,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -78.06067, y: -25.619507}
+  m_AnchoredPosition: {x: 286, y: -430.29996}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1574120508
@@ -3721,7 +3724,7 @@ MonoBehaviour:
   indexASupprime: 0
   deck: {fileID: 1442245924}
   librairie: {fileID: 1712367415}
-  grilleInventaire: {fileID: 726024465}
+  grilleInventaire: {fileID: 1810610323}
 --- !u!1 &1712367415
 GameObject:
   m_ObjectHideFlags: 0
@@ -4046,7 +4049,7 @@ GameObject:
   - component: {fileID: 1810610326}
   - component: {fileID: 1810610329}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Inventaire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4184,6 +4187,7 @@ MonoBehaviour:
   deck: {fileID: 1442245924}
   carteZoom: {fileID: 230713727}
   peutMontrerBtn: 0
+  inventaireEstMontre: 0
   btnEnlever: {fileID: 1574120506}
   btnAnnuler: {fileID: 1476465575}
 --- !u!1 &1824889654
