@@ -4070,7 +4070,7 @@ GameObject:
   - component: {fileID: 561644454}
   - component: {fileID: 561644453}
   m_Layer: 0
-  m_Name: animations
+  m_Name: animations_Protagoniste
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4083,16 +4083,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561644451}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -23.7}
-  m_LocalScale: {x: 2, y: 1.46, z: 1.46}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5.6}
+  m_LocalScale: {x: 1.1708333, y: 1.3936756, z: 0.23961547}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 587014300}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -252.93, y: -158.02}
+  m_AnchoredPosition: {x: -2.6, y: 0.7}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &561644453
@@ -4209,7 +4209,6 @@ RectTransform:
   - {fileID: 1145788281}
   - {fileID: 689316523}
   - {fileID: 1845866242}
-  - {fileID: 561644452}
   m_Father: {fileID: 165976861}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -4396,7 +4395,6 @@ RectTransform:
   - {fileID: 819776809}
   - {fileID: 859730995}
   - {fileID: 130910201}
-  - {fileID: 1769260838}
   m_Father: {fileID: 165976861}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -7360,7 +7358,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.4871826, y: -416}
+  m_AnchoredPosition: {x: -1.4870605, y: -416}
   m_SizeDelta: {x: 15.1954, y: -447.23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1137633052
@@ -9962,7 +9960,7 @@ GameObject:
   - component: {fileID: 1769260839}
   - component: {fileID: 1769260840}
   m_Layer: 0
-  m_Name: animations
+  m_Name: animations_Ennemi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9975,16 +9973,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769260837}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -24.8}
-  m_LocalScale: {x: 1.98, y: 1.46, z: 1.46}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5.8}
+  m_LocalScale: {x: 1.159125, y: 1.3936756, z: 0.23961547}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 611206439}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -658.21, y: -149.32}
+  m_AnchoredPosition: {x: 1.7, y: 0.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1769260839
@@ -11117,6 +11115,8 @@ SceneRoots:
   - {fileID: 981115533}
   - {fileID: 165976861}
   - {fileID: 879046994}
+  - {fileID: 561644452}
+  - {fileID: 1769260838}
   - {fileID: 1000876494}
   - {fileID: 224390228}
   - {fileID: 757405220}
