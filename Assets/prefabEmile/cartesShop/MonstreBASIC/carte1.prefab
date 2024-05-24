@@ -82,9 +82,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Attaque, Assembly-CSharp
-        m_MethodName: Attaquer
+      - m_Target: {fileID: 4707237692498070414}
+        m_TargetAssemblyTypeName: comportementInventaireCarte, Assembly-CSharp
+        m_MethodName: ReactionClic
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -107,14 +107,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btnInventaire: {fileID: 0}
+  grilleInventaire: {fileID: 0}
+  indexInventaire: 0
   carteZoom: {fileID: 0}
-  prefab: {fileID: 0}
+  prefab: {fileID: 2795280334094779141, guid: 836491653bf62ab4ebc31da4938add55, type: 3}
   imgButton: {fileID: 3615733263506085268}
+  spriteCarte: {fileID: 0}
   posYInitial: 0
   scaleInitial: 0
   scale: 0
   hauteur: 0
   survole: 0
+  debug: 0
 --- !u!1 &3615733263506085268
 GameObject:
   m_ObjectHideFlags: 0

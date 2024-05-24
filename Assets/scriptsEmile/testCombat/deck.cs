@@ -13,6 +13,8 @@ public class Deck : MonoBehaviour
     public GameObject carteDupliquee;
     public GameObject personnage;
 
+    public GameObject inventaire;
+
     public GameObject btnContinuer;
     public GameObject btnFinTour;
     public TextMeshProUGUI txtFinTour;
@@ -150,6 +152,8 @@ public class Deck : MonoBehaviour
             carte.GetComponent<carteProfil>().indexSiblingInitial = carte.transform.GetSiblingIndex();
             carte.GetComponent<carteProfil>().posXinitial = pos.x;
             carte.GetComponent<carteProfil>().posYinitial = pos.y;
+            carte.GetComponent<comportementCarteDeck>().inventaire = inventaire;
+            carte.GetComponent<carteProfil>().inventaire = inventaire;
         }
         btnFinTour.transform.SetSiblingIndex(100);
         btnContinuer.transform.SetSiblingIndex(100);
