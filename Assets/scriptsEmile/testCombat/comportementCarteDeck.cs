@@ -8,8 +8,12 @@ using static UnityEditor.PlayerSettings;
 public class comportementCarteDeck : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public GameObject deck;
+    public GameObject inventaire;
     public bool peutDistancierCartes;
     public bool peutRapprocherCartes;
+
+    public bool inventaireEstMontre;
+    
     public int index;
     public float distanceVersGauche;
     public float distanceVersDroite;
@@ -22,9 +26,13 @@ public class comportementCarteDeck : MonoBehaviour, IPointerEnterHandler, IPoint
 
     void Update() 
     {
+        inventaireEstMontre = inventaire.GetComponent<comportementInventaire>().inventaireEstMontre;
         index = GetComponent<carteProfil>().index;
-        RapprocherCartes();
-        DistancerCartes();
+        if (inventaireEstMontre == false)
+        {
+            RapprocherCartes();
+            DistancerCartes();
+        }
     }
 
 
