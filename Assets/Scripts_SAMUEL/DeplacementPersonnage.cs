@@ -28,7 +28,7 @@ public class DeplacementPersonnage : MonoBehaviour
         float deplacementX = Input.GetAxisRaw("Horizontal");
         float deplacementY = Input.GetAxisRaw("Vertical");
 
-        directionDeplacement = new Vector2(deplacementX, deplacementY);
+        directionDeplacement = new Vector2(deplacementX, deplacementY).normalized;
     }
 
     void FixedUpdate()
