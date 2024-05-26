@@ -7,8 +7,10 @@ public class DeplacementPersonnage : MonoBehaviour
     public float vitesseMouvement;
 
     public Rigidbody2D rigidBody;
+    public Animator animator;
 
     private Vector2 directionDeplacement;
+    Vector2 deplacement;
 
 
     // Start is called before the first frame update
@@ -25,10 +27,17 @@ public class DeplacementPersonnage : MonoBehaviour
         vitesseY = Input.GetAxisRaw("Vertical") + vitesseMouvement;
         rigidBody.velocity = new Vector2(vitesseX, vitesseY);*/
 
-        float deplacementX = Input.GetAxisRaw("Horizontal");
-        float deplacementY = Input.GetAxisRaw("Vertical");
+        deplacement.x = Input.GetAxisRaw("Horizontal");
+        deplacement.y = Input.GetAxisRaw("Vertical");
 
-        directionDeplacement = new Vector2(deplacementX, deplacementY).normalized;
+        animator.SetFloat("Horizontal", deplacement.x);
+        animator.SetFloat("Vertical", deplacement.y);
+        animator.SetFloat("Vitesse", deplacement.sqrMagnitude);
+
+        //directionDeplacement = new Vector2(deplacementX, deplacementY).normalized;
+
+        //animator.SetFloat("Horizontal", deplacementX);
+        //animator.SetFloat("Vertical", deplacementY);
     }
 
     void FixedUpdate()
@@ -37,6 +46,7 @@ public class DeplacementPersonnage : MonoBehaviour
     }
 
     void Deplacement() {
-        rigidBody.velocity = new Vector2(directionDeplacement.x * vitesseMouvement, directionDeplacement.y * vitesseMouvement);
+        //rigidBody.velocity = new Vector2(directionDeplacement.x * vitesseMouvement, directionDeplacement.y * vitesseMouvement);
+        rigidBody.MovePosition(rigidBody.position + deplacement * vitesseMouvement * Time.fixedDeltaTime);
     }
 }
