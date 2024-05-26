@@ -177,6 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vitesseMouvement: 180
   rigidBody: {fileID: 6283915}
+  animator: {fileID: 6283916}
 --- !u!114 &6283913
 MonoBehaviour:
   m_ObjectHideFlags: 0
