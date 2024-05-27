@@ -761,9 +761,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vie: 10
-  defense: 1
+  defense: 2
   defenseInitiale: 0
-  attaque: 3
+  attaque: 1
   typeBasique: 1
   typeEau: 0
   typeFeu: 0
