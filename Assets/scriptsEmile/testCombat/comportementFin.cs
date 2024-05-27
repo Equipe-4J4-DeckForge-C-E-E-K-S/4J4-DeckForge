@@ -25,10 +25,6 @@ public class comportementFin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (test)
-        {
-            FinirNiveau(true);
-        }   
     }
 
     public void FinirNiveau(bool victoire)
