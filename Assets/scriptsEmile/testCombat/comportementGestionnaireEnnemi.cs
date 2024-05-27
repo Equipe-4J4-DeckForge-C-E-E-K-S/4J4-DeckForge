@@ -14,6 +14,7 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
     public GameObject[] indexEau;
     public GameObject[] indexFeu;
     public GameObject[] indexPlante;
+    public GameObject[] indexBoss;
 
     public GameObject[] listeLocale;
 
@@ -95,6 +96,7 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
             indexLocal = indexPlante;
         }
 
+        indexLocal = indexBoss;
 
         int nbEnnemi = Random.Range(1, 4);
 

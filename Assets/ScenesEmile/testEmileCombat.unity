@@ -1217,6 +1217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joueur: {fileID: 587014299}
   cible: {fileID: 1531138875}
+  animations: {fileID: 0}
   enAttaque: 0
   doitChercher: 0
   librairie: {fileID: 1712367415}
@@ -3900,6 +3901,11 @@ MonoBehaviour:
   indexEau: []
   indexFeu: []
   indexPlante: []
+  indexBoss:
+  - {fileID: 8131188196628768124, guid: ce6652e91b396974ea92a92e590cdbb5, type: 3}
+  - {fileID: 8131188196628768124, guid: a63dce4330571cc45baca1ece9482ccb, type: 3}
+  - {fileID: 8131188196628768124, guid: 11d18797a7a2588469b6f5e0179794d2, type: 3}
+  - {fileID: 8131188196628768124, guid: 7e793c3a824017f419d04609e0a4f53e, type: 3}
   listeLocale: []
   librairie: {fileID: 1712367415}
   canvas: {fileID: 165976861}

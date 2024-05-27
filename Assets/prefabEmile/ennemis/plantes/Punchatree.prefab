@@ -854,6 +854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joueur: {fileID: 0}
   cible: {fileID: 7079473973263593687}
+  animations: {fileID: 7974953845970164242}
   enAttaque: 0
   doitChercher: 0
   librairie: {fileID: 0}
