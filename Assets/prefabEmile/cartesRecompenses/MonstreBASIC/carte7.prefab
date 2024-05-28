@@ -109,10 +109,10 @@ MonoBehaviour:
   btnAjoutRecompense: {fileID: 0}
   grilleRecompense: {fileID: 0}
   carteZoom: {fileID: 0}
-  prefab: {fileID: 0}
-  imgButton: {fileID: 0}
+  prefab: {fileID: 2795280334094779141, guid: 10c9a2c08b5062c46a528466b3c2a8f7, type: 3}
+  imgButton: {fileID: 4258141575620355410}
   fin: {fileID: 0}
-  spriteCarte: {fileID: 0}
+  spriteCarte: {fileID: 21300000, guid: d32364f29948cfc45b4cf9643dae3bde, type: 3}
   posYInitial: 0
   scaleInitial: 0
   scale: 0

@@ -55,9 +55,11 @@ public class comportementFin : MonoBehaviour
             foreach (var carte in librairie.GetComponent<comportementGestionnaireEnnemi>().listeRecompenseFinale)
             {
                 Debug.Log("oki1");
-                GameObject carteDupliquee = Instantiate(carte.GetComponent<comportementRecompenseCarte>().prefab, grilleRecompense.GetComponent<Transform>());
+                GameObject carteDupliquee = Instantiate(carte, grilleRecompense.GetComponent<Transform>());
                 carteDupliquee.GetComponent<comportementRecompenseCarte>().btnAjoutRecompense = btnAjouter;
                 carteDupliquee.GetComponent<comportementRecompenseCarte>().carteZoom = carteZoom;
+                carteDupliquee.GetComponent<comportementRecompenseCarte>().grilleRecompense = grilleRecompense;
+                carteDupliquee.GetComponent<comportementRecompenseCarte>().fin = gameObject;
                 cartesRecompenses = librairie.GetComponent<librairieDeck>().ajouterCarte(cartesRecompenses, carteDupliquee);
             }
             grilleRecompense.transform.SetSiblingIndex(100);

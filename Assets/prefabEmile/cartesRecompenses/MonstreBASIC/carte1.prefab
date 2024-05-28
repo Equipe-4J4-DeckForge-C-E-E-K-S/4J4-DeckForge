@@ -110,7 +110,7 @@ MonoBehaviour:
   grilleRecompense: {fileID: 0}
   carteZoom: {fileID: 0}
   prefab: {fileID: 2795280334094779141, guid: 836491653bf62ab4ebc31da4938add55, type: 3}
-  imgButton: {fileID: 0}
+  imgButton: {fileID: 3615733263506085268}
   fin: {fileID: 0}
   spriteCarte: {fileID: 21300000, guid: 5a106c88fe4391d41b072f8938e692e1, type: 3}
   posYInitial: 0
