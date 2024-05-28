@@ -17,6 +17,10 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
     public GameObject[] indexBoss;
 
     public GameObject[] listeLocale;
+    public GameObject[] listeRecompense;
+    public GameObject[] listeRecompenseFinale;
+
+    public int nombreRecompense;
 
     public GameObject librairie;
     public Transform canvas;
@@ -30,6 +34,7 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
 
     public bool tourEnnemiEnCours;
     public bool tourEnnemiTermine;
+    public bool peutMettreFin;
 
     public int delai;
     public static float difficulte;
@@ -59,8 +64,15 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
         GererReactionAttaqueEnnemi();
 
 
-        if (listeLocale.Length <= 0)
+        if (listeLocale.Length <= 0 && peutMettreFin)
         {
+            nombreRecompense = Random.Range(1, 3);
+            peutMettreFin = false;
+            for (int i = 0; i < nombreRecompense; i++)
+            {
+                int carteChoisie = Random.Range(1, (listeRecompense.Length-1));
+                listeRecompenseFinale = librairie.GetComponent<librairieDeck>().ajouterCarte(listeRecompenseFinale, listeRecompense[carteChoisie]);
+            }
             librairie.GetComponent<comportementFin>().FinirNiveau(true);
         }
 
@@ -96,8 +108,6 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
             indexLocal = indexPlante;
         }
 
-        indexLocal = indexBoss;
-
         int nbEnnemi = Random.Range(1, 4);
 
         for (int i = 0; i < nbEnnemi; i++)
@@ -120,6 +130,9 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
             ennemi.GetComponent<comportementEnnemi>().gestionnaireEnnemi = gameObject;
 
             listeLocale = librairie.GetComponent<librairieDeck>().ajouterCarte(listeLocale, ennemi);
+            listeRecompense = librairie.GetComponent<librairieDeck>().ajouterCarte(listeRecompense, ennemi.GetComponent<comportementEnnemi>().carte1);
+            listeRecompense = librairie.GetComponent<librairieDeck>().ajouterCarte(listeRecompense, ennemi.GetComponent<comportementEnnemi>().carte2);
+            listeRecompense = librairie.GetComponent<librairieDeck>().ajouterCarte(listeRecompense, ennemi.GetComponent<comportementEnnemi>().carte3);
             ennemi.SetActive(true);
         }
 

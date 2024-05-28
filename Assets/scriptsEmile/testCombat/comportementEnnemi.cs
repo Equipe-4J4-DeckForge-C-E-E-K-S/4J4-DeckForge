@@ -7,6 +7,9 @@ public class comportementEnnemi : MonoBehaviour
     public GameObject joueur;
     public GameObject cible;
     public GameObject animations;
+    public GameObject carte1;
+    public GameObject carte2;
+    public GameObject carte3;
     public bool enAttaque;
 
     public bool doitChercher;

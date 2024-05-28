@@ -21,6 +21,7 @@ public class Deck : MonoBehaviour
 
     public GameObject[] deckStatDebug;
     public static GameObject[] deckStat;
+    public static int maxLenght = 25;
 
     public GameObject[] deckFull;
     public GameObject[] deckLoc;
@@ -41,11 +42,10 @@ public class Deck : MonoBehaviour
 
     public float difficulteDEBUG;
 
-
-    //800w  340h
-
     void Start()
     {
+        maxLenght = 25;
+
         if (comportementGestionnaireEnnemi.difficulte <= 1)
         {
             for (int i = 0; i < 25; i++)

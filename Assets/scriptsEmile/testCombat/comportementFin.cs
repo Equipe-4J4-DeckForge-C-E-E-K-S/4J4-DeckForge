@@ -7,12 +7,24 @@ using UnityEngine.SceneManagement;
 public class comportementFin : MonoBehaviour
 {
     public GameObject deck;
+    public GameObject librairie;
     public bool test;
     public bool finNiveau;
 
     public GameObject messageVictoire;
     public GameObject messageDefaite;
     public GameObject bouton;
+    public GameObject btnAjouter;
+    public GameObject btnSauter;
+    public GameObject instructions;
+
+    public GameObject[] cartesRecompenses;
+
+    public GameObject grilleRecompense;
+    public GameObject carteZoom;
+
+
+    public GameObject inventaire;
 
     public bool resultatNiveau;
 
@@ -38,14 +50,53 @@ public class comportementFin : MonoBehaviour
 
         if (victoire)
         {
-            messageVictoire.SetActive(true);
-            resultatNiveau = true;
-            bouton.SetActive(true);
+            Debug.Log("oki0");
+            foreach (var carte in librairie.GetComponent<comportementGestionnaireEnnemi>().listeRecompenseFinale)
+            {
+                Debug.Log("oki1");
+                //GameObject carteDupliquee = Instantiate(carte.GetComponent<carteProfil>().prefabInventaire, grilleRecompense.GetComponent<Transform>());
+                //carteDupliquee.GetComponent<comportementInventaireCarte>().btnInventaire = btnEnlever;
+                //carteDupliquee.GetComponent<comportementInventaireCarte>().carteZoom = carteZoom;
+                //cartesRecompenses = librairie.GetComponent<librairieDeck>().ajouterCarte(cartesRecompenses, carteDupliquee);
+            }
+            grilleRecompense.transform.SetSiblingIndex(100);
+            instructions.transform.SetSiblingIndex(100);
+            carteZoom.transform.SetSiblingIndex(100);
+            btnSauter.transform.SetSiblingIndex(100);
+            btnAjouter.transform.SetSiblingIndex(100);
+            grilleRecompense.SetActive(true);
+
+            int index = 0;
+            foreach (var carte in cartesRecompenses)
+            {
+                float scale = carte.GetComponent<RectTransform>().localScale.x;
+                carte.GetComponent<comportementInventaireCarte>().scaleInitial = scale;
+                carte.GetComponent<comportementInventaireCarte>().indexInventaire = index;
+                index++;
+            }
+
+            if (Deck.deckStat.Length >= Deck.maxLenght)
+            {
+                
+            }
+            else
+            {
+                montrerMessageFin();
+            }
+        
         }
         else
         {
             SceneManager.LoadScene("GAMEOVER");
         }
 
+    }
+
+
+    public void montrerMessageFin()
+    {
+        messageVictoire.SetActive(true);
+        resultatNiveau = true;
+        bouton.SetActive(true);
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class comportementInventaireBouton : MonoBehaviour
 {
     public GameObject prefabADuplique;
+    //public GameObject ;
     public int indexASupprime;
 
     public GameObject deck;
