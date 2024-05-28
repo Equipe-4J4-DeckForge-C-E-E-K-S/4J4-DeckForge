@@ -8,8 +8,11 @@ using static UnityEditor.PlayerSettings;
 public class comportementRecompenseCarte : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public GameObject btnAjoutRecompense;
+    public GameObject btnAnnulerRecompense;
+    public GameObject btnSauterRecompense;
     public GameObject grilleRecompense;
     public GameObject carteZoom;
+    public GameObject instructions;
     public GameObject prefab;
     public GameObject imgButton;
 
@@ -63,11 +66,17 @@ public class comportementRecompenseCarte : MonoBehaviour, IPointerEnterHandler, 
 
     public void ReactionClic()
     {
-        fin.GetComponent<comportementFin>().peutSurvole = false;
-        btnAjoutRecompense.GetComponent<comportementRecompenseBouton>().prefabADuplique = prefab;
-        carteZoom.GetComponent<Image>().sprite = spriteCarte;
-        btnAjoutRecompense.SetActive(true);
-        carteZoom.SetActive(true);
+        if (fin.GetComponent<comportementFin>().peutSurvole == true)
+        {
+            fin.GetComponent<comportementFin>().peutSurvole = false;
+            btnAjoutRecompense.GetComponent<comportementRecompenseBouton>().prefabADuplique = prefab;
+            carteZoom.GetComponent<Image>().sprite = spriteCarte;
+            btnSauterRecompense.SetActive(false);
+            instructions.SetActive(false);
+            btnAjoutRecompense.SetActive(true);
+            btnAnnulerRecompense.SetActive(true);
+            carteZoom.SetActive(true);
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)

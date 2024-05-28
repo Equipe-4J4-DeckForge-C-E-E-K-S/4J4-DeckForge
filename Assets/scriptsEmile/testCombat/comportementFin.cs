@@ -16,6 +16,8 @@ public class comportementFin : MonoBehaviour
     public GameObject bouton;
     public GameObject btnAjouter;
     public GameObject btnSauter;
+    public GameObject btnAnnuler;
+    public GameObject btnEnlever;
     public GameObject instructions;
 
     public GameObject[] cartesRecompenses;
@@ -51,23 +53,27 @@ public class comportementFin : MonoBehaviour
 
         if (victoire)
         {
-            Debug.Log("oki0");
             foreach (var carte in librairie.GetComponent<comportementGestionnaireEnnemi>().listeRecompenseFinale)
             {
-                Debug.Log("oki1");
                 GameObject carteDupliquee = Instantiate(carte, grilleRecompense.GetComponent<Transform>());
                 carteDupliquee.GetComponent<comportementRecompenseCarte>().btnAjoutRecompense = btnAjouter;
+                carteDupliquee.GetComponent<comportementRecompenseCarte>().btnAnnulerRecompense = btnAnnuler;
+                carteDupliquee.GetComponent<comportementRecompenseCarte>().btnSauterRecompense = btnSauter;
                 carteDupliquee.GetComponent<comportementRecompenseCarte>().carteZoom = carteZoom;
+                carteDupliquee.GetComponent<comportementRecompenseCarte>().instructions = instructions;
                 carteDupliquee.GetComponent<comportementRecompenseCarte>().grilleRecompense = grilleRecompense;
                 carteDupliquee.GetComponent<comportementRecompenseCarte>().fin = gameObject;
                 cartesRecompenses = librairie.GetComponent<librairieDeck>().ajouterCarte(cartesRecompenses, carteDupliquee);
             }
-            grilleRecompense.transform.SetSiblingIndex(100);
             instructions.transform.SetSiblingIndex(100);
+            grilleRecompense.transform.SetSiblingIndex(100);
             carteZoom.transform.SetSiblingIndex(100);
             btnSauter.transform.SetSiblingIndex(100);
+            btnAnnuler.transform.SetSiblingIndex(100);
             btnAjouter.transform.SetSiblingIndex(100);
+            instructions.SetActive(true);
             grilleRecompense.SetActive(true);
+            btnSauter.SetActive(true);
 
             int index = 0;
             foreach (var carte in cartesRecompenses)
@@ -76,17 +82,6 @@ public class comportementFin : MonoBehaviour
                 carte.GetComponent<comportementRecompenseCarte>().scaleInitial = scale;
                 index++;
             }
-
-
-            if (Deck.deckStat.Length >= Deck.maxLenght)
-            {
-                
-            }
-            else
-            {
-                montrerMessageFin();
-            }
-        
         }
         else
         {

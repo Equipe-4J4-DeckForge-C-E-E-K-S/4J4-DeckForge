@@ -13,6 +13,8 @@ public class Deck : MonoBehaviour
     public GameObject carteDupliquee;
     public GameObject personnage;
 
+    public GameObject fin;
+
     public GameObject inventaire;
 
     public GameObject btnContinuer;
@@ -113,6 +115,7 @@ public class Deck : MonoBehaviour
     public void IdentifierCarte(GameObject carteAIdentifier)
     {
         carteAIdentifier.GetComponent<comportementCarteDeck>().deck = gameObject;
+        carteAIdentifier.GetComponent<carteProfil>().fin = fin;
 
         if (carteAIdentifier.GetComponent<carteProfil>().attaquer)
         {
