@@ -27,11 +27,12 @@ public class comportementFin : MonoBehaviour
     public GameObject inventaire;
 
     public bool resultatNiveau;
+    public bool peutSurvole;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        peutSurvole = true;
     }
 
     // Update is called once per frame
@@ -54,10 +55,10 @@ public class comportementFin : MonoBehaviour
             foreach (var carte in librairie.GetComponent<comportementGestionnaireEnnemi>().listeRecompenseFinale)
             {
                 Debug.Log("oki1");
-                //GameObject carteDupliquee = Instantiate(carte.GetComponent<carteProfil>().prefabInventaire, grilleRecompense.GetComponent<Transform>());
-                //carteDupliquee.GetComponent<comportementInventaireCarte>().btnInventaire = btnEnlever;
-                //carteDupliquee.GetComponent<comportementInventaireCarte>().carteZoom = carteZoom;
-                //cartesRecompenses = librairie.GetComponent<librairieDeck>().ajouterCarte(cartesRecompenses, carteDupliquee);
+                GameObject carteDupliquee = Instantiate(carte.GetComponent<comportementRecompenseCarte>().prefab, grilleRecompense.GetComponent<Transform>());
+                carteDupliquee.GetComponent<comportementRecompenseCarte>().btnAjoutRecompense = btnAjouter;
+                carteDupliquee.GetComponent<comportementRecompenseCarte>().carteZoom = carteZoom;
+                cartesRecompenses = librairie.GetComponent<librairieDeck>().ajouterCarte(cartesRecompenses, carteDupliquee);
             }
             grilleRecompense.transform.SetSiblingIndex(100);
             instructions.transform.SetSiblingIndex(100);
@@ -70,10 +71,10 @@ public class comportementFin : MonoBehaviour
             foreach (var carte in cartesRecompenses)
             {
                 float scale = carte.GetComponent<RectTransform>().localScale.x;
-                carte.GetComponent<comportementInventaireCarte>().scaleInitial = scale;
-                carte.GetComponent<comportementInventaireCarte>().indexInventaire = index;
+                carte.GetComponent<comportementRecompenseCarte>().scaleInitial = scale;
                 index++;
             }
+
 
             if (Deck.deckStat.Length >= Deck.maxLenght)
             {

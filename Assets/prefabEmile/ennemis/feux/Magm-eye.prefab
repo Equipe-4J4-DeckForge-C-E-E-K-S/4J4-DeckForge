@@ -855,6 +855,9 @@ MonoBehaviour:
   joueur: {fileID: 0}
   cible: {fileID: 7079473973263593687}
   animations: {fileID: 2424716774720990257}
+  carte1: {fileID: 2795280334094779141, guid: e19b2dba2a0f22a4aaeb3c9f5bf5af07, type: 3}
+  carte2: {fileID: 2795280334094779141, guid: e523502428dfdab4b9503de5cd9cfe84, type: 3}
+  carte3: {fileID: 2795280334094779141, guid: 9855a073dca006b47ae7d529beddefb6, type: 3}
   enAttaque: 0
   doitChercher: 0
   librairie: {fileID: 0}
