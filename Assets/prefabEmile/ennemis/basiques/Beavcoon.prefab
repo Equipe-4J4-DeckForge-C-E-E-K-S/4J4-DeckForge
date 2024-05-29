@@ -28,7 +28,7 @@ RectTransform:
   m_GameObject: {fileID: 138294903712883490}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8276, y: 0.8276, z: 0.8276}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7927718076053999951}
@@ -86,7 +86,7 @@ Animator:
   m_GameObject: {fileID: 138294903712883490}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d863ce85c795c804da6bff3804b0b016, type: 2}
+  m_Controller: {fileID: 9100000, guid: e411401644445c44d8dd0355470710c0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -698,11 +698,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2257540495647460847}
   - {fileID: 415232597256423468}
   - {fileID: 8610215217692650522}
   - {fileID: 7034300353522146525}
   - {fileID: 4250170693446309420}
-  - {fileID: 2257540495647460847}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -782,6 +782,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joueur: {fileID: 0}
   cible: {fileID: 7079473973263593687}
+  animations: {fileID: 138294903712883490}
+  carte1: {fileID: 2795280334094779141, guid: 4ca40adffc042be438db4cbb673a35ac, type: 3}
+  carte2: {fileID: 2795280334094779141, guid: 90459244181b87240b7eb6aae8c16c06, type: 3}
+  carte3: {fileID: 2795280334094779141, guid: 4ca40adffc042be438db4cbb673a35ac, type: 3}
   enAttaque: 0
   doitChercher: 0
   librairie: {fileID: 0}

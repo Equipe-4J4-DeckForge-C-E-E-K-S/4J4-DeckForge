@@ -26,7 +26,7 @@ public class comportementBoutonContinuer : MonoBehaviour
         if(resultat)
         {
             comportementJoueur.viePartie = (joueur.GetComponent<statistiquesPersonnage>().vie + 20f);
-            comportementGestionnaireEnnemi.difficulte += 0.1f;
+            comportementGestionnaireEnnemi.difficulte += 0.5f;
             SceneManager.LoadScene("JEUDECK");
         }
     }

@@ -12,6 +12,7 @@ public class comportementInventaire : MonoBehaviour
     public GameObject carteZoom;
     public bool peutMontrerBtn;
     public bool inventaireEstMontre;
+    public bool inventaireEstUtilise;
 
     public GameObject btnEnlever;
     public GameObject btnAnnuler;
@@ -25,17 +26,20 @@ public class comportementInventaire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (peutMontrerBtn)
+        if (inventaireEstUtilise)
         {
-            btnEnlever.SetActive(true);
-            btnAnnuler.SetActive(true);
-            carteZoom.SetActive(true);
-        }
-        else
-        {
-            btnEnlever.SetActive(false);
-            btnAnnuler.SetActive(false);
-            carteZoom.SetActive(false);
+            if (peutMontrerBtn)
+            {
+                btnEnlever.SetActive(true);
+                btnAnnuler.SetActive(true);
+                carteZoom.SetActive(true);
+            }
+            else
+            {
+                btnEnlever.SetActive(false);
+                btnAnnuler.SetActive(false);
+                carteZoom.SetActive(false);
+            }
         }
     }
 

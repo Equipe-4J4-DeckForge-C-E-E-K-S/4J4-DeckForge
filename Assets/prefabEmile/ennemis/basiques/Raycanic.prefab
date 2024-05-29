@@ -714,7 +714,7 @@ GameObject:
   - component: {fileID: 8576888070383058398}
   - component: {fileID: 4229270720867503302}
   m_Layer: 0
-  m_Name: test
+  m_Name: animations
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -729,8 +729,8 @@ RectTransform:
   m_GameObject: {fileID: 7471778870022964530}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8276, y: 0.8276, z: 0.8276}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7927718076053999951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -787,7 +787,7 @@ Animator:
   m_GameObject: {fileID: 7471778870022964530}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d863ce85c795c804da6bff3804b0b016, type: 2}
+  m_Controller: {fileID: 9100000, guid: dde819202590c08468a0de101f3d1e0a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -833,11 +833,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4197298991278733064}
   - {fileID: 5479279138590749479}
   - {fileID: 1863139304312874912}
   - {fileID: 5301181552137721758}
   - {fileID: 4250170693446309420}
-  - {fileID: 4197298991278733064}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -917,6 +917,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joueur: {fileID: 0}
   cible: {fileID: 7079473973263593687}
+  animations: {fileID: 7471778870022964530}
+  carte1: {fileID: 2795280334094779141, guid: 38d633c8020bf3b43b029bf8f7b7de6d, type: 3}
+  carte2: {fileID: 2795280334094779141, guid: 6ca8318ddde638843b203396069e131d, type: 3}
+  carte3: {fileID: 2795280334094779141, guid: 38d633c8020bf3b43b029bf8f7b7de6d, type: 3}
   enAttaque: 0
   doitChercher: 0
   librairie: {fileID: 0}
