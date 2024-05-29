@@ -82,8 +82,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: comportementInventaireCarte, Assembly-CSharp
+      - m_Target: {fileID: 3628741664025263205}
+        m_TargetAssemblyTypeName: comportementRecompenseCarte, Assembly-CSharp
         m_MethodName: ReactionClic
         m_Mode: 1
         m_Arguments:
@@ -107,8 +107,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btnAjoutRecompense: {fileID: 0}
+  btnAnnulerRecompense: {fileID: 0}
+  btnSauterRecompense: {fileID: 0}
   grilleRecompense: {fileID: 0}
   carteZoom: {fileID: 0}
+  instructions: {fileID: 0}
   prefab: {fileID: 2795280334094779141, guid: b971fa11aa530994b8860a62bc30e9b7, type: 3}
   imgButton: {fileID: 4258141575620355410}
   fin: {fileID: 0}

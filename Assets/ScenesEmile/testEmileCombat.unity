@@ -4286,6 +4286,8 @@ MonoBehaviour:
   deck: {fileID: 1442245924}
   librairie: {fileID: 1712367415}
   grilleInventaire: {fileID: 1810610323}
+  fin: {fileID: 0}
+  pourFin: 0
 --- !u!1 &1531138875
 GameObject:
   m_ObjectHideFlags: 0
@@ -4745,6 +4747,8 @@ MonoBehaviour:
   deck: {fileID: 1442245924}
   librairie: {fileID: 1712367415}
   grilleInventaire: {fileID: 1810610323}
+  fin: {fileID: 1712367415}
+  pourFin: 1
 --- !u!1 &1712367415
 GameObject:
   m_ObjectHideFlags: 0
@@ -4912,30 +4916,20 @@ MonoBehaviour:
   biomeEau: 0
   biomeFeu: 0
   biomePlante: 0
-  indexLocal:
+  indexLocal: []
+  indexBasique:
   - {fileID: 8131188196628768124, guid: 828f29edfcc34a948898a1050eec7874, type: 3}
   - {fileID: 8131188196628768124, guid: 10029fb7a6a0fee4b93652956a00796b, type: 3}
   - {fileID: 8131188196628768124, guid: 1a2c85ac52323864a890beaac5c4d985, type: 3}
-  - {fileID: 8131188196628768124, guid: b820d62801611c44bb7bba7d1127bca8, type: 3}
-  - {fileID: 8131188196628768124, guid: b4cbf0fc9c8117243972761ce16d8efa, type: 3}
-  - {fileID: 8131188196628768124, guid: 4add255ac755a1b4fbab647c761a8ab6, type: 3}
-  - {fileID: 8131188196628768124, guid: 466d0f185de6b01488cdea6bb9cdbee3, type: 3}
-  - {fileID: 8131188196628768124, guid: 35602c398f4739f49a2cf1a61e29060e, type: 3}
-  - {fileID: 8131188196628768124, guid: 9bd052d1ca9c45845a99b9f805cbdc1d, type: 3}
-  - {fileID: 8131188196628768124, guid: 75adfc361128be74ebfb5d97d94869f0, type: 3}
-  - {fileID: 8131188196628768124, guid: fdccda256c630bf409ffd1d9fa3b9876, type: 3}
-  - {fileID: 8131188196628768124, guid: 4bb34d952f21c20449ef7de01b4cf0db, type: 3}
-  - {fileID: 8131188196628768124, guid: 5eca3fb0bf9de684880a468bb7d7bc71, type: 3}
-  - {fileID: 8131188196628768124, guid: 51fc5d30f05de084c8bd082df0c29292, type: 3}
-  indexBasique: []
+  - {fileID: 8131188196628768124, guid: 524c5491cabc6a64686a2baff72d60ca, type: 3}
   indexEau: []
   indexFeu: []
   indexPlante: []
   indexBoss:
+  - {fileID: 8131188196628768124, guid: 7e793c3a824017f419d04609e0a4f53e, type: 3}
   - {fileID: 8131188196628768124, guid: ce6652e91b396974ea92a92e590cdbb5, type: 3}
   - {fileID: 8131188196628768124, guid: a63dce4330571cc45baca1ece9482ccb, type: 3}
   - {fileID: 8131188196628768124, guid: 11d18797a7a2588469b6f5e0179794d2, type: 3}
-  - {fileID: 8131188196628768124, guid: 7e793c3a824017f419d04609e0a4f53e, type: 3}
   listeLocale: []
   listeRecompense: []
   listeRecompenseFinale: []
@@ -4950,7 +4944,9 @@ MonoBehaviour:
   tourEnnemiEnCours: 0
   tourEnnemiTermine: 0
   peutMettreFin: 1
+  niveauBoss: 0
   delai: 0
+  nbEnnemi: 0
   indexListeLocale: 0
 --- !u!1 &1766633488
 GameObject:
@@ -5133,7 +5129,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810610323}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -5189,7 +5185,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810610323}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -5422,7 +5418,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845345914}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
