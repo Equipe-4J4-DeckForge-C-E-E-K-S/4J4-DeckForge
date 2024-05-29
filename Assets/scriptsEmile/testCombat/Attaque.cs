@@ -150,9 +150,6 @@ public class Attaque : MonoBehaviour
             carteADuplique = GetComponent<carteProfil>().prefab;
             indexASupprimer = GetComponent<carteProfil>().index;
 
-            Debug.Log(carteADuplique);
-            Debug.Log(indexASupprimer);
-
             deck.GetComponent<Deck>().deckTrash = librairie.GetComponent<librairieDeck>().ajouterCarte(deck.GetComponent<Deck>().deckTrash, carteADuplique);
             deck.GetComponent<Deck>().deckJoueur = librairie.GetComponent<librairieDeck>().enleverCarte(deck.GetComponent<Deck>().deckJoueur, indexASupprimer);
             deck.GetComponent<Deck>().OrganiserDeckJoueur();
@@ -162,9 +159,6 @@ public class Attaque : MonoBehaviour
 
     public void Attaquer()
     {
-        //carteADuplique = GetComponent<carteProfil>().prefab;
-        //indexASupprimer = GetComponent<carteProfil>().index;
-
         personnage.GetComponent<comportementJoueur>().enAttaque = true;
         personnage.GetComponent<comportementJoueur>().carteAttaqueUtilisee = GetComponent<carteProfil>().index;
     }

@@ -13,6 +13,7 @@ public class carteProfil : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public GameObject prefab;
     public GameObject prefabInventaire;
     public GameObject inventaire;
+    public GameObject fin;
 
     public Image imgButton;
 
@@ -37,7 +38,7 @@ public class carteProfil : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         Vector2 pos = GetComponent<RectTransform>().anchoredPosition;
         hauteurDebug = (pos.y - posYinitial);
-        if (survole && inventaire.GetComponent<comportementInventaire>().inventaireEstMontre == false)
+        if (survole && ((inventaire.GetComponent<comportementInventaire>().inventaireEstMontre == false) || (fin.GetComponent<comportementFin>().finNiveau == false)))
         {
             if (scale < 3.3f)
             {
