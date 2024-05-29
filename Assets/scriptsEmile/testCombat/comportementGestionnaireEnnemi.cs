@@ -48,6 +48,7 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(difficulte);
         FaireApparaitreEnnemi();
     }
 
@@ -71,6 +72,7 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
 
         if (listeLocale.Length <= 0 && peutMettreFin)
         {
+            Debug.Log("oki");
             peutMettreFin = false;
             if (niveauBoss == false)
             {
@@ -103,25 +105,25 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
         {
             indexLocal = indexBasique;
         }
-        else if (difficulte < 7f && difficulte >= 4.5f)
-        {
-            indexLocal = indexEau;
-        }
-        else if (difficulte < 13f && difficulte >= 10.5f)
-        {
-            indexLocal = indexFeu;
-        }
-        else if (difficulte < 10f && difficulte >= 7.5f)
+        else if (difficulte < 6.5f && difficulte >= 4f)
         {
             indexLocal = indexPlante;
         }
+        else if (difficulte < 12.5f && difficulte >= 10f)
+        {
+            indexLocal = indexFeu;
+        }
+        else if (difficulte < 9.5f && difficulte >= 7f)
+        {
+            indexLocal = indexEau;
+        }
 
-        if (difficulte == 4f)
+        if (difficulte == 3.5f)
         {
             niveauBoss = true;
             indexLocal = librairie.GetComponent<librairieDeck>().ajouterCarte(indexLocal, indexBoss[0]);
         }
-        else if (difficulte == 7f)
+        else if (difficulte == 6.5f)
         {
             niveauBoss = true;
             indexLocal = librairie.GetComponent<librairieDeck>().ajouterCarte(indexLocal, indexBoss[1]);
@@ -131,7 +133,7 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
             niveauBoss = true;
             indexLocal = librairie.GetComponent<librairieDeck>().ajouterCarte(indexLocal, indexBoss[2]);
         }
-        else if (difficulte >= 13f)
+        else if (difficulte >= 12.5f)
         {
             niveauBoss = true;
             indexLocal = librairie.GetComponent<librairieDeck>().ajouterCarte(indexLocal, indexBoss[3]);
@@ -149,6 +151,7 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
         for (int i = 0; i < nbEnnemi; i++)
         {
             int choixEnnemi = Random.Range(0, indexLocal.Length);
+            Debug.Log("choix" + choixEnnemi);
             GameObject ennemi = Instantiate(indexLocal[choixEnnemi], canvas);
             ennemi.GetComponent<statistiquesPersonnage>().vie = ((ennemi.GetComponent<statistiquesPersonnage>().vie * difficulte) / nbEnnemi);
             ennemi.GetComponent<statistiquesPersonnage>().vie = Mathf.Round(ennemi.GetComponent<statistiquesPersonnage>().vie * 10.0f) * 0.1f;

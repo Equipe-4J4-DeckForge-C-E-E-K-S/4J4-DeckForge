@@ -50,12 +50,6 @@ public class Deck : MonoBehaviour
 
         if (comportementGestionnaireEnnemi.difficulte <= 1)
         {
-            for (int i = 0; i < 25; i++)
-            {
-                int carteAleatoireChoisie = Random.Range(0, deckFull.Length);
-                GameObject carteChoisie = deckFull[carteAleatoireChoisie];
-                deckStatDebug = librairie.gameObject.GetComponent<librairieDeck>().ajouterCarte(deckStatDebug, carteChoisie);
-            }
             deckStat = deckStatDebug;
         }
 
