@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2985322214681882930}
   - component: {fileID: -1108411677537773838}
   - component: {fileID: -4310584277820079627}
+  - component: {fileID: 6861276948775920481}
   - component: {fileID: 2418485354692579635}
   m_Layer: 0
   m_Name: carte35BON
@@ -28,8 +29,8 @@ RectTransform:
   m_GameObject: {fileID: 2795280334094779141}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2586099818285285557}
   m_Father: {fileID: 0}
@@ -111,7 +112,41 @@ MonoBehaviour:
   bloquer: 0
   soigner: 1
   prefab: {fileID: 2795280334094779141, guid: 42a618655600cc148abb865143ac517b, type: 3}
+  prefabInventaire: {fileID: 2795280334094779141, guid: fd4bcac31575c494a9560cbf367ca90f, type: 3}
+  imgButton: {fileID: 3830442017021597120}
   index: 0
+  indexSiblingInitial: 0
+  typeBasique: 0
+  typeEau: 0
+  typeFeu: 0
+  typePlante: 1
+  posXinitial: 0
+  posYinitial: 0
+  survole: 0
+  scale: 3
+  hauteur: 0
+  hauteurDebug: 0
+--- !u!114 &6861276948775920481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2795280334094779141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b33a2230d6c07a40b9ada20c1ec36f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deck: {fileID: 0}
+  peutDistancierCartes: 0
+  peutRapprocherCartes: 0
+  index: 0
+  distanceVersGauche: 100
+  distanceVersDroite: 100
+  posXDebug: 0
+  ecart: 100
+  ennemisRemisEnPlace: 1
 --- !u!114 &2418485354692579635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,10 +160,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   personnage: {fileID: 0}
-  vie: 0
+  vie: 30
   estClique: 0
   librairie: {fileID: 0}
   deck: {fileID: 0}
+  finNiveau: 0
 --- !u!1 &4258141575620355410
 GameObject:
   m_ObjectHideFlags: 0

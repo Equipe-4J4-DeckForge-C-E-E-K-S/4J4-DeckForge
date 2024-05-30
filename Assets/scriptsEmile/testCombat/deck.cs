@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.U2D;
 
-public class deck : MonoBehaviour
+public class Deck : MonoBehaviour
 {
     public GameObject librairie;
     public Transform canvas;
@@ -12,10 +13,19 @@ public class deck : MonoBehaviour
     public GameObject carteDupliquee;
     public GameObject personnage;
 
+    public GameObject fin;
+
+    public GameObject inventaire;
+
+    public GameObject btnContinuer;
+    public GameObject btnFinTour;
+    public TextMeshProUGUI txtFinTour;
+
     public GameObject[] deckStatDebug;
-    static GameObject[] deckStat;
+    public static GameObject[] deckStat;
+    public static int maxLenght = 25;
 
-
+    public GameObject[] deckFull;
     public GameObject[] deckLoc;
     public GameObject[] deckTrash;
     public GameObject[] deckActuel;
@@ -28,13 +38,24 @@ public class deck : MonoBehaviour
     public bool tourJoueurCommence;
     public int nbCartesDonnees;
 
-    //800w  340h
+    public float posYCarteJeu = -370f;
+    public float ecartPourMettreCartes = 955f;
+    public float posCarteDepart = -600f;
+
+    public float difficulteDEBUG;
 
     void Start()
     {
-        deckStat = deckStatDebug;
+        maxLenght = 25;
+
+        if (comportementGestionnaireEnnemi.difficulte <= 1)
+        {
+            deckStat = deckStatDebug;
+        }
+
         deckLoc = deckStat;
         deckActuel = deckLoc;
+        deckActuel = librairie.GetComponent<librairieDeck>().SufflerCartes(deckActuel);
     }
 
     void Update()
@@ -48,10 +69,12 @@ public class deck : MonoBehaviour
             {
                 CommenceTourJoueur();
             }
+            btnFinTour.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
         }
         else
         {
             tourJoueurCommence = true;
+            btnFinTour.GetComponent<Image>().color = new Color32(164, 164, 164, 242);
         }
     }
 
@@ -59,6 +82,7 @@ public class deck : MonoBehaviour
     // Update is called once per frame
     public void CommenceTourJoueur()
     {
+        personnage.GetComponent<statistiquesPersonnage>().defense = personnage.GetComponent<statistiquesPersonnage>().defenseInitiale;
         tourJoueurCommence = false;
         for (int carte = 0; carte < nbCartesDonnees; carte++)
         {
@@ -84,6 +108,9 @@ public class deck : MonoBehaviour
 
     public void IdentifierCarte(GameObject carteAIdentifier)
     {
+        carteAIdentifier.GetComponent<comportementCarteDeck>().deck = gameObject;
+        carteAIdentifier.GetComponent<carteProfil>().fin = fin;
+
         if (carteAIdentifier.GetComponent<carteProfil>().attaquer)
         {
             carteAIdentifier.GetComponent<Attaque>().personnage = personnage;
@@ -108,7 +135,7 @@ public class deck : MonoBehaviour
 
     public void OrganiserDeckJoueur()
     {
-        float distanceEntreCartes = ((540 - (deckJoueur.Length * 20)) / (deckJoueur.Length + 1));
+        float distanceEntreCartes = ((ecartPourMettreCartes - (deckJoueur.Length)) / (deckJoueur.Length + 1));
 
         int index = 0;
         foreach (var carte in deckJoueur)
@@ -116,17 +143,24 @@ public class deck : MonoBehaviour
             carte.GetComponent<carteProfil>().index = index;
             index++;
             Vector2 pos;
-            pos.x = -270 + (distanceEntreCartes * index);
-            pos.y = -150;
+            pos.x = posCarteDepart + (distanceEntreCartes * index);
+            pos.y = posYCarteJeu;
             carte.GetComponent<RectTransform>().anchoredPosition = new Vector2(pos.x, pos.y);
+            carte.GetComponent<carteProfil>().indexSiblingInitial = carte.transform.GetSiblingIndex();
+            carte.GetComponent<carteProfil>().posXinitial = pos.x;
+            carte.GetComponent<carteProfil>().posYinitial = pos.y;
+            carte.GetComponent<comportementCarteDeck>().inventaire = inventaire;
+            carte.GetComponent<carteProfil>().inventaire = inventaire;
         }
+        btnFinTour.transform.SetSiblingIndex(100);
+        btnContinuer.transform.SetSiblingIndex(100);
     }
 
 
     public void Recharger()
     {
-            deckActuel = deckTrash;
-            deckActuel = librairie.GetComponent<librairieDeck>().SufflerCartes(deckActuel);
+        deckActuel = deckTrash;
+        deckActuel = librairie.GetComponent<librairieDeck>().SufflerCartes(deckActuel);
 
         foreach (GameObject carte in deckTrash)
         {

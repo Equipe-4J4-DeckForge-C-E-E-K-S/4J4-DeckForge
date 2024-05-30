@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2985322214681882930}
   - component: {fileID: 5166795894786985043}
   - component: {fileID: 2431121778374051047}
+  - component: {fileID: 663687606810395068}
   - component: {fileID: 176844491623045949}
   m_Layer: 0
   m_Name: carte30
@@ -28,8 +29,8 @@ RectTransform:
   m_GameObject: {fileID: 2795280334094779141}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2586099818285285557}
   m_Father: {fileID: 0}
@@ -111,7 +112,41 @@ MonoBehaviour:
   bloquer: 0
   soigner: 0
   prefab: {fileID: 2795280334094779141, guid: a2f9e9a8b903edf4aa0b7fb159a47a16, type: 3}
+  prefabInventaire: {fileID: 2795280334094779141, guid: c7d3537f72584d241a813acbff160693, type: 3}
+  imgButton: {fileID: 3830442017021597120}
   index: 0
+  indexSiblingInitial: 0
+  typeBasique: 0
+  typeEau: 0
+  typeFeu: 1
+  typePlante: 0
+  posXinitial: 0
+  posYinitial: 0
+  survole: 0
+  scale: 3
+  hauteur: 0
+  hauteurDebug: 0
+--- !u!114 &663687606810395068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2795280334094779141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b33a2230d6c07a40b9ada20c1ec36f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deck: {fileID: 0}
+  peutDistancierCartes: 0
+  peutRapprocherCartes: 0
+  index: 0
+  distanceVersGauche: 100
+  distanceVersDroite: 100
+  posXDebug: 0
+  ecart: 100
+  ennemisRemisEnPlace: 1
 --- !u!114 &176844491623045949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,12 +162,17 @@ MonoBehaviour:
   personnage: {fileID: 0}
   cible: {fileID: 0}
   attaque: 0
+  attaqueCarte: 18
   cibleTrouve: 0
   enAttaque: 0
   librairie: {fileID: 0}
   deck: {fileID: 0}
+  carteBouton: {fileID: 0}
   carteADuplique: {fileID: 0}
   indexASupprimer: 0
+  finNiveau: 0
+  debug: 0
+  debug2: 0
 --- !u!1 &4258141575620355410
 GameObject:
   m_ObjectHideFlags: 0

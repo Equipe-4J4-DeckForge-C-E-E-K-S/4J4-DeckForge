@@ -17,7 +17,7 @@ public class bouttonFinTour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (deck.GetComponent<deck>().tourJoueur)
+        if (deck.GetComponent<Deck>().tourJoueur)
         {
             GetComponent<Button>().enabled = true;
         }
@@ -29,7 +29,7 @@ public class bouttonFinTour : MonoBehaviour
 
     public void FinirTour()
     {
-        deck.GetComponent<deck>().tourJoueur = false;
-        deck.GetComponent<deck>().tourEnnemi = true;
+        deck.GetComponent<Deck>().tourJoueur = false;
+        deck.GetComponent<Deck>().tourEnnemi = true;
     }
 }
