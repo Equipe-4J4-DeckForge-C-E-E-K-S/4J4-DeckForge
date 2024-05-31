@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d574be07f761b0f41a41334faed79542
+guid: 908b64aff5a8c404d84c4365aae831ca
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,12 +97,33 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mobile - GraalOnline Era - Building_0
+      name: TX Tileset Stone Ground_0
       rect:
         serializedVersion: 2
-        x: 303
-        y: 64
-        width: 47
+        x: 0
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea173a531917c68498c63a5f8aa47b89
+      internalID: -1346722366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Stone Ground_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 96
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -111,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df6591d354dd31c4c9b92acbd8bf5cad
-      internalID: 1028623037
+      spriteID: b0f168b4a4249df42a52a80771ec2784
+      internalID: -815184176
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - GraalOnline Era - Building_1
+      name: TX Tileset Stone Ground_2
       rect:
         serializedVersion: 2
-        x: 303
-        y: 32
-        width: 47
-        height: 32
+        x: 0
+        y: 160
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,19 +153,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af1e35f79b009874ab8cb4f9841ed2e0
-      internalID: 1117056249
+      spriteID: 3f6db3a3f11bb3f4eba35005ec2d8d20
+      internalID: -254220976
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - GraalOnline Era - Building_2
+      name: TX Tileset Stone Ground_3
       rect:
         serializedVersion: 2
-        x: 351
-        y: 65
-        width: 48
+        x: 96
+        y: 160
+        width: 31
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae332f6c2e90ab46a6fa1cc9fe86225
+      internalID: 2036047869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Stone Ground_4
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 129
+        width: 31
         height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -153,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b248648879b26fa41b6499c40348e6a7
-      internalID: -149072923
+      spriteID: 35257251cd7260f42b04293e248d1b39
+      internalID: -1074356613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - GraalOnline Era - Building_3
+      name: TX Tileset Stone Ground_5
       rect:
         serializedVersion: 2
-        x: 351
-        y: 32
-        width: 47
-        height: 32
+        x: 127
+        y: 128
+        width: 33
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +216,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 526143c9b3b553d44acad6ba89c6f09c
-      internalID: -1858236890
+      spriteID: cd6fcbf3cc74cb143a57d4bf439a8c23
+      internalID: 806713683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - GraalOnline Era - Building_4
+      name: TX Tileset Stone Ground_6
       rect:
         serializedVersion: 2
-        x: 351
+        x: 160
+        y: 160
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2da467c1ea83ed4f8a7718030aac67a
+      internalID: -1121241838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Stone Ground_7
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82358d406424d5b4cb65119e438b51d7
+      internalID: 1267252214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Stone Ground_8
+      rect:
+        serializedVersion: 2
+        x: 128
         y: 0
-        width: 48
-        height: 32
+        width: 65
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +279,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 555ed32c1fc11e04dac6d1928b2bd990
-      internalID: -839940207
+      spriteID: 03a6999964becaf4fa08eeaf5401ffa4
+      internalID: 629219352
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - GraalOnline Era - Building_5
+      name: TX Tileset Stone Ground_9
       rect:
         serializedVersion: 2
-        x: 303
+        x: 193
         y: 0
-        width: 48
-        height: 32
+        width: 63
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,8 +300,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e298cb4becd75654ebfff5e4bd444d25
-      internalID: 1525342357
+      spriteID: d07a03a171f33d04d96d77ece93ab40e
+      internalID: -1068970911
       vertices: []
       indices: 
       edges: []
@@ -225,7 +309,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9223bd46c0d2aa74f8b019574bb8f08a
+    spriteID: c07223e408882b04db1ff6757d912af0
     internalID: 0
     vertices: []
     indices: 
@@ -233,12 +317,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Mobile - GraalOnline Era - Building_0: 1028623037
-      Mobile - GraalOnline Era - Building_1: 1117056249
-      Mobile - GraalOnline Era - Building_2: -149072923
-      Mobile - GraalOnline Era - Building_3: -1858236890
-      Mobile - GraalOnline Era - Building_4: -839940207
-      Mobile - GraalOnline Era - Building_5: 1525342357
+      TX Tileset Stone Ground_0: -1346722366
+      TX Tileset Stone Ground_1: -815184176
+      TX Tileset Stone Ground_2: -254220976
+      TX Tileset Stone Ground_3: 2036047869
+      TX Tileset Stone Ground_4: -1074356613
+      TX Tileset Stone Ground_5: 806713683
+      TX Tileset Stone Ground_6: -1121241838
+      TX Tileset Stone Ground_7: 1267252214
+      TX Tileset Stone Ground_8: 629219352
+      TX Tileset Stone Ground_9: -1068970911
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
