@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: db6d898f6b85d7d428e5883a287106d1
+guid: 684ec7b0531775545a639bcd0046044b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -95,84 +95,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Mobile - GraalOnline Era - Bed and Chairs_0
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 65
-        width: 30
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 13f62ff9bded5b145b27bff97007e47b
-      internalID: -1166117608
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile - GraalOnline Era - Bed and Chairs_1
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 32
-        width: 30
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87fd475b7c7e85843a7cdc3836e36940
-      internalID: -1093613613
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile - GraalOnline Era - Bed and Chairs_2
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 33
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a3e766c6c99c7844eb7abd4dbd54fa2a
-      internalID: 486720723
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 4d01ea3adf592f84d8ebeeea39c4d3b4
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Mobile - GraalOnline Era - Bed and Chairs_0: -1166117608
-      Mobile - GraalOnline Era - Bed and Chairs_1: -1093613613
-      Mobile - GraalOnline Era - Bed and Chairs_2: 486720723
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
