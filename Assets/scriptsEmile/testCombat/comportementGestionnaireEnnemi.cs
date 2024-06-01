@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class comportementGestionnaireEnnemi : MonoBehaviour
 {
@@ -19,6 +20,11 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
     public GameObject[] listeLocale;
     public GameObject[] listeRecompense;
     public GameObject[] listeRecompenseFinale;
+
+    public GameObject[] environnements;
+    public Sprite[] backgrounds;
+
+    public GameObject background;
 
     public int nombreRecompense;
 
@@ -101,18 +107,30 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
 
         if (difficulte < 3.5f && difficulte >= 1f)
         {
+            //int environnementChoisi = Random.Range(0, 3);
+            //environnements[environnementChoisi].SetActive(true);
+            //background.GetComponent<Image>().sprite = backgrounds[0];
             indexLocal = indexBasique;
         }
         else if (difficulte < 7f && difficulte >= 4.5f)
         {
+            //int environnementChoisi = Random.Range(0, 3);
+            //environnements[environnementChoisi].SetActive(true);
+            //background.GetComponent<Image>().sprite = backgrounds[0];
             indexLocal = indexEau;
         }
         else if (difficulte < 13f && difficulte >= 10.5f)
         {
+            //int environnementChoisi = Random.Range(8, 11);
+            //environnements[environnementChoisi].SetActive(true);
+            //background.GetComponent<Image>().sprite = backgrounds[2];
             indexLocal = indexFeu;
         }
         else if (difficulte < 10f && difficulte >= 7.5f)
         {
+            //int environnementChoisi = Random.Range(4, 7);
+            //environnements[environnementChoisi].SetActive(true);
+            //background.GetComponent<Image>().sprite = backgrounds[1];
             indexLocal = indexPlante;
         }
 
@@ -120,21 +138,29 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
         {
             niveauBoss = true;
             indexLocal = librairie.GetComponent<librairieDeck>().ajouterCarte(indexLocal, indexBoss[0]);
+            //environnements[3].SetActive(true);
+            //background.GetComponent<Image>().sprite = backgrounds[0];
         }
         else if (difficulte == 7f)
         {
             niveauBoss = true;
             indexLocal = librairie.GetComponent<librairieDeck>().ajouterCarte(indexLocal, indexBoss[1]);
+            //environnements[7].SetActive(true);
+            //background.GetComponent<Image>().sprite = backgrounds[1];
         }
         else if (difficulte == 10f)
         {
             niveauBoss = true;
             indexLocal = librairie.GetComponent<librairieDeck>().ajouterCarte(indexLocal, indexBoss[2]);
+            environnements[11].SetActive(true);
+            background.GetComponent<Image>().sprite = backgrounds[2];
         }
         else if (difficulte >= 13f)
         {
             niveauBoss = true;
             indexLocal = librairie.GetComponent<librairieDeck>().ajouterCarte(indexLocal, indexBoss[3]);
+            //environnements[12].SetActive(true);
+            //background.GetComponent<Image>().sprite = backgrounds[2];
         }
 
         if (niveauBoss)
