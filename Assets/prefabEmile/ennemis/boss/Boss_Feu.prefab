@@ -967,10 +967,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5cff5969350d4040abc4ef2fbdba924, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vie: 30
-  defense: 3
+  vie: 2
+  defense: 2
   defenseInitiale: 0
-  attaque: 6
+  attaque: 1
   typeBasique: 0
   typeEau: 0
   typeFeu: 0
@@ -990,6 +990,9 @@ MonoBehaviour:
   joueur: {fileID: 0}
   cible: {fileID: 7079473973263593687}
   animations: {fileID: 7681896553238289711}
+  carte1: {fileID: 0}
+  carte2: {fileID: 0}
+  carte3: {fileID: 0}
   enAttaque: 0
   doitChercher: 0
   librairie: {fileID: 0}

@@ -30,26 +30,41 @@ public class comportementJoueur : MonoBehaviour
     }
 
     void Update()
+{
+    if(enrDefInitiale)
     {
-        if(enrDefInitiale)
-        {
-            GetComponent<statistiquesPersonnage>().defense = defPartie;
-            GetComponent<statistiquesPersonnage>().defenseInitiale = defPartie;
-            enrDefInitiale=false;
-        }
+        GetComponent<statistiquesPersonnage>().defense = defPartie;
+        GetComponent<statistiquesPersonnage>().defenseInitiale = defPartie;
+        enrDefInitiale=false;
+    }
 
-        if (cibleTrouve)
+    if (cibleTrouve)
+    {
+        if (deck != null)
         {
-            for (int i = 0; i < deck.GetComponent<Deck>().deckJoueur.Length; i++) 
+            Deck deckComponent = deck.GetComponent<Deck>();
+            if (deckComponent != null && deckComponent.deckJoueur != null)
             {
-                if (i == carteAttaqueUtilisee)
+                for (int i = 0; i < deckComponent.deckJoueur.Length; i++) 
                 {
-                    deck.GetComponent<Deck>().deckJoueur[i].GetComponent<Attaque>().cibleTrouve = true;
+                    if (i == carteAttaqueUtilisee)
+                    {
+                        GameObject joueur = deckComponent.deckJoueur[i];
+                        if (joueur != null)
+                        {
+                            Attaque attaqueComponent = joueur.GetComponent<Attaque>();
+                            if (attaqueComponent != null)
+                            {
+                                attaqueComponent.cibleTrouve = true;
+                            }
+                        }
+                    }
                 }
             }
-            cibleTrouve=false;
         }
+        cibleTrouve=false;
     }
+}
 
     // Update is called once per frame
     private void FixedUpdate()
