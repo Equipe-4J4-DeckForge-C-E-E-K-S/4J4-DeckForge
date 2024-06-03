@@ -105,63 +105,63 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
         {
             difficulte = 1f;
         }
-
+        
         if (difficulte < 3.5f && difficulte >= 1f)
         {
-            //int environnementChoisi = Random.Range(0, 3);
-            //environnements[environnementChoisi].SetActive(true);
-            //background.GetComponent<Image>().sprite = backgrounds[0];
+            int environnementChoisi = Random.Range(0, 3);
+            environnements[environnementChoisi].SetActive(true);
+            background.GetComponent<Image>().sprite = backgrounds[0];
             indexLocal = indexBasique;
         }
-        else if (difficulte < 7f && difficulte >= 4.5f)
+        else if (difficulte < 6.5f && difficulte >= 4f)
         {
-            //int environnementChoisi = Random.Range(0, 3);
-            //environnements[environnementChoisi].SetActive(true);
-            //background.GetComponent<Image>().sprite = backgrounds[0];
-            indexLocal = indexEau;
-        }
-        else if (difficulte < 13f && difficulte >= 10.5f)
-        {
-            //int environnementChoisi = Random.Range(8, 11);
-            //environnements[environnementChoisi].SetActive(true);
-            //background.GetComponent<Image>().sprite = backgrounds[2];
-            indexLocal = indexFeu;
-        }
-        else if (difficulte < 10f && difficulte >= 7.5f)
-        {
-            //int environnementChoisi = Random.Range(4, 7);
-            //environnements[environnementChoisi].SetActive(true);
-            //background.GetComponent<Image>().sprite = backgrounds[1];
+            int environnementChoisi = Random.Range(0, 3);
+            environnements[environnementChoisi].SetActive(true);
+            background.GetComponent<Image>().sprite = backgrounds[0];
             indexLocal = indexPlante;
         }
+        else if (difficulte < 12.5f && difficulte >= 10f)
+        {
+            int environnementChoisi = Random.Range(8, 11);
+            environnements[environnementChoisi].SetActive(true);
+            background.GetComponent<Image>().sprite = backgrounds[2];
+            indexLocal = indexFeu;
+        }
+        else if (difficulte < 9.5f && difficulte >= 7f)
+        {
+            int environnementChoisi = Random.Range(4, 7);
+            environnements[environnementChoisi].SetActive(true);
+            background.GetComponent<Image>().sprite = backgrounds[1];
+            indexLocal = indexEau;
+        }
 
-        if (difficulte == 4f)
+        if (difficulte == 3.5f)
         {
             niveauBoss = true;
             indexLocal = librairie.GetComponent<librairieDeck>().ajouterCarte(indexLocal, indexBoss[0]);
-            //environnements[3].SetActive(true);
-            //background.GetComponent<Image>().sprite = backgrounds[0];
+            environnements[3].SetActive(true);
+            background.GetComponent<Image>().sprite = backgrounds[0];
         }
-        else if (difficulte == 7f)
+        else if (difficulte == 6.5f)
         {
             niveauBoss = true;
             indexLocal = librairie.GetComponent<librairieDeck>().ajouterCarte(indexLocal, indexBoss[1]);
-            //environnements[7].SetActive(true);
-            //background.GetComponent<Image>().sprite = backgrounds[1];
+            environnements[7].SetActive(true);
+            background.GetComponent<Image>().sprite = backgrounds[1];
         }
-        else if (difficulte == 10f)
+        else if (difficulte == 9.5f)
         {
             niveauBoss = true;
             indexLocal = librairie.GetComponent<librairieDeck>().ajouterCarte(indexLocal, indexBoss[2]);
             environnements[11].SetActive(true);
             background.GetComponent<Image>().sprite = backgrounds[2];
         }
-        else if (difficulte >= 13f)
+        else if (difficulte >= 12.5f)
         {
             niveauBoss = true;
             indexLocal = librairie.GetComponent<librairieDeck>().ajouterCarte(indexLocal, indexBoss[3]);
-            //environnements[12].SetActive(true);
-            //background.GetComponent<Image>().sprite = backgrounds[2];
+            environnements[12].SetActive(true);
+            background.GetComponent<Image>().sprite = backgrounds[3];
         }
 
         if (niveauBoss)
@@ -172,7 +172,7 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
         {
             nbEnnemi = Random.Range(1, 4);
         }
-
+        Debug.Log(difficulte);
         for (int i = 0; i < nbEnnemi; i++)
         {
             int choixEnnemi = Random.Range(0, indexLocal.Length);
