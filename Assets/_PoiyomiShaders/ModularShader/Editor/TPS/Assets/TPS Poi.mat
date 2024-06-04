@@ -2,23 +2,45 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: TPS Poi
-  m_Shader: {fileID: 4800000, guid: 1787129096f7e4d45814aa4d2a62d45c, type: 3}
-  m_ShaderKeywords: GEOM_TYPE_BRANCH POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE POI_LIGHT_DATA_ADDITIVE_ENABLE
-    POI_VERTEXLIGHT_ON TPS_IsSkinnedMesh TPS_Penetrator VIGNETTE_MASKED _GLOSSYREFLECTIONS_OFF
-    _LIGHTINGMODE_REALISTIC _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
-    _SUNDISK_SIMPLE
+  m_Shader: {fileID: 4800000, guid: ce2fece0429f09643afa033c5eb22ada, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - GEOM_TYPE_BRANCH
+  - POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
+  - POI_LIGHT_DATA_ADDITIVE_ENABLE
+  - POI_VERTEXLIGHT_ON
+  - TPS_IsSkinnedMesh
+  - TPS_Penetrator
+  - VIGNETTE_MASKED
+  - _GLOSSYREFLECTIONS_OFF
+  - _LIGHTINGMODE_REALISTIC
+  - _RIM2STYLE_POIYOMI
+  - _RIMSTYLE_POIYOMI
+  - _STOCHASTICMODE_DELIOT_HEITZ
+  - _SUNDISK_SIMPLE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
-  stringTagMap: {}
+  stringTagMap:
+    AllLockedGUIDS: c7d22f1ac7b86df49963d49c28de7ad1
+    OriginalKeywords: GEOM_TYPE_BRANCH POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
+      POI_LIGHT_DATA_ADDITIVE_ENABLE POI_VERTEXLIGHT_ON TPS_IsSkinnedMesh TPS_Penetrator
+      VIGNETTE_MASKED _GLOSSYREFLECTIONS_OFF _LIGHTINGMODE_REALISTIC _RIM2STYLE_POIYOMI
+      _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ _SUNDISK_SIMPLE
+    OriginalShader: .poiyomi/Old Versions/8.1/Poiyomi Pro
+    OriginalShaderGUID: 1787129096f7e4d45814aa4d2a62d45c
+    RenderType: Opaque
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -534,6 +556,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - GeometryShader_Enabled: 1
     - Instancing: 0
@@ -2052,7 +2075,7 @@ Material:
     - _Set_HighColorMaskChannel: 1
     - _Set_HighColorMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 0
+    - _ShaderOptimizerEnabled: 1
     - _ShaderUIWarning0: -0
     - _ShaderUIWarning1: -0
     - _ShadingEnabled: 1
@@ -3009,3 +3032,4 @@ Material:
     - _VertexWorldTranslationALMin: {r: 0, g: 0, b: 0, a: 1}
     - _VideoMaskTexturePan: {r: 0, g: 0, b: 0, a: 0}
     - _VideoResolution: {r: 1280, g: 720, b: 0, a: 0}
+  m_BuildTextureStacks: []

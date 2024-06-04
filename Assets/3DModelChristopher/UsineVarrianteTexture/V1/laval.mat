@@ -8,10 +8,11 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: laval
-  m_Shader: {fileID: 4800000, guid: 23f6705aff8bf964c87bfb3dd66ab345, type: 3}
+  m_Shader: {fileID: 4800000, guid: bf29a2b36c312c449924ac11d565bdf6, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - BSSBLOOMFOGTYPE_HEIGHT
   - VIGNETTE_MASKED
   - _EMISSION
@@ -19,12 +20,17 @@ Material:
   - _RIM2STYLE_POIYOMI
   - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
-  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
-  stringTagMap: {}
+  stringTagMap:
+    AllLockedGUIDS: 060fb499e14447c4584dbae9e56d9b66
+    OriginalKeywords: BSSBLOOMFOGTYPE_HEIGHT VIGNETTE_MASKED _EMISSION _LIGHTINGMODE_REALISTIC
+      _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
+    OriginalShader: .poiyomi/Poiyomi Toon
+    OriginalShaderGUID: 23f6705aff8bf964c87bfb3dd66ab345
+    RenderType: Opaque
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -2308,7 +2314,7 @@ Material:
     - _Set_RimLightMaskChannel: 1
     - _Set_RimLightMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 0
+    - _ShaderOptimizerEnabled: 1
     - _ShaderUIWarning0: -0
     - _ShaderUIWarning1: -0
     - _ShadingEnabled: 1

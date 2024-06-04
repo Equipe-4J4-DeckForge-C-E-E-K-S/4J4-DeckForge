@@ -2,20 +2,34 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: PM_TwoLayerSpec
-  m_Shader: {fileID: 4800000, guid: 5ca92f1e9fc35504aba297fd1acd62df, type: 3}
-  m_ShaderKeywords: POI_STYLIZED_StylizedSpecular VIGNETTE_MASKED _LIGHTINGMODE_FLAT
-    _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
+  m_Shader: {fileID: 4800000, guid: 282cf56e55b67c245bac69e6ff313657, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - POI_STYLIZED_StylizedSpecular
+  - VIGNETTE_MASKED
+  - _LIGHTINGMODE_FLAT
+  - _RIM2STYLE_POIYOMI
+  - _RIMSTYLE_POIYOMI
+  - _STOCHASTICMODE_DELIOT_HEITZ
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2450
   stringTagMap:
+    AllLockedGUIDS: cb35437f4ab29234db690b5f1dd22fb4
+    OriginalKeywords: POI_STYLIZED_StylizedSpecular VIGNETTE_MASKED _LIGHTINGMODE_FLAT
+      _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
+    OriginalShader: .poiyomi/Old Versions/8.1/Poiyomi Toon
+    OriginalShaderGUID: 5ca92f1e9fc35504aba297fd1acd62df
+    RenderType: Opaque
     _HighColor_Power_isPreset: true
     _Is_BlendAddToHiColor_isPreset: true
     _Is_SpecularToHighColor_isPreset: true
@@ -30,6 +44,7 @@ Material:
     m_start_stylizedSpec_isPreset: true
     presetName: Shading/Stylized Specular/Simple Two Layer
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -533,6 +548,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - GeometryShader_Enabled: 1
     - Instancing: 0
@@ -2168,7 +2184,7 @@ Material:
     - _Set_RimLightMaskChannel: 1
     - _Set_RimLightMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 0
+    - _ShaderOptimizerEnabled: 1
     - _ShaderUIWarning0: -0
     - _ShaderUIWarning1: -0
     - _ShadingEnabled: 1
@@ -3103,3 +3119,4 @@ Material:
     - _VertexWorldTranslationALMin: {r: 0, g: 0, b: 0, a: 1}
     - _VideoMaskTexturePan: {r: 0, g: 0, b: 0, a: 0}
     - _VideoResolution: {r: 1280, g: 720, b: 0, a: 0}
+  m_BuildTextureStacks: []
