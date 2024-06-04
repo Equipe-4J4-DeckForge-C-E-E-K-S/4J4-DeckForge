@@ -31,8 +31,8 @@ public class comportementInventaireBouton : MonoBehaviour
         }
     }
 
-    public void Annuler()
-    {
-        grilleInventaire.GetComponent<comportementInventaire>().peutMontrerBtn = false;
-    }
+   public void Annuler()
+{
+    grilleInventaire.GetComponent<comportementInventaire>().peutMontrerBtn = false;
+}
 }

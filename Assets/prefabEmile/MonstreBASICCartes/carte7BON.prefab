@@ -113,6 +113,8 @@ MonoBehaviour:
   soigner: 0
   prefab: {fileID: 2795280334094779141, guid: c40e11c37c3099d448c5ea3242e7a1cb, type: 3}
   prefabInventaire: {fileID: 2795280334094779141, guid: 274b95977aa076d468fecc5c2f74345f, type: 3}
+  inventaire: {fileID: 0}
+  fin: {fileID: 0}
   imgButton: {fileID: 3830442017021597120}
   index: 0
   indexSiblingInitial: 0
@@ -139,8 +141,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deck: {fileID: 0}
+  inventaire: {fileID: 0}
   peutDistancierCartes: 0
   peutRapprocherCartes: 0
+  inventaireEstMontre: 0
   index: 0
   distanceVersGauche: 100
   distanceVersDroite: 100
@@ -162,7 +166,7 @@ MonoBehaviour:
   personnage: {fileID: 0}
   cible: {fileID: 0}
   attaque: 0
-  attaqueCarte: 5
+  attaqueCarte: 7
   cibleTrouve: 0
   enAttaque: 0
   librairie: {fileID: 0}
