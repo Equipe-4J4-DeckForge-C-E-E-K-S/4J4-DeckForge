@@ -6,6 +6,10 @@ public class comportementEnnemi : MonoBehaviour
 {
     public GameObject joueur;
     public GameObject cible;
+    public GameObject animations;
+    public GameObject carte1;
+    public GameObject carte2;
+    public GameObject carte3;
     public bool enAttaque;
 
     public bool doitChercher;
@@ -125,6 +129,7 @@ public class comportementEnnemi : MonoBehaviour
 
         if (actionChoisie >= 0)
         {
+            animations.GetComponent<Animator>().SetTrigger("Attaque");
             librairie.GetComponent<librairieAttaque>().AttaquerNormal(joueur, GetComponent<statistiquesPersonnage>().attaque, typeEau, typeFeu, typePlante);
         }
     }

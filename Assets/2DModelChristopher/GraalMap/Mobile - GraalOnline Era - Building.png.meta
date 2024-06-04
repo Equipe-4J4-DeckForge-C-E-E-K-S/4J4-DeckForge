@@ -95,18 +95,150 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Mobile - GraalOnline Era - Building_0
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 64
+        width: 47
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df6591d354dd31c4c9b92acbd8bf5cad
+      internalID: 1028623037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - GraalOnline Era - Building_1
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 32
+        width: 47
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af1e35f79b009874ab8cb4f9841ed2e0
+      internalID: 1117056249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - GraalOnline Era - Building_2
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 65
+        width: 48
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b248648879b26fa41b6499c40348e6a7
+      internalID: -149072923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - GraalOnline Era - Building_3
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 32
+        width: 47
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 526143c9b3b553d44acad6ba89c6f09c
+      internalID: -1858236890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - GraalOnline Era - Building_4
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 0
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 555ed32c1fc11e04dac6d1928b2bd990
+      internalID: -839940207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - GraalOnline Era - Building_5
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 0
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e298cb4becd75654ebfff5e4bd444d25
+      internalID: 1525342357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9223bd46c0d2aa74f8b019574bb8f08a
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mobile - GraalOnline Era - Building_0: 1028623037
+      Mobile - GraalOnline Era - Building_1: 1117056249
+      Mobile - GraalOnline Era - Building_2: -149072923
+      Mobile - GraalOnline Era - Building_3: -1858236890
+      Mobile - GraalOnline Era - Building_4: -839940207
+      Mobile - GraalOnline Era - Building_5: 1525342357
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

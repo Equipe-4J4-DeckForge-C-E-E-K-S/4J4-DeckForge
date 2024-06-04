@@ -9,16 +9,21 @@ public class Attaque : MonoBehaviour
     public GameObject personnage;
     public GameObject cible;
     public float attaque;
+    public float attaqueCarte;
     public bool cibleTrouve;
     public bool enAttaque;
 
     public GameObject librairie;
     public GameObject deck;
+    public GameObject carteBouton;
 
     public GameObject carteADuplique;
     public int indexASupprimer;
 
     public bool finNiveau;
+
+    public bool debug;
+    public int debug2;
 
 
     // Start is called before the first frame update
@@ -44,10 +49,11 @@ public class Attaque : MonoBehaviour
             }
         }
 
-        cibleTrouve = personnage.GetComponent<comportementJoueur>().cibleTrouve;
         if (cibleTrouve)
         {
             attaque = personnage.GetComponent<statistiquesPersonnage>().attaque;
+            attaque = attaque * attaqueCarte;
+
             cible = personnage.GetComponent<comportementJoueur>().ennemiAAttaque;
             float defCible = cible.GetComponent<statistiquesPersonnage>().defense;
 
@@ -153,7 +159,7 @@ public class Attaque : MonoBehaviour
 
     public void Attaquer()
     {
-        enAttaque = true;
-        personnage.GetComponent<comportementJoueur>().enAttaque = enAttaque;
+        personnage.GetComponent<comportementJoueur>().enAttaque = true;
+        personnage.GetComponent<comportementJoueur>().carteAttaqueUtilisee = GetComponent<carteProfil>().index;
     }
 }

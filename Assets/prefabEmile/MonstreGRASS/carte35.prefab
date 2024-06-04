@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2985322214681882930}
   - component: {fileID: -1108411677537773838}
   - component: {fileID: -4310584277820079627}
+  - component: {fileID: 4531816491991124846}
   - component: {fileID: 2418485354692579635}
   m_Layer: 0
   m_Name: carte35
@@ -111,11 +112,41 @@ MonoBehaviour:
   bloquer: 0
   soigner: 1
   prefab: {fileID: 2795280334094779141, guid: 2a5e86d0de7ac7443a13f4aa1bdfa9fe, type: 3}
+  prefabInventaire: {fileID: 2795280334094779141, guid: fd4bcac31575c494a9560cbf367ca90f, type: 3}
+  imgButton: {fileID: 3830442017021597120}
   index: 0
+  indexSiblingInitial: 0
   typeBasique: 0
   typeEau: 0
   typeFeu: 0
   typePlante: 1
+  posXinitial: 0
+  posYinitial: 0
+  survole: 0
+  scale: 3
+  hauteur: 0
+  hauteurDebug: 0
+--- !u!114 &4531816491991124846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2795280334094779141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b33a2230d6c07a40b9ada20c1ec36f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deck: {fileID: 0}
+  peutDistancierCartes: 0
+  peutRapprocherCartes: 0
+  index: 0
+  distanceVersGauche: 100
+  distanceVersDroite: 100
+  posXDebug: 0
+  ecart: 100
+  ennemisRemisEnPlace: 1
 --- !u!114 &2418485354692579635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   personnage: {fileID: 0}
-  vie: 0
+  vie: 30
   estClique: 0
   librairie: {fileID: 0}
   deck: {fileID: 0}

@@ -1,6 +1,8 @@
+// using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class comportementGestionnaireEnnemi : MonoBehaviour
 {
@@ -14,8 +16,18 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
     public GameObject[] indexEau;
     public GameObject[] indexFeu;
     public GameObject[] indexPlante;
+    public GameObject[] indexBoss;
 
     public GameObject[] listeLocale;
+    public GameObject[] listeRecompense;
+    public GameObject[] listeRecompenseFinale;
+
+    public GameObject[] environnements;
+    public Sprite[] backgrounds;
+
+    public GameObject background;
+
+    public int nombreRecompense;
 
     public GameObject librairie;
     public Transform canvas;
@@ -29,8 +41,14 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
 
     public bool tourEnnemiEnCours;
     public bool tourEnnemiTermine;
+    public bool peutMettreFin;
+
+    public bool niveauBoss;
 
     public int delai;
+
+    public int nbEnnemi;
+
     public static float difficulte;
     public int indexListeLocale;
 
@@ -58,13 +76,23 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
         GererReactionAttaqueEnnemi();
 
 
-        if (listeLocale.Length <= 0)
+        if (listeLocale.Length <= 0 && peutMettreFin)
         {
+            peutMettreFin = false;
+            if (niveauBoss == false)
+            {
+                nombreRecompense = Random.Range(1, 3);
+                for (int i = 0; i < nombreRecompense; i++)
+                {
+                    int carteChoisie = Random.Range(1, (listeRecompense.Length - 1));
+                    listeRecompenseFinale = librairie.GetComponent<librairieDeck>().ajouterCarte(listeRecompenseFinale, listeRecompense[carteChoisie]);
+                }
+            }
             librairie.GetComponent<comportementFin>().FinirNiveau(true);
         }
 
 
-        if(tourEnnemiTermine)
+        if (tourEnnemiTermine)
         {
             Invoke("ChangerLeTour", delai);
             tourEnnemiTermine = false;
@@ -73,48 +101,109 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
 
     public void FaireApparaitreEnnemi()
     {
-        if (difficulte <= 0)
+        if (difficulte <= 0f)
         {
-            difficulte = 1;
+            difficulte = 1f;
         }
-
-        if (biomeBasique)
+        
+        if (difficulte < 3.5f && difficulte >= 1f)
         {
+            int environnementChoisi = Random.Range(0, 3);
+            environnements[environnementChoisi].SetActive(true);
+            background.GetComponent<Image>().sprite = backgrounds[0];
             indexLocal = indexBasique;
         }
-        else if (biomeEau)
+        else if (difficulte < 6.5f && difficulte >= 4f)
         {
-            indexLocal = indexEau;
-        }
-        else if (biomeFeu)
-        {
-            indexLocal = indexFeu;
-        }
-        else if (biomePlante)
-        {
+            int environnementChoisi = Random.Range(0, 3);
+            environnements[environnementChoisi].SetActive(true);
+            background.GetComponent<Image>().sprite = backgrounds[0];
             indexLocal = indexPlante;
         }
+        else if (difficulte < 12.5f && difficulte >= 10f)
+        {
+            int environnementChoisi = Random.Range(8, 11);
+            environnements[environnementChoisi].SetActive(true);
+            background.GetComponent<Image>().sprite = backgrounds[2];
+            indexLocal = indexFeu;
+        }
+        else if (difficulte < 9.5f && difficulte >= 7f)
+        {
+            int environnementChoisi = Random.Range(4, 7);
+            environnements[environnementChoisi].SetActive(true);
+            background.GetComponent<Image>().sprite = backgrounds[1];
+            indexLocal = indexEau;
+        }
 
+        if (difficulte == 3.5f)
+        {
+            niveauBoss = true;
+            indexLocal = librairie.GetComponent<librairieDeck>().ajouterCarte(indexLocal, indexBoss[0]);
+            environnements[3].SetActive(true);
+            background.GetComponent<Image>().sprite = backgrounds[0];
+        }
+        else if (difficulte == 6.5f)
+        {
+            niveauBoss = true;
+            indexLocal = librairie.GetComponent<librairieDeck>().ajouterCarte(indexLocal, indexBoss[1]);
+            environnements[7].SetActive(true);
+            background.GetComponent<Image>().sprite = backgrounds[1];
+        }
+        else if (difficulte == 9.5f)
+        {
+            niveauBoss = true;
+            indexLocal = librairie.GetComponent<librairieDeck>().ajouterCarte(indexLocal, indexBoss[2]);
+            environnements[11].SetActive(true);
+            background.GetComponent<Image>().sprite = backgrounds[2];
+        }
+        else if (difficulte >= 12.5f)
+        {
+            niveauBoss = true;
+            indexLocal = librairie.GetComponent<librairieDeck>().ajouterCarte(indexLocal, indexBoss[3]);
+            environnements[12].SetActive(true);
+            background.GetComponent<Image>().sprite = backgrounds[3];
+        }
 
-        int nbEnnemi = Random.Range(1, 4);
-
+        if (niveauBoss)
+        {
+            nbEnnemi = 1;
+        }
+        else
+        {
+            nbEnnemi = Random.Range(1, 4);
+        }
+        Debug.Log(difficulte);
         for (int i = 0; i < nbEnnemi; i++)
         {
             int choixEnnemi = Random.Range(0, indexLocal.Length);
             GameObject ennemi = Instantiate(indexLocal[choixEnnemi], canvas);
             ennemi.GetComponent<statistiquesPersonnage>().vie = ((ennemi.GetComponent<statistiquesPersonnage>().vie * difficulte) / nbEnnemi);
             ennemi.GetComponent<statistiquesPersonnage>().vie = Mathf.Round(ennemi.GetComponent<statistiquesPersonnage>().vie * 10.0f) * 0.1f;
+
             ennemi.GetComponent<statistiquesPersonnage>().attaque = ((ennemi.GetComponent<statistiquesPersonnage>().attaque * difficulte) / nbEnnemi);
             ennemi.GetComponent<statistiquesPersonnage>().attaque = Mathf.Round(ennemi.GetComponent<statistiquesPersonnage>().attaque * 10.0f) * 0.1f;
-            ennemi.GetComponent<statistiquesPersonnage>().defense = ((ennemi.GetComponent<statistiquesPersonnage>().defense * difficulte) / nbEnnemi);
+
+            ennemi.GetComponent<statistiquesPersonnage>().defense = ((ennemi.GetComponent<statistiquesPersonnage>().defense * (difficulte / 2)) / nbEnnemi);
+            if (ennemi.GetComponent<statistiquesPersonnage>().defense >= 10f)
+            {
+                ennemi.GetComponent<statistiquesPersonnage>().defense = 9f;
+            }
             ennemi.GetComponent<statistiquesPersonnage>().defense = Mathf.Round(ennemi.GetComponent<statistiquesPersonnage>().defense * 10.0f) * 0.1f;
+
             ennemi.GetComponent<comportementEnnemi>().index = i;
             ennemi.GetComponent<comportementEnnemi>().joueur = joueur;
             ennemi.GetComponent<comportementEnnemi>().librairie = librairie;
             ennemi.GetComponent<comportementEnnemi>().deck = deck;
             ennemi.GetComponent<comportementEnnemi>().gestionnaireEnnemi = gameObject;
 
+
             listeLocale = librairie.GetComponent<librairieDeck>().ajouterCarte(listeLocale, ennemi);
+            if (niveauBoss == false)
+            {
+                listeRecompense = librairie.GetComponent<librairieDeck>().ajouterCarte(listeRecompense, ennemi.GetComponent<comportementEnnemi>().carte1);
+                listeRecompense = librairie.GetComponent<librairieDeck>().ajouterCarte(listeRecompense, ennemi.GetComponent<comportementEnnemi>().carte2);
+                listeRecompense = librairie.GetComponent<librairieDeck>().ajouterCarte(listeRecompense, ennemi.GetComponent<comportementEnnemi>().carte3);
+            }
             ennemi.SetActive(true);
         }
 
@@ -175,7 +264,7 @@ public class comportementGestionnaireEnnemi : MonoBehaviour
 
     public void AttaquerJoueur()
     {
-        indexListeLocale ++;
+        indexListeLocale++;
         if (indexListeLocale == listeLocale.Length + 1)
         {
             tourEnnemiTermine = true;

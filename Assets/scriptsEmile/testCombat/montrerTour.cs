@@ -20,11 +20,11 @@ public class montrerTour : MonoBehaviour
     {
         if (deck.GetComponent<Deck>().tourJoueur) 
         {
-            typeTour.text = "type: Joueur";
+            typeTour.text = "Tour: Joueur";
         }
         else
         {
-            typeTour.text = "type: Ennemi";
+            typeTour.text = "Tour: Ennemi";
         }
     }
 }

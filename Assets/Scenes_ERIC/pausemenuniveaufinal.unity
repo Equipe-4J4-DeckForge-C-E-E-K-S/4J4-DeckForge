@@ -931,8 +931,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000022888, y: -0.000020027}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_AnchoredPosition: {x: 13.772, y: 2.539}
+  m_SizeDelta: {x: 1947.543, y: 1074.922}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &533147731
 MonoBehaviour:
@@ -954,7 +954,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c2866653a35d4594089a2a60bc822a3a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b29dbec243c27f749b3834ebfac71c86, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3160,7 +3160,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit Game
+  m_text: Quitter jeu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 91ac2f942e3d6d34099737e8bc113b5a, type: 2}
   m_sharedMaterial: {fileID: 3359679687554880278, guid: 91ac2f942e3d6d34099737e8bc113b5a, type: 2}
