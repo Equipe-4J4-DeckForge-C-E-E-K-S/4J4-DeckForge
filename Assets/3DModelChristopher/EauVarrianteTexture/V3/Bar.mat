@@ -8,23 +8,20 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Bar
-  m_Shader: {fileID: 4800000, guid: 8da3d90ffd42e624499ae6a1ca478bee, type: 3}
+  m_Shader: {fileID: 4800000, guid: 2e3031f96e69d5843b1dce5ce2d8d284, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - BSSBLOOMFOGTYPE_HEIGHT
-  - VIGNETTE_MASKED
-  - _LIGHTINGMODE_REALISTIC
-  - _RIM2STYLE_POIYOMI
-  - _RIMSTYLE_POIYOMI
-  - _STOCHASTICMODE_DELIOT_HEITZ
-  m_InvalidKeywords:
-  - _TPS_ANIMATEDTOGGLE_ON
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
-  stringTagMap: {}
+  stringTagMap:
+    AllLockedGUIDS: 5f4a21179bbc11f44a3ff879dcc115b4,152d1d909d51984459c1d54da6cc6842,ae97e41544637f342af3b26c06035f45,562b5daf82e0c664f97a0422f61d511a
+    OriginalShader: .poiyomi/Poiyomi Pro
+    OriginalShaderGUID: 8da3d90ffd42e624499ae6a1ca478bee
+    RenderType: Opaque
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -2364,7 +2361,7 @@ Material:
     - _Set_RimLightMaskChannel: 1
     - _Set_RimLightMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 0
+    - _ShaderOptimizerEnabled: 1
     - _ShaderUIWarning0: -0
     - _ShaderUIWarning1: -0
     - _ShadingEnabled: 1
